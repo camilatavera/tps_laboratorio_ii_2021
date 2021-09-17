@@ -1,0 +1,16 @@
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP1\Entidades\bin\Debug\net5.0\Entidades.exe
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP1\Entidades\bin\Debug\net5.0\Entidades.deps.json
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP1\Entidades\bin\Debug\net5.0\Entidades.runtimeconfig.json
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP1\Entidades\bin\Debug\net5.0\Entidades.runtimeconfig.dev.json
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP1\Entidades\bin\Debug\net5.0\Entidades.dll
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP1\Entidades\bin\Debug\net5.0\ref\Entidades.dll
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP1\Entidades\bin\Debug\net5.0\Entidades.pdb
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP1\Entidades\obj\Debug\net5.0\Entidades.csproj.AssemblyReference.cache
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP1\Entidades\obj\Debug\net5.0\Entidades.GeneratedMSBuildEditorConfig.editorconfig
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP1\Entidades\obj\Debug\net5.0\Entidades.AssemblyInfoInputs.cache
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP1\Entidades\obj\Debug\net5.0\Entidades.AssemblyInfo.cs
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP1\Entidades\obj\Debug\net5.0\Entidades.csproj.CoreCompileInputs.cache
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP1\Entidades\obj\Debug\net5.0\Entidades.dll
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP1\Entidades\obj\Debug\net5.0\ref\Entidades.dll
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP1\Entidades\obj\Debug\net5.0\Entidades.pdb
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP1\Entidades\obj\Debug\net5.0\Entidades.genruntimeconfig.cache
