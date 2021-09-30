@@ -15,3 +15,9 @@ C:\Users\caami\Downloads\TP-02-Cascara.r2.zip (Unzipped Files)-20210927T183830Z-
 C:\Users\caami\Downloads\TP-02-Cascara.r2.zip (Unzipped Files)-20210927T183830Z-001\TP-02-Cascara.r2.zip (Unzipped Files)\TP-02\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Users\caami\Downloads\TP-02-Cascara.r2.zip (Unzipped Files)-20210927T183830Z-001\TP-02-Cascara.r2.zip (Unzipped Files)\TP-02\Entidades\obj\Debug\Entidades.dll
 C:\Users\caami\Downloads\TP-02-Cascara.r2.zip (Unzipped Files)-20210927T183830Z-001\TP-02-Cascara.r2.zip (Unzipped Files)\TP-02\Entidades\obj\Debug\Entidades.pdb
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP2\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP2\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP2\Entidades\obj\Debug\Entidades.dll
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP2\Entidades\obj\Debug\Entidades.pdb
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP2\Entidades\bin\Debug\Entidades.dll
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP2\Entidades\bin\Debug\Entidades.pdb

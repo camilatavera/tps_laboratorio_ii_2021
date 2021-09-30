@@ -23,3 +23,13 @@ D:\Federico\VB .Net\Visual C#\utn\TPs\2018\TP-N2\TP-02\TP-02\obj\Debug\TP-02.csp
 D:\Federico\VB .Net\Visual C#\utn\TPs\2018\TP-N2\TP-02\TP-02\obj\Debug\TP-02.exe
 C:\Users\caami\Downloads\TP-02-Cascara.r2.zip (Unzipped Files)-20210927T183830Z-001\TP-02-Cascara.r2.zip (Unzipped Files)\TP-02\TP-02\obj\Debug\TP-02.csproj.AssemblyReference.cache
 C:\Users\caami\Downloads\TP-02-Cascara.r2.zip (Unzipped Files)-20210927T183830Z-001\TP-02-Cascara.r2.zip (Unzipped Files)\TP-02\TP-02\obj\Debug\TP-02.csproj.CoreCompileInputs.cache
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP2\TP-02\obj\Debug\TP-02.csproj.AssemblyReference.cache
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP2\TP-02\obj\Debug\TP-02.csproj.CoreCompileInputs.cache
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP2\TP-02\bin\Debug\TP-02.exe.config
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP2\TP-02\bin\Debug\TP-02.exe
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP2\TP-02\bin\Debug\TP-02.pdb
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP2\TP-02\bin\Debug\Entidades.dll
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP2\TP-02\bin\Debug\Entidades.pdb
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP2\TP-02\obj\Debug\TP-02.csproj.CopyComplete
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP2\TP-02\obj\Debug\TP-02.exe
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP2\TP-02\obj\Debug\TP-02.pdb
