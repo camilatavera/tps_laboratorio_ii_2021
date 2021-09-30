@@ -1,0 +1,17 @@
+D:\Federico\VB .Net\Visual C#\utn\TP-02\Entidades\bin\Debug\Entidades.dll
+D:\Federico\VB .Net\Visual C#\utn\TP-02\Entidades\bin\Debug\Entidades.pdb
+D:\Federico\VB .Net\Visual C#\utn\TP-02\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
+D:\Federico\VB .Net\Visual C#\utn\TP-02\Entidades\obj\Debug\Entidades.dll
+D:\Federico\VB .Net\Visual C#\utn\TP-02\Entidades\obj\Debug\Entidades.pdb
+D:\VisualStudio\Federico Dávila\TP-02\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
+D:\VisualStudio\Federico Dávila\TP-02\Entidades\obj\Debug\Entidades.dll
+D:\VisualStudio\Federico Dávila\TP-02\Entidades\obj\Debug\Entidades.pdb
+D:\VisualStudio\Federico Dávila\TP-02\Entidades\bin\Debug\Entidades.dll
+D:\VisualStudio\Federico Dávila\TP-02\Entidades\bin\Debug\Entidades.pdb
+D:\Federico\VB .Net\Visual C#\utn\TPs\2018\TP-02\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
+D:\Federico\VB .Net\Visual C#\utn\TPs\2018\TP-02\Entidades\obj\Debug\Entidades.dll
+D:\Federico\VB .Net\Visual C#\utn\TPs\2018\TP-02\Entidades\obj\Debug\Entidades.pdb
+C:\Users\caami\Downloads\TP-02-Cascara.r2.zip (Unzipped Files)-20210927T183830Z-001\TP-02-Cascara.r2.zip (Unzipped Files)\TP-02\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\caami\Downloads\TP-02-Cascara.r2.zip (Unzipped Files)-20210927T183830Z-001\TP-02-Cascara.r2.zip (Unzipped Files)\TP-02\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\caami\Downloads\TP-02-Cascara.r2.zip (Unzipped Files)-20210927T183830Z-001\TP-02-Cascara.r2.zip (Unzipped Files)\TP-02\Entidades\obj\Debug\Entidades.dll
+C:\Users\caami\Downloads\TP-02-Cascara.r2.zip (Unzipped Files)-20210927T183830Z-001\TP-02-Cascara.r2.zip (Unzipped Files)\TP-02\Entidades\obj\Debug\Entidades.pdb

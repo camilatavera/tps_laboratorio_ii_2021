@@ -165,7 +165,7 @@ namespace MiCalculadora
         }
 
 
-        
+            
         private void FormCalculadora_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("Seguro de querer salir?", "Salir",
