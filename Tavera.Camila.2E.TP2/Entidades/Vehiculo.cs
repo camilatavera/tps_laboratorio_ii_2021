@@ -86,5 +86,16 @@ namespace Entidades
         {
             return (v1.chasis != v2.chasis);
         }
+
+        public override bool Equals(object obj)
+        {
+            Vehiculo vehiculo = obj as Vehiculo;
+            return vehiculo != null && this == vehiculo;
+        }
+
+        public override int GetHashCode()
+        {
+            return chasis.GetHashCode();
+        }
     }
 }
