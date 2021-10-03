@@ -60,28 +60,25 @@ namespace Entidades
 
                         
             foreach (Vehiculo v in taller.vehiculos)
-            //for(int i=0;i<taller.vehiculos.Count; i++)
             {
-            //    Vehiculo v = taller.vehiculos[i];
                 switch (tipo)
                 {
-                    //antes decia appendLine;
                     case ETipo.Camioneta:
                         if(v is Suv)
-                            sb.AppendFormat(v.Mostrar());
+                            sb.AppendLine(v.Mostrar());
                         break;
 
                     case ETipo.Moto:
                         if(v is Ciclomotor)
-                            sb.AppendFormat(v.Mostrar());
+                            sb.AppendLine(v.Mostrar());
                         break;
 
                     case ETipo.Automovil:
                         if(v is Sedan)
-                            sb.AppendFormat(v.Mostrar());
+                            sb.AppendLine(v.Mostrar());
                         break;
                     default:
-                        sb.AppendFormat(v.Mostrar());
+                        sb.AppendLine(v.Mostrar());
                         break;
                 }
             }

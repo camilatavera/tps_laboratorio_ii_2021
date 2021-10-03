@@ -49,23 +49,23 @@ namespace Entidades
             set { tipo = value; }
         }
 
-       
+
 
         public override sealed string Mostrar()
         {
+
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine("SEDAN");
-            //sb.AppendLine(this);
-            sb.AppendFormat(base.Mostrar());
-
-            //sb.AppendLine((string)this);
-            //sb.AppendFormat("TAMAÑO : {0}", this.Tamanio);
-            //sb.AppendLine("TIPO : " + tipo);
+            sb.AppendLine((string)this);
+            sb.AppendFormat("TAMAÑO : {0}", this.Tamanio);
+            sb.AppendLine("TIPO : " + tipo);
             sb.AppendLine("");
             sb.AppendLine("---------------------");
 
             return sb.ToString();
+
+           
         }
 
         

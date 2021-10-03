@@ -45,7 +45,6 @@ namespace Entidades
         {
             StringBuilder sb = new StringBuilder();
 
-            //sb.AppendLine(this);
             sb.AppendLine((string)this);
             sb.AppendFormat("TAMAÑO : {0}", this.Tamanio);
             sb.AppendLine("");

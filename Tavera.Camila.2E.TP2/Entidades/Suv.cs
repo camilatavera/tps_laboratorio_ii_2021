@@ -26,8 +26,6 @@ namespace Entidades
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine("SUV");
-            //sb.AppendLine((string)this);
-            //sb.AppendFormat("TAMAÑO : {0}\n", Tamanio);
             sb.AppendFormat(base.Mostrar());
             sb.AppendLine("");
             sb.AppendLine("---------------------");
