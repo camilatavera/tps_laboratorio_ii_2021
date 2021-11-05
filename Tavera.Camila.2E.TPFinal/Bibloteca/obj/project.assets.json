@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "ManejoArchivos/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/ManejoArchivos.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ManejoArchivos.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "ManejoArchivos/1.0.0": {
+      "type": "project",
+      "path": "../ManejoArchivos/ManejoArchivos.csproj",
+      "msbuildProject": "../ManejoArchivos/ManejoArchivos.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "ManejoArchivos >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\caami\\.nuget\\packages\\": {}
@@ -33,7 +52,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\tps_laboratorio_ii\\tps_laboratorio_ii\\Tavera.Camila.2E.TPFinal\\ManejoArchivos\\ManejoArchivos.csproj": {
+              "projectPath": "C:\\tps_laboratorio_ii\\tps_laboratorio_ii\\Tavera.Camila.2E.TPFinal\\ManejoArchivos\\ManejoArchivos.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
