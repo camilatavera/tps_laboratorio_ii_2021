@@ -17,3 +17,5 @@ C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\Test\obj\Debug
 C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\Test\obj\Debug\net5.0\ref\Test.dll
 C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\Test\obj\Debug\net5.0\Test.pdb
 C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\Test\obj\Debug\net5.0\Test.genruntimeconfig.cache
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\Test\bin\Debug\net5.0\ManejoArchivos.dll
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\Test\bin\Debug\net5.0\ManejoArchivos.pdb

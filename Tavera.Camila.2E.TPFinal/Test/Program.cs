@@ -12,15 +12,16 @@ namespace Test
 
 
 
-            funcionesAyuda func = new funcionesAyuda();
             Profesor profesorError = new Profesor("Profe1", "Error", 50, Esexo.f, 1800, 0, 5, 10);
             Profesor profesor = new Profesor("Profe2", "Sin Error", 40, Esexo.f, 900, 3, 3, 30);
 
             Ordenanza ordenanzaError = new Ordenanza("Ordenanza1", "Error", 60, Esexo.m, 500, 2, 10, ETurno.maniana);
-            Ordenanza ordenanza = new Ordenanza("Ordenanza 2", "Sin error", 50, Esexo.f, 500, 5, 1, ETurno.maniana);
+            Ordenanza ordenanza = new Ordenanza("Ordenanza2", "Sin error", 50, Esexo.f, 500, 5, 1, ETurno.maniana);
 
             Estudiante estudiante = new Estudiante("Estudiante1", "Sin error", 17, Esexo.m, 600, 5, 5, 8, 5);
-            Estudiante estudianteError = new Estudiante("Estudiante 2", "Error", 18, Esexo.f, 1500, 10, 5, 9, 10);
+            Estudiante estudianteError = new Estudiante("Estudiante2", "Error", 18, Esexo.f, 1500, 10, 5, 9, 10);
+            Estudiante estudianteRepetido = new Estudiante("Estudiante1", "Sin error", 17, Esexo.m, 600, 5, 5, 8, 5);
+
 
             List<Persona> listSinValidar = new List<Persona>();
             listSinValidar.Add(profesor);
@@ -29,6 +30,7 @@ namespace Test
             listSinValidar.Add(ordenanza);
             listSinValidar.Add(estudiante);
             listSinValidar.Add(estudianteError);
+            listSinValidar.Add(estudianteRepetido);
 
             Console.WriteLine("Lista sin validar:");
             foreach (Persona item in listSinValidar)
@@ -44,9 +46,32 @@ namespace Test
             Console.WriteLine("\n");
 
             List<Persona> listValidada = new List<Persona>();
-            listValidada = func.validarLista(listSinValidar);
 
-            BarColegio.Compradores = listValidada;
+            Console.WriteLine("Valdiamos campos y agregamos a listValidada");
+            foreach(Persona per in listSinValidar)
+            {
+                if(per.validarTodosLosCampos())
+                {
+                    listValidada.Add(per);
+                    Console.WriteLine($"Se agrego a {per.Nombre} {per.Apellido}");
+                }
+            }
+
+            Console.WriteLine("\nSe agrega a la lista oficial de compradores validando que no este repetido");
+            foreach (Persona per in listValidada)
+            {
+                try
+                {
+                    BarColegio.AgregarComprador(per);
+                    Console.WriteLine($"Se agrego a {per.Nombre} {per.Apellido}");
+                }
+                catch(ExcepcionPersona ex)
+                {
+                    Console.WriteLine($"{ex.Message} ");
+                }
+               
+
+            }
 
             Console.WriteLine("\nValidamos separar la lista de compradores por tipo de persona desde BarColegio");
             Console.WriteLine($"Estudiantes:");
@@ -73,68 +98,52 @@ namespace Test
 
 
 
-            Console.WriteLine("Validacion de campos y si no pasa la validacion, imprimo la primera excepcion que encuentra");
-
-            foreach (Persona per in listSinValidar)
-            {
-                func.validarYExcepciones(per);
-            }
 
             //___________________________________________________________________
 
+            Console.WriteLine("\n _______MOSTRAMOS DATOS DE LAS PERSONAS A ANALIZAR_______________");
+            foreach(Persona aux in BarColegio.Compradores)
+            {
+                Console.WriteLine($"\n{aux.mostrarDatos()}");
+                
+            }
+
+    
+
+           
+
+
             //Analisis general;
+            Console.WriteLine("______________ANALISIS GENERAL_______________________________________________");
 
-            AnalisisDeDatosGeneral analisisGeneral = new AnalisisDeDatosGeneral(listValidada);
-            Console.WriteLine($"\nQuien gasta mas? (Validamos que salga ''{typeof(Profesor).Name}'') ");
-            try
-            {
-                Console.WriteLine(analisisGeneral.QuienGastaMas());
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-
-            Console.WriteLine($"\nQue sexo gasta mas plata? Validamos que salga ''{Esexo.f.Traducir()}'' ");
-            try
-            {
-                Console.WriteLine(analisisGeneral.SexoMasPlataGastada());
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-
-            Profesor profesorNuevo = new Profesor("ProfeNuevo", "Sin Error", 30, Esexo.m, 800, 3, 3, 30);
-            analisisGeneral.agregarPersona(profesorNuevo);
-
-            Console.WriteLine($"\nQue sexo gasta mas plata? Validamos que no salga ninguno de los dos ");
-            try
-            {
-                Console.WriteLine(analisisGeneral.SexoMasPlataGastada());
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+            AnalisisDeDatosGeneral analisisGeneral = new AnalisisDeDatosGeneral(BarColegio.Compradores);
+            Console.WriteLine(analisisGeneral.generarAnalisisTxt());
 
 
-            //______________________ANALISIS DE DOS GRUPOS
 
-            BarColegio.Compradores = listValidada;
-
+            Console.WriteLine("______________COMPARAR DOS GRUPOS____(Tenemos en cuenta el estudiante y el ordenanza de arriba)_");
+          
             AnalisisEntreDosGrupos<Estudiante, Ordenanza> AEstudianteOrdenanza = new AnalisisEntreDosGrupos<Estudiante, Ordenanza>
              (BarColegio.getEstudiantes(), BarColegio.getOrdenanza());
 
-            Console.WriteLine($"\nCalcular porcentaje de sueldo? Validamos que no arroje una excepcion ");
-            try
-            {
-                Console.WriteLine(AEstudianteOrdenanza.promedioGastoSueldo());
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+            Console.WriteLine(AEstudianteOrdenanza.generarComparacion());
+
+            Console.WriteLine("\n");
+            AnalisisEntreDosGrupos<Profesor, Ordenanza> AProfesorEstudiante = new AnalisisEntreDosGrupos<Profesor, Ordenanza>
+             (BarColegio.getProfesor(), BarColegio.getOrdenanza());
+
+            Console.WriteLine(AProfesorEstudiante.generarComparacion());
+
+
+
+
+
+
+
+
+
+
+
 
 
 

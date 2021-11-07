@@ -15,8 +15,16 @@
         }
       },
       "Bibloteca/1.0.0": {
+        "dependencies": {
+          "ManejoArchivos": "1.0.0"
+        },
         "runtime": {
           "Bibloteca.dll": {}
+        }
+      },
+      "ManejoArchivos/1.0.0": {
+        "runtime": {
+          "ManejoArchivos.dll": {}
         }
       }
     }
@@ -28,6 +36,11 @@
       "sha512": ""
     },
     "Bibloteca/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ManejoArchivos/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

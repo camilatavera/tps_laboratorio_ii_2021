@@ -153,7 +153,7 @@ namespace FrmAnalisisDeDatos
 
         private void btn_exportar_Click(object sender, EventArgs e)
         {
-            string analisisTxt = analisis.generarAnalisisTxt();
+            string analisisTxt = analisis.generarAnalisis();
 
             if(saveFileDialog.ShowDialog() == DialogResult.OK)
             {
@@ -199,7 +199,7 @@ namespace FrmAnalisisDeDatos
             
             try
             {
-                this.txt_9.Text = analisis.comprasSegunPromedio();
+                this.txt_9.Text = analisis.promedioBajoMasCompras();
 
             }
             catch (Exception ex)

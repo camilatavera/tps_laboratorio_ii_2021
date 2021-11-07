@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Bibloteca
 {
-    public class AnalisisEntreDosGrupos<T,U> where T:Persona
-                                             where U:Persona
+    public class AnalisisEntreDosGrupos<T,U> : Analisis 
+                                             where T:Persona
+                                             where U:Persona 
     {
         List<T> grupo1;
         List<U> grupo2;
@@ -28,7 +29,6 @@ namespace Bibloteca
                 tipoG2 = typeof(U);
             }
             else
-                //excepcion grupos iguales
                 throw new Exception();
            
 
@@ -65,7 +65,8 @@ namespace Bibloteca
         }
 
 
-        private string masProductosComprados()
+
+        public override string masProductosComprados()
         {
             int totalProductosG1 = 0;
             int totalProductosG2 = 0;
@@ -108,8 +109,7 @@ namespace Bibloteca
         }
 
 
-        // QUE GRUPO TIENE MAS COMPRAS, +VECES VA AL BAR (EN RELACION A LA CANTIDAD DE CUANTOS INTEGRANTES HAY X GRUPO)
-        private string QuienMasCompras()
+        public override string QuienMasCompras()
         {
             int cantCompras1 = 0;
             int cantCompras2 = 0;
@@ -148,6 +148,15 @@ namespace Bibloteca
 
         }
 
+
+        
+
+        /// <summary>
+        ///  Calcula cual es el mayor porcentaje de los tres pasados por parametro
+        /// </summary>
+        /// <param name="p1"></param>
+        /// <param name="p2"></param>
+        /// <returns>string: El nombre del Type del elemento</returns>
         private string PorcentajeMayor(float p1, float p2)
         {
             if (p1 > p2)
@@ -167,13 +176,12 @@ namespace Bibloteca
             return PorcentajeMayor(p1, p2);
         }
 
-        
-
-       
 
 
-        //QUE GRUPO GASTA MAS (EN RELACION A LA CANTIDAD DE CUANTOS INTEGRANTES HAY X GRUPO)
-        private string QuienGastaMas()
+
+
+
+        public override string QuienGastaMas()
         {
             int gastos1 = 0;
             int gastos2 = 0;
@@ -214,8 +222,8 @@ namespace Bibloteca
         }
 
 
-        //QUE GRUPO COMPRA MAS PRODUCTOS POR COMRA
-        private string masProductosPorCompra()
+      
+        public override string masProductosPorCompra()
         {
             int cantComprasG1 = 0;
             int cantProductosG1 = 0;
@@ -260,6 +268,10 @@ namespace Bibloteca
         }
 
 
+        /// <summary>
+        ///Compara el promedio de sueldo y gastos entre los grupos, en caso de que alguno de los grupos no tenga sueldo arroja una excepcion
+        /// </summary>
+        /// <returns>string: El nombre del Type del elemento</returns>
         public string promedioGastoSueldo()
         {
             int gastos1 = 0;
@@ -322,7 +334,7 @@ namespace Bibloteca
         }
 
 
-        public string generarComparacion()
+        public override string generarAnalisis()
         {
             StringBuilder sb = new StringBuilder();
 
@@ -363,7 +375,7 @@ namespace Bibloteca
                 
                 try
                 {
-                    sb.AppendLine($"Grupo que tiene mas compras: {QuienMasCompras()}");
+                    sb.AppendLine($"\nGrupo que tiene mas compras: {QuienMasCompras()}");
                 }
                 catch (Exception e)
                 {
@@ -373,23 +385,23 @@ namespace Bibloteca
                 try
                 {
                    
-                    sb.AppendLine($"Grupo que mas gasta plata: {QuienGastaMas()}");
+                    sb.AppendLine($"\nGrupo que mas gasta plata: {QuienGastaMas()}");
                 }
                 catch (Exception e)
                 {
-                    sb.AppendLine($"Grupo que mas gasta plata: {e.Message}");
+                    sb.AppendLine($"\nGrupo que mas gasta plata: {e.Message}");
                 }
                 
 
                 try
                 {
                    
-                    sb.AppendLine($"Grupo que se lleva mas productos por compra: {masProductosPorCompra()}");
+                    sb.AppendLine($"\nGrupo que se lleva mas productos por compra: {masProductosPorCompra()}");
 
                 }
                 catch (Exception e) 
                 {
-                    sb.AppendLine($"Grupo que se lleva mas productos por compra: {e.Message}");
+                    sb.AppendLine($"\nGrupo que se lleva mas productos por compra: {e.Message}");
                 }
                
                 return sb.ToString();

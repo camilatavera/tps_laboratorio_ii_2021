@@ -70,48 +70,7 @@ namespace Bibloteca
             }
         }
 
-        /*
-        public static string relacionNotasCompras()
-        {
-            int cantPromAlto = 0;
-            int compras_promAlto = 0;
-            int cantPromBajo = 0;
-            int compras_promBajo = 0;
-            
-
-            List<Estudiante> list = new List<Estudiante>(BarColegio.getCompradoresEstudiantes());
-
-            foreach(Estudiante item in list)
-            {
-                if (item.PromedioGeneral > 5)
-                {
-                    cantPromAlto++;
-                    compras_promAlto += item.CantidadCompras;
-                }
-                else
-                {
-                    cantPromBajo++;
-                    compras_promBajo += item.CantidadCompras;
-                }
-            }
-
-            if((float)compras_promAlto/cantPromAlto > (float)compras_promBajo / cantPromBajo)
-            {
-                return "Hay mas compras realizadas por lo estudiantes con promedio mayor a 5 que los estudiantes con promedio menos o igual a 5";
-            }
-            else if((float)compras_promAlto / cantPromAlto < (float)compras_promBajo / cantPromBajo)
-            {
-                return "Hay mas compras realizadas por lo estudiantes con promedio menor o igual a 5 que los estudiantes con promedio mayor a 5";
-
-            }
-            else
-            {
-                return "El porcentaje de cantidad de compras por los estudiantes con promedio mayor o menor a 5 es la misma";
-            }
-
-
-        }
-        */
+       
 
         public override int calcularHorasEnElColegioPorMes()
         {
@@ -122,7 +81,7 @@ namespace Bibloteca
         public override string mostrarDatos()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine("ALUMNO REGULAR");
+            sb.AppendLine("ESTUDIANTE");
             sb.AppendLine(base.mostrarDatos());
             sb.AppendLine($"Promedio general: {PromedioGeneral}");
             sb.AppendLine($"Anio de curso: {AnioCurso}");

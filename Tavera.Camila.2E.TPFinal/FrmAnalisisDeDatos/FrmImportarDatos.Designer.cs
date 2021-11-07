@@ -34,6 +34,8 @@ namespace FrmAnalisisDeDatos
             this.btn_cancel = new System.Windows.Forms.Button();
             this.btn_guardar = new System.Windows.Forms.Button();
             this.lbl_aclaracion = new System.Windows.Forms.Label();
+            this.btn_automatic = new System.Windows.Forms.Button();
+            this.btn_ayuda = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_abrirArchivo
@@ -44,9 +46,9 @@ namespace FrmAnalisisDeDatos
             this.btn_abrirArchivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_abrirArchivo.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_abrirArchivo.ForeColor = System.Drawing.Color.Coral;
-            this.btn_abrirArchivo.Location = new System.Drawing.Point(186, 24);
+            this.btn_abrirArchivo.Location = new System.Drawing.Point(103, 21);
             this.btn_abrirArchivo.Name = "btn_abrirArchivo";
-            this.btn_abrirArchivo.Size = new System.Drawing.Size(396, 45);
+            this.btn_abrirArchivo.Size = new System.Drawing.Size(326, 45);
             this.btn_abrirArchivo.TabIndex = 27;
             this.btn_abrirArchivo.Text = "Abrir archivo";
             this.btn_abrirArchivo.UseVisualStyleBackColor = true;
@@ -54,9 +56,9 @@ namespace FrmAnalisisDeDatos
             // 
             // rtb_datos
             // 
-            this.rtb_datos.Location = new System.Drawing.Point(107, 75);
+            this.rtb_datos.Location = new System.Drawing.Point(93, 79);
             this.rtb_datos.Name = "rtb_datos";
-            this.rtb_datos.Size = new System.Drawing.Size(608, 304);
+            this.rtb_datos.Size = new System.Drawing.Size(608, 315);
             this.rtb_datos.TabIndex = 28;
             this.rtb_datos.Text = "";
             // 
@@ -68,9 +70,9 @@ namespace FrmAnalisisDeDatos
             this.btn_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cancel.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_cancel.ForeColor = System.Drawing.Color.Coral;
-            this.btn_cancel.Location = new System.Drawing.Point(149, 398);
+            this.btn_cancel.Location = new System.Drawing.Point(281, 412);
             this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(214, 45);
+            this.btn_cancel.Size = new System.Drawing.Size(182, 45);
             this.btn_cancel.TabIndex = 29;
             this.btn_cancel.Text = "Cancelar";
             this.btn_cancel.UseVisualStyleBackColor = true;
@@ -85,9 +87,9 @@ namespace FrmAnalisisDeDatos
             this.btn_guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_guardar.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_guardar.ForeColor = System.Drawing.Color.Coral;
-            this.btn_guardar.Location = new System.Drawing.Point(437, 398);
+            this.btn_guardar.Location = new System.Drawing.Point(479, 412);
             this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(214, 45);
+            this.btn_guardar.Size = new System.Drawing.Size(200, 45);
             this.btn_guardar.TabIndex = 30;
             this.btn_guardar.Text = "Guardar";
             this.btn_guardar.UseVisualStyleBackColor = true;
@@ -97,12 +99,43 @@ namespace FrmAnalisisDeDatos
             // 
             this.lbl_aclaracion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbl_aclaracion.ForeColor = System.Drawing.Color.White;
-            this.lbl_aclaracion.Location = new System.Drawing.Point(152, 459);
+            this.lbl_aclaracion.Location = new System.Drawing.Point(141, 474);
             this.lbl_aclaracion.Name = "lbl_aclaracion";
             this.lbl_aclaracion.Size = new System.Drawing.Size(526, 44);
             this.lbl_aclaracion.TabIndex = 31;
             this.lbl_aclaracion.Text = "Si se intenta importar compradores repetidos, quedara registro de su apellido en " +
     "CompradoresRepetidos.txt en el baseDirectory";
+            // 
+            // btn_automatic
+            // 
+            this.btn_automatic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_automatic.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_automatic.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_automatic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_automatic.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_automatic.ForeColor = System.Drawing.Color.Cyan;
+            this.btn_automatic.Location = new System.Drawing.Point(455, 10);
+            this.btn_automatic.Name = "btn_automatic";
+            this.btn_automatic.Size = new System.Drawing.Size(224, 63);
+            this.btn_automatic.TabIndex = 32;
+            this.btn_automatic.Text = "Importar automaticamente";
+            this.btn_automatic.UseVisualStyleBackColor = true;
+            this.btn_automatic.Click += new System.EventHandler(this.btn_automatic_Click);
+            // 
+            // btn_ayuda
+            // 
+            this.btn_ayuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_ayuda.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_ayuda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_ayuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ayuda.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_ayuda.ForeColor = System.Drawing.Color.Cyan;
+            this.btn_ayuda.Location = new System.Drawing.Point(103, 410);
+            this.btn_ayuda.Name = "btn_ayuda";
+            this.btn_ayuda.Size = new System.Drawing.Size(165, 49);
+            this.btn_ayuda.TabIndex = 33;
+            this.btn_ayuda.Text = "Ayuda";
+            this.btn_ayuda.UseVisualStyleBackColor = true;
             // 
             // FrmImportarDatos
             // 
@@ -110,6 +143,8 @@ namespace FrmAnalisisDeDatos
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(814, 527);
+            this.Controls.Add(this.btn_ayuda);
+            this.Controls.Add(this.btn_automatic);
             this.Controls.Add(this.lbl_aclaracion);
             this.Controls.Add(this.btn_guardar);
             this.Controls.Add(this.btn_cancel);
@@ -128,5 +163,7 @@ namespace FrmAnalisisDeDatos
         public System.Windows.Forms.Button btn_cancel;
         public System.Windows.Forms.Button btn_guardar;
         public System.Windows.Forms.Label lbl_aclaracion;
+        public System.Windows.Forms.Button btn_automatic;
+        public System.Windows.Forms.Button btn_ayuda;
     }
 }

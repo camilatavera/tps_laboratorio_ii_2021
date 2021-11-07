@@ -150,5 +150,45 @@ namespace FrmAnalisisDeDatos
         {
 
         }
+
+        private void btn_automatic_Click(object sender, EventArgs e)
+        {
+            string arch = AppDomain.CurrentDomain.BaseDirectory + "CompradoresIniciales.xml";
+
+            
+            
+
+            try
+            {
+
+                listPrueba.Clear();
+                listValidada.Clear();
+
+                archivo = openFileDialog.FileName;
+                listPrueba = ser.Leer(arch);
+
+                validarList();
+
+
+                if (listValidada != null)
+                {
+                    imprimirLista();
+                    this.btn_guardar.Enabled = true;
+                }
+
+            }
+            catch (Exception ex )
+            {
+                MessageBox.Show($"No se pudo inicializar {ex.Message} ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void btn_ayuda_Click(object sender, EventArgs e)
+        {
+
+        }
+
+      
     }
 }

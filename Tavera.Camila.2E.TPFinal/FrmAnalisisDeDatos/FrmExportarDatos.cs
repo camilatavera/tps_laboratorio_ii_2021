@@ -107,5 +107,25 @@ namespace FrmAnalisisDeDatos
             this.Close();
 
         }
+
+        private void btn_automatic_Click(object sender, EventArgs e)
+        {
+
+
+            string path= AppDomain.CurrentDomain.BaseDirectory + "holis.xml";
+
+            Serializador<List<Estudiante>> serEstudiante = new Serializador<List<Estudiante>>(EtipoArchivoS.JSON);
+            Serializador<List<Profesor>> serProfesor = new Serializador<List<Profesor>>(EtipoArchivoS.JSON);
+
+
+            Serializador<List<Persona>> ser = new Serializador<List<Persona>>(EtipoArchivoS.XML);
+            ser.Escribir(path, BarColegio.Compradores, true);
+            this.Close();
+
+               
+            }
+
+        }
     }
-}
+    
+

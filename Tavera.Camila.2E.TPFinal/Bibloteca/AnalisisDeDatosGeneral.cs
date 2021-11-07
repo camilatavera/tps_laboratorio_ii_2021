@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 
 namespace Bibloteca
 {
-    public class AnalisisDeDatosGeneral
+    public class AnalisisDeDatosGeneral:Analisis
     {
         List<Persona> listAComparar;
         List<Ordenanza> listOrdenanza;
         List<Profesor> listProfesor;
         List<Estudiante> listEstudiante;
 
-        //static string retNull = "No hay un grupo con mayor cantidad";
         static string retNull = "No se registran diferencias";
         static string msjException = "Error. No se pudo calcular";
 
@@ -30,20 +29,15 @@ namespace Bibloteca
 
         public AnalisisDeDatosGeneral(List<Persona> listAcomparar) : this()
         {
-            try
-            {
-                ListAComparar = listAcomparar;
-                separarListaPorTipo();  
-                
-            }
-            catch(NullReferenceException)
-            //ESTO CREO Q NO
-            {
-                new NullReferenceException(msjException);
-            }
-            
+            ListAComparar = listAcomparar;
+            separarListaPorTipo();
         }
 
+
+        /// <summary>
+        /// Agrega la nueva persona al lista generica y a la lista de su tipo correspondiente
+        /// </summary>
+        /// <param name="nuevaPersona"></param>
         public void agregarPersona(Persona nuevaPersona)
         {
             if (nuevaPersona != null)
@@ -64,19 +58,39 @@ namespace Bibloteca
             }
         }
 
+        /// <summary>
+        /// Cuenta la cantidad de objetos de tipo ordenanza que hay en la lista
+        /// </summary>
+        /// <returns>int</returns>
         public int countOrdenanza()
         {
             return listOrdenanza.Count;
         }
+
+        /// <summary>
+        /// Cuenta la cantidad de objetos de tipo profesor que hay en la lista
+        /// </summary>
+        /// <returns>int</returns>
         public int countProfesores()
         {
             return listProfesor.Count;
         }
+
+
+
+        /// <summary>
+        /// Cuenta la cantidad de objetos de tipo estudiante que hay en la lista
+        /// </summary>
+        /// <returns>int</returns>
         public int countEstudiantes()
         {
             return listEstudiante.Count;
         }
 
+
+        /// <summary>
+        /// Separa la lista segun el tipo de objeto y lo agrega a la lista correspondiente
+        /// </summary>
         public void separarListaPorTipo()
         {
             foreach (Persona item in ListAComparar)
@@ -99,6 +113,13 @@ namespace Bibloteca
             }
         }
 
+
+        /// <summary>
+        /// Suma total de la cantidad de compras que tiene cada objeto de la lista
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="list"></param>
+        /// <returns>int</returns>
         public int cantidadCompras<T>(List<T> list) where T:Persona
         {
             int cantCompras = 0;
@@ -109,6 +130,14 @@ namespace Bibloteca
             return cantCompras;
         }
 
+
+
+        /// <summary>
+        /// Suma total de la cantidad de productos que tiene cada objeto de la lista
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="list"></param>
+        /// <returns>int</returns>
         public int cantidadProductos<T>(List<T> list) where T : Persona
         {
             int cantProductos = 0;
@@ -119,6 +148,14 @@ namespace Bibloteca
             return cantProductos;
         }
 
+
+
+        /// <summary>
+        /// Suma total de la cantidad de plata gastada que tiene cada objeto de la lista
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="list"></param>
+        /// <returns>int</returns>
         public int plataGastada<T>(List<T> list) where T : Persona
         {
             int plataGastada = 0;
@@ -136,7 +173,15 @@ namespace Bibloteca
             get { return listAComparar; }
         }
 
-        //type
+        
+
+        /// <summary>
+        /// Calcula cual es el mayor porcentaje de los tres pasados por parametro
+        /// </summary>
+        /// <param name="pOrdenanza"></param>
+        /// <param name="pProfesor"></param>
+        /// <param name="pEstudiante"></param>
+        /// <returns>string: El nombre del Type del elemento</returns>
         public string mayorPorcentaje(float pOrdenanza, float pProfesor, float pEstudiante)
         {
             if (pOrdenanza > pProfesor && pOrdenanza > pEstudiante)
@@ -159,13 +204,10 @@ namespace Bibloteca
 
 
 
-       
-
-        //COMPARACION ENTRE LOS DOS GRUPOS
 
 
-        // QUE GRUPO TIENE MAS PRODUCTOS COMPRADOS, (EN RELACION A LA CANTIDAD DE CUANTOS INTEGRANTES HAY X GRUPO)
-        public string masProductosComprados()
+        
+        public override string masProductosComprados()
         {
             int totalProductosOrdenanza = cantidadProductos(listOrdenanza);
             int totalProductosProfesor = cantidadProductos(listProfesor);
@@ -198,9 +240,7 @@ namespace Bibloteca
    
         }
 
-
-        // QUE GRUPO TIENE MAS COMPRAS, +VECES VA AL BAR (EN RELACION A LA CANTIDAD DE CUANTOS INTEGRANTES HAY X GRUPO)
-        public string QuienMasCompras()
+        public override string QuienMasCompras()
         {
             int totalComprasOrdenanza = cantidadCompras(listOrdenanza);
             int totalComprasProfesor = cantidadCompras(listProfesor);
@@ -239,8 +279,8 @@ namespace Bibloteca
         }
 
 
-        //QUE GRUPO GASTA MAS (EN RELACION A LA CANTIDAD DE CUANTOS INTEGRANTES HAY X GRUPO)
-        public string QuienGastaMas()
+       
+        public override string QuienGastaMas()
         {
             int totalPlataOrdenanza = plataGastada(listOrdenanza);
             int totalPlataProfesor = plataGastada(listProfesor);
@@ -277,8 +317,8 @@ namespace Bibloteca
         }
 
 
-        //QUE GRUPO COMPRA MAS PRODUCTOS POR COMRA
-        public string masProductosPorCompra()
+        
+        public override string masProductosPorCompra()
         {
             int totalComprasOrdenanza = cantidadCompras(listOrdenanza);
             int totalComprasProfesor = cantidadCompras(listProfesor);
@@ -316,6 +356,13 @@ namespace Bibloteca
 
 
         //QUE SEXO GASTA MAS EN RELACION A LA CANTIDAD DE INTEGRANTE POR SEXO
+
+
+
+        /// <summary>
+        /// Calcula que sexo de la lista total de compradores tiene mayor porcentaje de plata gastada
+        /// </summary>
+        /// <returns>string:femenino o masculino</returns>
         public string SexoMasPlataGastada()
         {
             int cantF = 0;
@@ -367,6 +414,11 @@ namespace Bibloteca
 
         }
 
+
+        /// <summary>
+        /// Calcula que turno de ordenanza tiene mayor porcentaje de plata gastada
+        /// </summary>
+        /// <returns>string: nombre del type del objeto</returns>
         public string turnoOrdenanzaMasGastador()
         {
             int gastosM = 0;
@@ -418,6 +470,12 @@ namespace Bibloteca
             }
         }
 
+
+
+        /// <summary>
+        /// Analiza si los estudiantes gastan mas plata que los empleados 
+        /// </summary>
+        /// <returns>bool</returns>
         public string EstudiantesGastanMas()
         {
             int gastosEstudiantes = plataGastada(listEstudiante);
@@ -448,6 +506,11 @@ namespace Bibloteca
 
 
 
+
+        /// <summary>
+        /// Calcula el promedio de horas en el colegio y analiza si la gente con horas mayor al promedio gasta mas plata
+        /// </summary>
+        /// <returns>bool</returns>
         public string MasHorasMasPlataGastada()
         {
             int horaPromedio = BarColegio.promedioHorasColegio();
@@ -491,7 +554,13 @@ namespace Bibloteca
 
         }
 
-        public string comprasSegunPromedio()
+
+
+        /// <summary>
+        /// Analiza si los estudiantes con promedio menos o igual a cinco realizan mas compras que los otros
+        /// </summary>
+        /// <returns>bool</returns>
+        public string promedioBajoMasCompras()
         {
             int contPAlto = 0;
             int contPBajo = 0;
@@ -535,17 +604,15 @@ namespace Bibloteca
                 bool res = porcentajePBajo > porcentajePAlto;
                 return res.Traducir();
             }
-           
-            
-
-
-
-
-
-
         }
 
-        public string generarAnalisisTxt()
+
+
+        /// <summary>
+        /// Imprime todo el analisis
+        /// </summary>
+        /// <returns>string</returns>
+        public override string generarAnalisis()
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("El analisis se va a realizar entre los siguientes integrantes :");
@@ -623,11 +690,10 @@ namespace Bibloteca
             try
             {
                 sb.AppendLine($"\nQue turno de ordenanza gasta mas plata? {turnoOrdenanzaMasGastador()}");
-                //sb.Append(turnoOrdenanzaMasGastador());
             }
             catch(Exception e)
             {
-                //sb.Append(e.Message);
+                
                 sb.AppendLine($"\nQue turno de ordenanza gasta mas plata? {e.Message}");
             }
             
@@ -645,7 +711,7 @@ namespace Bibloteca
 
             try
             {
-                resString = comprasSegunPromedio();
+                resString = promedioBajoMasCompras();
                 sb.Append($"\nLos estudiantes con promedio mayor a 5 realizan menos compras que el resto de los estudiantes? {resString}");
 
             }

@@ -100,3 +100,5 @@ C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\UnitTest\obj\D
 C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\UnitTest\obj\Debug\net5.0\ref\UnitTest.dll
 C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\UnitTest\obj\Debug\net5.0\UnitTest.pdb
 C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\UnitTest\obj\Debug\net5.0\UnitTest.genruntimeconfig.cache
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\UnitTest\bin\Debug\net5.0\ManejoArchivos.dll
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\UnitTest\bin\Debug\net5.0\ManejoArchivos.pdb
