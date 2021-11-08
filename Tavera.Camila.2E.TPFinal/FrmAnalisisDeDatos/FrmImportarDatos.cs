@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -97,12 +98,8 @@ namespace FrmAnalisisDeDatos
                 try
                 {
 
-                    listPrueba.Clear();
-                    listValidada.Clear();
-
-                    archivo = openFileDialog.FileName;
+                    limpiarListas();
                     listPrueba = ser.Leer(archivo);
-
                     validarList();
 
 
@@ -112,6 +109,10 @@ namespace FrmAnalisisDeDatos
                             this.btn_guardar.Enabled = true;
                     }
                     
+                }
+                catch (ExceptionNoExisteRuta)
+                {
+                    MessageBox.Show("La ruta del archivo es invalida");
                 }
                 catch (ExceptionExtension)
                 {
@@ -135,14 +136,13 @@ namespace FrmAnalisisDeDatos
                 per = listValidada[i];
                 BarColegio.AgregarCompradorSerializer(per);
            }
-            MessageBox.Show($"val {listValidada.Count}\n bar{BarColegio.Compradores.Count}");
+         
             this.Close();
         }
 
         private void btn_cancel_Click(object sender, EventArgs e)
         {
-            listPrueba.Clear();
-            listValidada.Clear();
+            this.Close();
 
         }
 
@@ -154,17 +154,11 @@ namespace FrmAnalisisDeDatos
         private void btn_automatic_Click(object sender, EventArgs e)
         {
             string arch = AppDomain.CurrentDomain.BaseDirectory + "CompradoresIniciales.xml";
-
-            
-            
+            limpiarListas();
+           
 
             try
             {
-
-                listPrueba.Clear();
-                listValidada.Clear();
-
-                archivo = openFileDialog.FileName;
                 listPrueba = ser.Leer(arch);
 
                 validarList();
@@ -172,12 +166,18 @@ namespace FrmAnalisisDeDatos
 
                 if (listValidada != null)
                 {
+                   
                     imprimirLista();
                     this.btn_guardar.Enabled = true;
                 }
 
             }
-            catch (Exception ex )
+            catch(ExceptionNoExisteRuta)
+            {
+                MessageBox.Show("No se encuentra el archivo con los compradores");
+            }
+            
+            catch (Exception ex)
             {
                 MessageBox.Show($"No se pudo inicializar {ex.Message} ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -186,7 +186,22 @@ namespace FrmAnalisisDeDatos
 
         private void btn_ayuda_Click(object sender, EventArgs e)
         {
+            FrmAyuda frmAyuda = new FrmAyuda();
+            frmAyuda.ShowDialog();
+                
 
+        }
+
+        public void limpiarListas()
+        {
+            if (listValidada.Count != 0)
+            {
+                listValidada.Clear();
+            }
+            if (listPrueba.Count != 0)
+            {
+                listPrueba.Clear();
+            }
         }
 
       

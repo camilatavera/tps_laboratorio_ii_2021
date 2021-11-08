@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bibloteca
 {
-    public class AnalisisDeDatosGeneral:Analisis
+    public class AnalisisDeDatosGeneral:IAnalisis
     {
         List<Persona> listAComparar;
         List<Ordenanza> listOrdenanza;
@@ -207,7 +207,7 @@ namespace Bibloteca
 
 
         
-        public override string masProductosComprados()
+        public string masProductosComprados()
         {
             int totalProductosOrdenanza = cantidadProductos(listOrdenanza);
             int totalProductosProfesor = cantidadProductos(listProfesor);
@@ -240,7 +240,7 @@ namespace Bibloteca
    
         }
 
-        public override string QuienMasCompras()
+        public string QuienMasCompras()
         {
             int totalComprasOrdenanza = cantidadCompras(listOrdenanza);
             int totalComprasProfesor = cantidadCompras(listProfesor);
@@ -279,8 +279,8 @@ namespace Bibloteca
         }
 
 
-       
-        public override string QuienGastaMas()
+
+        public string QuienGastaMas()
         {
             int totalPlataOrdenanza = plataGastada(listOrdenanza);
             int totalPlataProfesor = plataGastada(listProfesor);
@@ -317,8 +317,8 @@ namespace Bibloteca
         }
 
 
-        
-        public override string masProductosPorCompra()
+
+        public string masProductosPorCompra()
         {
             int totalComprasOrdenanza = cantidadCompras(listOrdenanza);
             int totalComprasProfesor = cantidadCompras(listProfesor);
@@ -360,6 +360,7 @@ namespace Bibloteca
 
 
         /// <summary>
+        /// Implementa metodo de EXTENSION
         /// Calcula que sexo de la lista total de compradores tiene mayor porcentaje de plata gastada
         /// </summary>
         /// <returns>string:femenino o masculino</returns>
@@ -416,6 +417,7 @@ namespace Bibloteca
 
 
         /// <summary>
+        /// Implementa metodo de EXTENSION
         /// Calcula que turno de ordenanza tiene mayor porcentaje de plata gastada
         /// </summary>
         /// <returns>string: nombre del type del objeto</returns>
@@ -473,6 +475,7 @@ namespace Bibloteca
 
 
         /// <summary>
+        /// Implementa metodo de EXTENSION
         /// Analiza si los estudiantes gastan mas plata que los empleados 
         /// </summary>
         /// <returns>bool</returns>
@@ -508,6 +511,7 @@ namespace Bibloteca
 
 
         /// <summary>
+        /// Implementa metodo de EXTENSION
         /// Calcula el promedio de horas en el colegio y analiza si la gente con horas mayor al promedio gasta mas plata
         /// </summary>
         /// <returns>bool</returns>
@@ -557,6 +561,7 @@ namespace Bibloteca
 
 
         /// <summary>
+        /// Implementa metodo de EXTENSION
         /// Analiza si los estudiantes con promedio menos o igual a cinco realizan mas compras que los otros
         /// </summary>
         /// <returns>bool</returns>
@@ -612,7 +617,7 @@ namespace Bibloteca
         /// Imprime todo el analisis
         /// </summary>
         /// <returns>string</returns>
-        public override string generarAnalisis()
+        public string generarAnalisis()
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("El analisis se va a realizar entre los siguientes integrantes :");

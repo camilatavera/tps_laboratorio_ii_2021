@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Bibloteca
 {
-    public class AnalisisEntreDosGrupos<T,U> : Analisis 
+
+    //IMPLEMENTA TIPOS GENERICOS
+    public class AnalisisEntreDosGrupos<T,U> : IAnalisis 
                                              where T:Persona
                                              where U:Persona 
     {
@@ -66,7 +68,7 @@ namespace Bibloteca
 
 
 
-        public override string masProductosComprados()
+        public string masProductosComprados()
         {
             int totalProductosG1 = 0;
             int totalProductosG2 = 0;
@@ -109,7 +111,7 @@ namespace Bibloteca
         }
 
 
-        public override string QuienMasCompras()
+        public string QuienMasCompras()
         {
             int cantCompras1 = 0;
             int cantCompras2 = 0;
@@ -181,7 +183,7 @@ namespace Bibloteca
 
 
 
-        public override string QuienGastaMas()
+        public string QuienGastaMas()
         {
             int gastos1 = 0;
             int gastos2 = 0;
@@ -223,7 +225,7 @@ namespace Bibloteca
 
 
       
-        public override string masProductosPorCompra()
+        public string masProductosPorCompra()
         {
             int cantComprasG1 = 0;
             int cantProductosG1 = 0;
@@ -334,7 +336,7 @@ namespace Bibloteca
         }
 
 
-        public override string generarAnalisis()
+        public string generarAnalisis()
         {
             StringBuilder sb = new StringBuilder();
 

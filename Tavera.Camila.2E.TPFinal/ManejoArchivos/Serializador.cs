@@ -25,6 +25,13 @@ namespace ManejoArchivos
             set { tipo = value; }
         }
 
+
+        /// <summary>
+        /// Serializa los datos en el archivo.xml o .json en la ruta que se paso por parametro
+        /// </summary>
+        /// <param name="path"></param>
+        /// <param name="dato"></param>
+        /// <param name="append"></param>
         public void Escribir(string path, T dato, bool append)
         {
             try
@@ -65,8 +72,19 @@ namespace ManejoArchivos
             }
         }
 
+
+        /// <summary>
+        /// Deserializa los objetos en un archivo.xml o .json ubicado en la ruta que se paso por parametro
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
         public T Leer(string path)
         {
+            if (!File.Exists(path))
+            {
+                throw new ExceptionNoExisteRuta("La ruta del archivo no existe");
+            }
+
             try
             {
                 if (this.Tipo == EtipoArchivoS.JSON && Path.GetExtension(path) == ".json")

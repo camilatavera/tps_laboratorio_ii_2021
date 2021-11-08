@@ -19,6 +19,10 @@ namespace FrmAnalisisDeDatos
 
         }
 
+        /// <summary>
+        /// Valida que los campos no esten vacios
+        /// </summary>
+        /// <returns>bool</returns>
         protected bool validarCamposLlenos()
         {
             int aux;
@@ -37,6 +41,11 @@ namespace FrmAnalisisDeDatos
 
         }
 
+        /// <summary>
+        /// valida la coherencia de los campos plata gastada, cantidad de compras y cantidad de productos 
+        /// arrojando una excepcion si no se cumple 
+        /// </summary>
+        /// <returns>bool</returns>
         protected bool validarCoherencia()
         {
             int plata = (int)nud_plata.Value;
@@ -64,6 +73,10 @@ namespace FrmAnalisisDeDatos
 
         }
 
-      
+        protected void btn_cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
     }
 }

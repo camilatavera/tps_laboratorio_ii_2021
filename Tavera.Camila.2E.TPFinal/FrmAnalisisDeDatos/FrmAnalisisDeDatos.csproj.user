@@ -16,6 +16,9 @@
     <Compile Update="FrmAnalisis.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmAyuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmComparar.cs">
       <SubType>Form</SubType>
     </Compile>

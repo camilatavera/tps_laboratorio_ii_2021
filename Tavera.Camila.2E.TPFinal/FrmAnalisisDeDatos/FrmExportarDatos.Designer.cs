@@ -32,7 +32,6 @@ namespace FrmAnalisisDeDatos
             this.rtb_datos = new System.Windows.Forms.RichTextBox();
             this.btn_cancel = new System.Windows.Forms.Button();
             this.btn_guardar = new System.Windows.Forms.Button();
-            this.btn_automatic = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // rtb_datos
@@ -75,29 +74,12 @@ namespace FrmAnalisisDeDatos
             this.btn_guardar.UseVisualStyleBackColor = true;
             this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
-            // btn_automatic
-            // 
-            this.btn_automatic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_automatic.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btn_automatic.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_automatic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_automatic.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_automatic.ForeColor = System.Drawing.Color.Coral;
-            this.btn_automatic.Location = new System.Drawing.Point(28, -3);
-            this.btn_automatic.Name = "btn_automatic";
-            this.btn_automatic.Size = new System.Drawing.Size(214, 45);
-            this.btn_automatic.TabIndex = 32;
-            this.btn_automatic.Text = "auto";
-            this.btn_automatic.UseVisualStyleBackColor = true;
-            this.btn_automatic.Click += new System.EventHandler(this.btn_automatic_Click);
-            // 
             // FrmExportarDatos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btn_automatic);
             this.Controls.Add(this.btn_guardar);
             this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.rtb_datos);
@@ -113,6 +95,5 @@ namespace FrmAnalisisDeDatos
         private System.Windows.Forms.RichTextBox rtb_datos;
         public System.Windows.Forms.Button btn_cancel;
         public System.Windows.Forms.Button btn_guardar;
-        public System.Windows.Forms.Button btn_automatic;
     }
 }

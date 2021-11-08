@@ -12,6 +12,7 @@ namespace Bibloteca
 
         public Profesor() { }
 
+        
         public Profesor(string nombre, string apellido, int edad, Esexo sexo, int plataGastada, int cantidadProductosComprados,
                           int cantidadCompras, int horasCatedra) : base(nombre, apellido, edad, sexo,
                                                                plataGastada, cantidadProductosComprados, cantidadCompras)
@@ -20,21 +21,37 @@ namespace Bibloteca
             HorasEnElColegiPorMes = calcularHorasEnElColegioPorMes();
         }
 
+
+        /// <summary>
+        /// propiedad de lectura del pago por hora
+        /// </summary>
         public int PagoPorHora
         {
             get { return 600; }
         }
 
+
+        /// <summary>
+        /// Calcula el sueldo por mes
+        /// </summary>
+        /// <returns>int</returns>
         public int calcularSueldo()
         {
             return horasCatedraPorSemana * PagoPorHora * 30;
         }
 
+
+        /// <summary>
+        /// Propiedad de lectura del sueldo
+        /// </summary>
         public int Sueldo
         {
             get { return calcularSueldo(); }
         }
 
+        /// <summary>
+        /// Propiedad de lectura y escritura del atributo de horas catedra validando el rango e insertando un 0 si no pasa la validacion
+        /// </summary>
         public int HorasCatedraPorSemana
         {
             set
@@ -52,6 +69,10 @@ namespace Bibloteca
             get { return horasCatedraPorSemana; }
         }
 
+
+        /// <summary>
+        /// Propiedad de lectura y escritura del atributo Edad validando el rango e insertando un 0 si no pasa la validacion
+        /// </summary>
         public override int Edad
         {
             get { return edad; }
@@ -68,12 +89,21 @@ namespace Bibloteca
             }           
         }
 
+        /// <summary>
+        /// Calcula las horas en el colegio por mes
+        /// </summary>
+        /// <returns></returns>
         public override int calcularHorasEnElColegioPorMes()
         {
             int cantSemanas = 4;
             return HorasCatedraPorSemana*cantSemanas;
         }
 
+
+        /// <summary>
+        /// Muestra los valores de todos los atributos
+        /// </summary>
+        /// <returns> string </returns>
         public override string mostrarDatos()
         {
             StringBuilder sb = new StringBuilder();
@@ -84,6 +114,11 @@ namespace Bibloteca
             return sb.ToString();
         }
 
+
+        /// <summary>
+        /// Valida los valores de los atributos
+        /// </summary>
+        /// <returns>bool</returns>
         public override bool validarTodosLosCampos()
         {
             bool ret = false;
@@ -102,6 +137,12 @@ namespace Bibloteca
             }
         }
 
+
+
+        /// <summary>
+        /// Valida los valores de los atributos, en caso de no pasar la validacion arroja una excepcion
+        /// </summary>
+        /// <returns>bool</returns>
         public override bool validarConException()
         {
             try

@@ -9,6 +9,11 @@ namespace Bibloteca
     public static class Extensiones
     {
 
+        /// <summary>
+        /// Traduce el valor contenidoe en una variable de tipo bool
+        /// </summary>
+        /// <param name="valor"></param>
+        /// <returns>string</returns>
         public static string Traducir(this bool valor)
         {
             if (valor == true)
@@ -21,6 +26,12 @@ namespace Bibloteca
             }
         }
 
+
+        /// <summary>
+        /// Traduce el valor  de una variable de tipo Eturno
+        /// </summary>
+        /// <param name="valor"></param>
+        /// <returns>string</returns>
         public static string Traducir(this ETurno valor)
         {
             if (valor == ETurno.maniana)
@@ -33,6 +44,12 @@ namespace Bibloteca
             }
         }
 
+
+        /// <summary>
+        /// Traduce el valor  de una variable de tipo Esexo
+        /// </summary>
+        /// <param name="valor"></param>
+        /// <returns>string</returns>
         public static string Traducir(this Esexo valor)
         {
             if (valor == Esexo.f)

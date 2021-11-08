@@ -185,7 +185,6 @@ namespace FrmAnalisisDeDatos
             this.btn_guardar.TabIndex = 31;
             this.btn_guardar.Text = "Guardar";
             this.btn_guardar.UseVisualStyleBackColor = true;
-
             // 
             // btn_cancel
             // 
@@ -201,6 +200,7 @@ namespace FrmAnalisisDeDatos
             this.btn_cancel.TabIndex = 32;
             this.btn_cancel.Text = "Cancelar";
             this.btn_cancel.UseVisualStyleBackColor = true;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
             // FrmAgregarPersona
             // 

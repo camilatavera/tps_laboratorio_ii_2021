@@ -58,7 +58,10 @@ namespace FrmAnalisisDeDatos
         }
 
        
-
+        /// <summary>
+        /// Valida que los campos de la edad y las horas catedra no esten fuera de rango, y arroja una excepcion si esto sucede
+        /// </summary>
+        /// <returns>bool</returns>
         private bool validarRangos()
         {
             if (!((int)nud_edad.Value >= 22))

@@ -21,17 +21,30 @@ namespace Bibloteca
             HorasEnElColegiPorMes = calcularHorasEnElColegioPorMes();
         }
 
-       public int calcularSueldo()
-       {
+
+        /// <summary>
+        /// Calcula el sueldo por mes
+        /// </summary>
+        /// <returns>int</returns>
+        public int calcularSueldo()
+        {
             return PagoPorHora * 20 * HorasEnElColegiPorMes;
 
         }
 
+
+        /// <summary>
+        /// Propiedad de lectura del sueldo
+        /// </summary>
         public int Sueldo
         {
             get { return calcularSueldo(); }
         }
 
+
+        /// <summary>
+        /// propiedad de lectura del pago por hora
+        /// </summary>
         public int PagoPorHora
         {
             get 
@@ -48,18 +61,29 @@ namespace Bibloteca
             }
         }
 
+        /// <summary>
+        /// Calcula las horas en el colegio en un mes
+        /// </summary>
+        /// <returns>int</returns>
         public override int calcularHorasEnElColegioPorMes()
         {
             int diasPorMes = 20;
             return 8* diasPorMes;
         }
 
+        /// <summary>
+        /// Propiedad de lectura y escritura del atributo Turno
+        /// </summary>
         public ETurno Turno
         {
             set { turno = value; }
             get { return turno; }
         }
 
+
+        /// <summary>
+        /// Propiedad de lectura y escritura del atributo Edad validando el rango e insertando un 0 si no pasa la validacion
+        /// </summary>
         public override int Edad
         {
             get { return edad; }
@@ -78,7 +102,10 @@ namespace Bibloteca
 
 
 
-
+        /// <summary>
+        /// Muestra los valores de todos los atributos
+        /// </summary>
+        /// <returns> string </returns>
         public override string mostrarDatos()
         {
             StringBuilder sb = new StringBuilder();
@@ -89,6 +116,11 @@ namespace Bibloteca
             return sb.ToString();
         }
 
+
+        /// <summary>
+        /// Valida los valores de los atributos
+        /// </summary>
+        /// <returns>bool</returns>
         public override bool validarTodosLosCampos()
         {
             bool ret = false;
@@ -106,6 +138,11 @@ namespace Bibloteca
             }
         }
 
+
+        /// <summary>
+        /// Valida los valores de los atributos, en caso de no pasar la validacion arroja una excepcion
+        /// </summary>
+        /// <returns>bool</returns>
         public override bool validarConException()
         {
             try

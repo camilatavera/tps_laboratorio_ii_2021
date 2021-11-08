@@ -70,6 +70,10 @@ namespace FrmAnalisisDeDatos
 
         }
 
+        /// <summary>
+        /// valida el campo edad no este fuera de rango y arroja una excepcion si esto sucede
+        /// </summary>
+        /// <returns>bool</returns>
         private bool validarRangos()
         {
             if (!((int)nud_edad.Value >= 18))

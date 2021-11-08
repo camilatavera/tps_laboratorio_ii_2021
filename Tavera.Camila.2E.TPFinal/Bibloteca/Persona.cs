@@ -26,9 +26,7 @@ namespace Bibloteca
         public Persona() { }
 
 
-        /*
-         * Si no pasa la validacion va a largar una excepcion y dejar los valores de los campos por defecto
-         */
+       
         protected Persona(string nombre, string apellido, int edad, Esexo sexo, int plataGastada, int cantidadProductosComprados,
                            int cantidadCompras)
         {
@@ -43,6 +41,10 @@ namespace Bibloteca
             
         }
 
+
+        /// <summary>
+        /// Propiedad de lectura y escritura del atributo Nombre
+        /// </summary>
         public string Nombre
         {
             get { return nombre; }
@@ -50,39 +52,67 @@ namespace Bibloteca
         }
 
 
+        /// <summary>
+        /// Propiedad de lectura y escritura del atributo Apellido
+        /// </summary>
         public string Apellido
         {
             get { return apellido; }
             set { apellido = value.Trim(); }
         }
 
-        public abstract int Edad{ get;set;}
-       
 
+        /// <summary>
+        /// Propiedad de lectura y escritura del atributo Edad
+        /// </summary>
+        public abstract int Edad{ get;set;}
+
+
+        /// <summary>
+        /// Propiedad de lectura y escritura del atributo Sexo
+        /// </summary>
         public Esexo Sexo
         {
             get { return sexo; }
             set { sexo = value; }
         }
 
+
+        /// <summary>
+        /// Propiedad de lectura y escritura del atributo Plata Gastada
+        /// </summary>
         public int PlataGastada
         {
             get { return plataGastada; }
             set { plataGastada = value; }
         }
 
+
+
+        /// <summary>
+        /// Propiedad de lectura y escritura del atributo Cantidad Productos Comprados
+        /// </summary>
         public int CantidadProductosComprados
         {
             get { return cantidadProductosComprados; }
             set { cantidadProductosComprados = value; }
         }
 
+
+        /// <summary>
+        /// Propiedad de lectura y escritura del atributo Cantidad de Compras
+        /// </summary>
         public int CantidadCompras
         {
             get { return cantidadCompras; }
             set { cantidadCompras = value; }
         }
 
+
+
+        /// <summary>
+        /// Propiedad de lectura y escritura del atributo Horas en el colegio por mes
+        /// </summary>
         public int HorasEnElColegiPorMes 
         { 
             get { return horasEnElColegioPorMes; }
@@ -90,33 +120,32 @@ namespace Bibloteca
         }
        
 
+        /// <summary>
+        /// Calcula las horas en el colegio  por mes
+        /// </summary>
+        /// <returns></returns>
         public abstract int calcularHorasEnElColegioPorMes();
 
-        //protected abstract int validarHorasColegio();
-
+       
+        /// <summary>
+        /// Propiedad de lectura de la relacion entre cantidad de compras y horas en el colegio
+        /// </summary>
         private int Relacion_Compras_Horas
         {
             get { return CantidadCompras / HorasEnElColegiPorMes; }
         }
 
 
-        public static List<Persona> operator +(List<Persona> list, Persona persona)
-        {
-            if (persona != null)
-            {
-                list.Add(persona);
-            }
-            
-            return list;
-        }
+       
 
-        public static List<Persona> operator -(List<Persona> list, Persona persona)
-        {
-            return null;
-        }
-
-        
-
+       /// <summary>
+       /// Valida que los atributos Plata gastada, cantidad de compras y cantidad de productos tengan coherencia entre ellos, y 
+       /// en caso contrario arroja un excepcion 
+       /// </summary>
+       /// <param name="plataGastada"></param>
+       /// <param name="cantidadCompras"></param>
+       /// <param name="cantidadProductos"></param>
+       /// <returns></returns>
         public bool validarCoherenciaCampos(int plataGastada, int cantidadCompras, int cantidadProductos)
         {
             if((plataGastada>0 && cantidadCompras>0 && cantidadProductos >= cantidadCompras && cantidadCompras!=0) ||
@@ -130,6 +159,17 @@ namespace Bibloteca
             }
         }
 
+        /// <summary>
+        /// Valida que el objeto no tenga atributos vacios/ con valores nulos. Y en caso contrario, arroja una excepcion
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
+        /// <param name="edad"></param>
+        /// <param name="sexo"></param>
+        /// <param name="plataGastada"></param>
+        /// <param name="cantidadProductosComprados"></param>
+        /// <param name="cantidadCompras"></param>
+        /// <returns>bool</returns>
         public bool validarCampos(string nombre, string apellido, int edad, Esexo sexo, int plataGastada, int cantidadProductosComprados,
                           int cantidadCompras)
         {
@@ -144,12 +184,16 @@ namespace Bibloteca
             }
         }
 
+        /// <summary>
+        /// Valida que el objeto no tenga atributos vacios/ con valores nulos.
+        /// </summary>
+        /// <returns>bool</returns>
         public bool validarExistencia()
         {
             if (string.IsNullOrEmpty(Nombre) && string.IsNullOrEmpty(Apellido) && Edad == 0 && Sexo == 0 &&
                 PlataGastada == 0 && CantidadProductosComprados == 0 && CantidadCompras == 0)
             {
-                //throw new ExcepcionPersona("Campos vacios", apellido);
+                
                 return false;
             }
             else
@@ -159,7 +203,10 @@ namespace Bibloteca
 
        
 
-        //virtual
+        /// <summary>
+        /// Muestra valores de atributos
+        /// </summary>
+        /// <returns>string</returns>
         public  virtual string mostrarDatos()
         {
             StringBuilder sb = new StringBuilder();
@@ -173,6 +220,11 @@ namespace Bibloteca
             return sb.ToString();
         }
 
+
+        /// <summary>
+        /// Muestra los datos que comparten todas las PErsonas
+        /// </summary>
+        /// <returns>string </returns>
         public string mostrarDatosGenerales()
         {
             StringBuilder sb = new StringBuilder();
@@ -189,9 +241,17 @@ namespace Bibloteca
        
 
         
-
+        /// <summary>
+        /// Valida los valores de los atributos
+        /// </summary>
+        /// <returns>bool</returns>
         public abstract bool validarTodosLosCampos();
 
+
+        /// <summary>
+        /// Valida los valores de los atributos arrojando una excepcion si no pasa la validacion
+        /// </summary>
+        /// <returns>bool</returns>
         public abstract bool validarConException();
 
        

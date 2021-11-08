@@ -171,6 +171,7 @@ namespace Bibloteca
             }       
         }
 
+       
 
         /// <summary>
         /// Borra la lista de compradores del bar

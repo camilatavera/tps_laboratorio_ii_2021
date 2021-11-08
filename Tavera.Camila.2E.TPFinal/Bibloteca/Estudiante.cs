@@ -22,6 +22,10 @@ namespace Bibloteca
             HorasEnElColegiPorMes = calcularHorasEnElColegioPorMes();
         }
 
+
+        /// <summary>
+        /// Propiedad de lectura y escritura del atributo Promedio General validando el rango e insertando un 0 si no pasa la validacion
+        /// </summary>
         public float PromedioGeneral
         {
             get { return promedioGeneral; }
@@ -31,9 +35,17 @@ namespace Bibloteca
                 {
                     promedioGeneral = value;
                 }
+                else
+                {
+                    PromedioGeneral = 0;
+                }
             }
             
         }
+
+        /// <summary>
+        /// Propiedad de lectura y escritura del atributo Anio del Curso validando el rango e insertando un 0 si no pasa la validacion
+        /// </summary>
         public int AnioCurso
         {
             get { return anioCurso; }
@@ -53,7 +65,9 @@ namespace Bibloteca
 
 
 
-
+        /// <summary>
+        /// Propiedad de lectura y escritura del atributo Edad validando el rango e insertando un 0 si no pasa la validacion
+        /// </summary>
         public override int Edad
         {
             get { return edad; }
@@ -71,13 +85,21 @@ namespace Bibloteca
         }
 
        
-
+        /// <summary>
+        /// Calcula las horas en el colegio en un mes
+        /// </summary>
+        /// <returns>int </returns>
         public override int calcularHorasEnElColegioPorMes()
         {
             int diasPorMes = 20;
             return 6*diasPorMes;
         }
 
+
+        /// <summary>
+        /// Muestra todos los valores de los atributos del objeto
+        /// </summary>
+        /// <returns>string</returns>
         public override string mostrarDatos()
         {
             StringBuilder sb = new StringBuilder();
@@ -89,11 +111,11 @@ namespace Bibloteca
             return sb.ToString();
         }
 
-        public override string ToString()
-        {
-            return "Estudiante";
-        }
 
+        /// <summary>
+        /// Valida los valores de los atributos arrojando una excepcion si no pasa la validacion
+        /// </summary>
+        /// <returns>bool</returns>
         public override bool validarConException()
         {
 
@@ -124,6 +146,12 @@ namespace Bibloteca
                 return true;
         }
 
+
+
+        /// <summary>
+        /// Valida los valores de los atributos
+        /// </summary>
+        /// <returns>bool</returns>
         public override bool validarTodosLosCampos()
         {
             bool ret = false;

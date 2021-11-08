@@ -16,7 +16,7 @@ namespace FrmAnalisisDeDatos
     public partial class FrmComparar : Form
     {
 
-        //OpenFileDialog openFileDialog;
+
         SaveFileDialog saveFileDialog;
         ArchivoTxt archivoTxt;
                 
@@ -44,6 +44,12 @@ namespace FrmAnalisisDeDatos
             cmb_grupo2.SelectedItem = null;
         }
 
+
+        /// <summary>
+        /// Genera la comparacion en un archivo.txt
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_generar_Click(object sender, EventArgs e)
         {
             string informe;
@@ -52,11 +58,9 @@ namespace FrmAnalisisDeDatos
                 cmb_grupo1.SelectedItem != cmb_grupo2.SelectedItem)
             {
                 informe=generarTxt();
-                MessageBox.Show(informe, "Generar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+               
 
-
-
-                if (saveFileDialog.ShowDialog() == DialogResult.OK) //me muestra el coso para guardar
+                if (saveFileDialog.ShowDialog() == DialogResult.OK) 
                 {
                     archivo = saveFileDialog.FileName;
 
@@ -84,6 +88,11 @@ namespace FrmAnalisisDeDatos
             }
         }
 
+
+        /// <summary>
+        /// Instancia la clase generica AnalisisEntreDosGrupos segun haya elegido el usuario y genera el analisis
+        /// </summary>
+        /// <returns>string</returns>
         private string generarTxt()
         {
             if ((cmb_grupo1.SelectedItem.ToString() == typeof(Ordenanza).Name.ToString() ||
