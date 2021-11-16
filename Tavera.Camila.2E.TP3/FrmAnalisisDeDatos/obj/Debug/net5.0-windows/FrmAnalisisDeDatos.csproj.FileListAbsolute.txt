@@ -1,0 +1,66 @@
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\FrmAnalisisDeDatos\bin\Debug\net5.0-windows\FrmAnalisisDeDatos.exe
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\FrmAnalisisDeDatos\bin\Debug\net5.0-windows\FrmAnalisisDeDatos.deps.json
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\FrmAnalisisDeDatos\bin\Debug\net5.0-windows\FrmAnalisisDeDatos.runtimeconfig.json
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\FrmAnalisisDeDatos\bin\Debug\net5.0-windows\FrmAnalisisDeDatos.runtimeconfig.dev.json
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\FrmAnalisisDeDatos\bin\Debug\net5.0-windows\FrmAnalisisDeDatos.dll
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\FrmAnalisisDeDatos\bin\Debug\net5.0-windows\ref\FrmAnalisisDeDatos.dll
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\FrmAnalisisDeDatos\bin\Debug\net5.0-windows\FrmAnalisisDeDatos.pdb
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\FrmAnalisisDeDatos\bin\Debug\net5.0-windows\Bibloteca.dll
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\FrmAnalisisDeDatos\bin\Debug\net5.0-windows\ManejoArchivos.dll
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\FrmAnalisisDeDatos\bin\Debug\net5.0-windows\Bibloteca.pdb
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\FrmAnalisisDeDatos\bin\Debug\net5.0-windows\ManejoArchivos.pdb
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.csproj.AssemblyReference.cache
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.FrmAgregarEstudiante.resources
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.FrmAgregarOrdenanza.resources
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.FrmAgregarPersona.resources
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.FrmAgregarProfesor.resources
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.FrmAnalisis.resources
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.FrmAyuda.resources
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.FrmComparar.resources
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.FrmExportarDatos.resources
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.FrmImportarDatos.resources
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.FrmInicio.resources
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.FrmOpcionesAgregar.resources
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.csproj.GenerateResource.cache
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.GeneratedMSBuildEditorConfig.editorconfig
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.AssemblyInfoInputs.cache
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.AssemblyInfo.cs
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.csproj.CoreCompileInputs.cache
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.csproj.CopyComplete
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.dll
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\ref\FrmAnalisisDeDatos.dll
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.pdb
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.genruntimeconfig.cache
+C:\Users\caami\OneDrive\Documentos\copia TP\tps_laboratorio_ii\Tavera.Camila.2E.TP3\FrmAnalisisDeDatos\bin\Debug\net5.0-windows\FrmAnalisisDeDatos.exe
+C:\Users\caami\OneDrive\Documentos\copia TP\tps_laboratorio_ii\Tavera.Camila.2E.TP3\FrmAnalisisDeDatos\bin\Debug\net5.0-windows\FrmAnalisisDeDatos.deps.json
+C:\Users\caami\OneDrive\Documentos\copia TP\tps_laboratorio_ii\Tavera.Camila.2E.TP3\FrmAnalisisDeDatos\bin\Debug\net5.0-windows\FrmAnalisisDeDatos.runtimeconfig.json
+C:\Users\caami\OneDrive\Documentos\copia TP\tps_laboratorio_ii\Tavera.Camila.2E.TP3\FrmAnalisisDeDatos\bin\Debug\net5.0-windows\FrmAnalisisDeDatos.runtimeconfig.dev.json
+C:\Users\caami\OneDrive\Documentos\copia TP\tps_laboratorio_ii\Tavera.Camila.2E.TP3\FrmAnalisisDeDatos\bin\Debug\net5.0-windows\FrmAnalisisDeDatos.dll
+C:\Users\caami\OneDrive\Documentos\copia TP\tps_laboratorio_ii\Tavera.Camila.2E.TP3\FrmAnalisisDeDatos\bin\Debug\net5.0-windows\ref\FrmAnalisisDeDatos.dll
+C:\Users\caami\OneDrive\Documentos\copia TP\tps_laboratorio_ii\Tavera.Camila.2E.TP3\FrmAnalisisDeDatos\bin\Debug\net5.0-windows\FrmAnalisisDeDatos.pdb
+C:\Users\caami\OneDrive\Documentos\copia TP\tps_laboratorio_ii\Tavera.Camila.2E.TP3\FrmAnalisisDeDatos\bin\Debug\net5.0-windows\Bibloteca.dll
+C:\Users\caami\OneDrive\Documentos\copia TP\tps_laboratorio_ii\Tavera.Camila.2E.TP3\FrmAnalisisDeDatos\bin\Debug\net5.0-windows\ManejoArchivos.dll
+C:\Users\caami\OneDrive\Documentos\copia TP\tps_laboratorio_ii\Tavera.Camila.2E.TP3\FrmAnalisisDeDatos\bin\Debug\net5.0-windows\Bibloteca.pdb
+C:\Users\caami\OneDrive\Documentos\copia TP\tps_laboratorio_ii\Tavera.Camila.2E.TP3\FrmAnalisisDeDatos\bin\Debug\net5.0-windows\ManejoArchivos.pdb
+C:\Users\caami\OneDrive\Documentos\copia TP\tps_laboratorio_ii\Tavera.Camila.2E.TP3\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.csproj.AssemblyReference.cache
+C:\Users\caami\OneDrive\Documentos\copia TP\tps_laboratorio_ii\Tavera.Camila.2E.TP3\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.FrmAgregarEstudiante.resources
+C:\Users\caami\OneDrive\Documentos\copia TP\tps_laboratorio_ii\Tavera.Camila.2E.TP3\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.FrmAgregarOrdenanza.resources
+C:\Users\caami\OneDrive\Documentos\copia TP\tps_laboratorio_ii\Tavera.Camila.2E.TP3\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.FrmAgregarPersona.resources
+C:\Users\caami\OneDrive\Documentos\copia TP\tps_laboratorio_ii\Tavera.Camila.2E.TP3\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.FrmAgregarProfesor.resources
+C:\Users\caami\OneDrive\Documentos\copia TP\tps_laboratorio_ii\Tavera.Camila.2E.TP3\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.FrmAnalisis.resources
+C:\Users\caami\OneDrive\Documentos\copia TP\tps_laboratorio_ii\Tavera.Camila.2E.TP3\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.FrmAyuda.resources
+C:\Users\caami\OneDrive\Documentos\copia TP\tps_laboratorio_ii\Tavera.Camila.2E.TP3\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.FrmComparar.resources
+C:\Users\caami\OneDrive\Documentos\copia TP\tps_laboratorio_ii\Tavera.Camila.2E.TP3\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.FrmExportarDatos.resources
+C:\Users\caami\OneDrive\Documentos\copia TP\tps_laboratorio_ii\Tavera.Camila.2E.TP3\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.FrmImportarDatos.resources
+C:\Users\caami\OneDrive\Documentos\copia TP\tps_laboratorio_ii\Tavera.Camila.2E.TP3\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.FrmInicio.resources
+C:\Users\caami\OneDrive\Documentos\copia TP\tps_laboratorio_ii\Tavera.Camila.2E.TP3\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.FrmOpcionesAgregar.resources
+C:\Users\caami\OneDrive\Documentos\copia TP\tps_laboratorio_ii\Tavera.Camila.2E.TP3\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.csproj.GenerateResource.cache
+C:\Users\caami\OneDrive\Documentos\copia TP\tps_laboratorio_ii\Tavera.Camila.2E.TP3\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\caami\OneDrive\Documentos\copia TP\tps_laboratorio_ii\Tavera.Camila.2E.TP3\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.AssemblyInfoInputs.cache
+C:\Users\caami\OneDrive\Documentos\copia TP\tps_laboratorio_ii\Tavera.Camila.2E.TP3\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.AssemblyInfo.cs
+C:\Users\caami\OneDrive\Documentos\copia TP\tps_laboratorio_ii\Tavera.Camila.2E.TP3\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.csproj.CoreCompileInputs.cache
+C:\Users\caami\OneDrive\Documentos\copia TP\tps_laboratorio_ii\Tavera.Camila.2E.TP3\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.csproj.CopyComplete
+C:\Users\caami\OneDrive\Documentos\copia TP\tps_laboratorio_ii\Tavera.Camila.2E.TP3\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.dll
+C:\Users\caami\OneDrive\Documentos\copia TP\tps_laboratorio_ii\Tavera.Camila.2E.TP3\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\ref\FrmAnalisisDeDatos.dll
+C:\Users\caami\OneDrive\Documentos\copia TP\tps_laboratorio_ii\Tavera.Camila.2E.TP3\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.pdb
+C:\Users\caami\OneDrive\Documentos\copia TP\tps_laboratorio_ii\Tavera.Camila.2E.TP3\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.genruntimeconfig.cache

@@ -1,0 +1,5 @@
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\Test\obj\Debug\net5.0\Test.csproj.AssemblyReference.cache
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\Test\obj\Debug\net5.0\Test.GeneratedMSBuildEditorConfig.editorconfig
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\Test\obj\Debug\net5.0\Test.AssemblyInfoInputs.cache
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\Test\obj\Debug\net5.0\Test.AssemblyInfo.cs
+C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TPFinal\Test\obj\Debug\net5.0\Test.csproj.CoreCompileInputs.cache
