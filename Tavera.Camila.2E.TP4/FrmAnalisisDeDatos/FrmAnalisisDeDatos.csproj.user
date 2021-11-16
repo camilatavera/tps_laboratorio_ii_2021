@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="FrmBorrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmAgregarEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmAgregarOrdenanza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmAgregarPersona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmAgregarProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmAnalisis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmAyuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmComparar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmCompararTodos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmInicioDescarga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmExportarDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmImportarDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmOpciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
