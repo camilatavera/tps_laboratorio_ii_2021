@@ -9,11 +9,14 @@ using Bibloteca;
 
 namespace ManejoDB
 {
+    //DELEGADO
+    public delegate void mensajeEvento(string mensaje);
     public class InicioDB
     {
 
-        public event Action<string> eventoInicio;
-        public event Action<string> eventoFinal;
+        //EVENTOS
+        public event mensajeEvento eventoInicio;
+        public event mensajeEvento eventoFinal;
 
         public InicioDB() { }
 

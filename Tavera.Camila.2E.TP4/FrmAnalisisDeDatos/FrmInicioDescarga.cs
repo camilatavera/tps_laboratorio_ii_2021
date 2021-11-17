@@ -17,7 +17,6 @@ namespace FrmAnalisisDeDatos
     public partial class FrmInicioDescarga : Form
     {
 
-        Serializador<List<Persona>> ser;
         InicioDB db;
         PersonaInicioXML xmlInicio;
         Task taskdb;
@@ -44,7 +43,6 @@ namespace FrmAnalisisDeDatos
             db.eventoInicio += msj_DB;
             db.eventoFinal += msj_DB;
 
-            ser = new Serializador<List<Persona>>(EtipoArchivoS.XML);
         }
 
         private void IniciarProcesoCompleto()

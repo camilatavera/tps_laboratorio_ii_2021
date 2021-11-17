@@ -14,7 +14,7 @@ namespace Bibloteca
     {
 
         public List<Persona> listNueva;
-        public Action<string> eventoAviso;
+        public event Action<string> eventoAviso;
         private Serializador<List<Persona>> ser;
 
         public PersonaInicioXML()
