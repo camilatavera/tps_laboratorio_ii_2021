@@ -20,11 +20,12 @@ namespace FrmAnalisisDeDatos
         Serializador<List<Persona>> ser;
         InicioDB db;
         PersonaInicioXML xmlInicio;
-        CancellationTokenSource tokenSource;
         Task taskdb;
         Task taskxml;
+        OpenFileDialog openFileDialog;
+        string archivo;
 
-
+       
 
         public FrmInicioDescarga()
         {
@@ -33,38 +34,30 @@ namespace FrmAnalisisDeDatos
 
         }
 
+       
+
         private void FrmDescargaPrincipal_Load(object sender, EventArgs e)
         {
 
             db = new InicioDB();
+            xmlInicio = new PersonaInicioXML();
             db.eventoInicio += msj_DB;
             db.eventoFinal += msj_DB;
 
             ser = new Serializador<List<Persona>>(EtipoArchivoS.XML);
-            xmlInicio = new PersonaInicioXML();
-            Action<string> del = new Action<string>(msj_XML);
-            xmlInicio.eventoAviso += del;
-
-            this.tokenSource = new CancellationTokenSource();
-
-            IniciarProceso();
-
-
-
         }
 
-        private void IniciarProceso()
+        private void IniciarProcesoCompleto()
+        {           
+            xmlInicio.eventoAviso += msj_XML;
+            taskxml = xmlInicio.inicioTask(archivo);
+            taskdb = db.inicioTask();
+      
+        }
+
+        private void IniciarDB()
         {
-            
-            CancellationToken token = this.tokenSource.Token;
-             taskdb=db.inicioTask(token);
-             //taskdb = Task.Run(() => db.traerDatosIniciales(token));
-
-             taskxml = xmlInicio.inicioTask(token);
-             //taskxml = Task.Run(() => xmlInicio.traerXMLiniciales(token));
-
-        
-
+            taskdb = db.inicioTask();
         }
 
 
@@ -83,6 +76,8 @@ namespace FrmAnalisisDeDatos
             }
 
         }
+
+
 
         private void msj_XML(string mensaje)
         {
@@ -112,58 +107,76 @@ namespace FrmAnalisisDeDatos
 
         private void btn_inicio_Click(object sender, EventArgs e)
         {
-           
-            if(taskdb!=null && taskxml!=null && !taskdb.IsCompleted && !taskxml.IsCompleted) 
-            {
-                MessageBox.Show("Todavia no se cargaron los datos");
-                return;
-            }
-
-            try
-            {
-                if (this.xmlInicio.listNueva != null)
-                {
-                    for (int i = 0; i < this.xmlInicio.listNueva.Count; i++)
-                    {
-                        if (this.xmlInicio.listNueva[i].GetType() == typeof(Ordenanza))
-                        {
-                            DB.AgregarOrdenanza((Ordenanza)this.xmlInicio.listNueva[i]);
-                        }
-                        else if (this.xmlInicio.listNueva[i].GetType() == typeof(Profesor))
-                        {
-                            DB.AgregarProfesor((Profesor)this.xmlInicio.listNueva[i]);
-                        }
-                        else if (this.xmlInicio.listNueva[i].GetType() == typeof(Estudiante))
-                        {
-                            DB.AgregarEstudiante((Estudiante)this.xmlInicio.listNueva[i]);
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-            FrmInicio inicio = new FrmInicio();
-            inicio.Show();
+            IniciarDB();
+            lbl_xml.Text = "No hay archivos xml para serializar";
+            btn_xml.Enabled = false;
+            btn_db.Enabled = false;
         }
 
-        private void btn_cancel_Click(object sender, EventArgs e)
+
+
+       
+
+        private void btn_xml_Click(object sender, EventArgs e)
         {
-            if(!taskdb.IsCompleted && !taskxml.IsCompleted)
+
+            openFileDialog = new OpenFileDialog();
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                tokenSource.Cancel();
-                this.lbl_db.Text = "Descarga de la base de datos cancelada";
-                this.lbl_xml.Text = "Serializacion cancelada";
+
+                archivo = openFileDialog.FileName;
+                Action<string> del = new Action<string>(msj_XML);
+                xmlInicio.eventoAviso += del;
+                btn_xml.Enabled = false;
+                btn_db.Enabled = false;
+                IniciarProcesoCompleto();
+            }
+        }
+
+        private void btn_entrar_Click(object sender, EventArgs e)
+        {
+
+            if (((taskdb != null && !taskdb.IsCompleted) || (taskxml!=null && !taskxml.IsCompleted)) ||
+                ((taskdb != null && !taskdb.IsCompleted) && (taskxml != null && !taskxml.IsCompleted)))
+            {
+                MessageBox.Show("Todavia no se cargaron los datos");
             }
             else
             {
-                MessageBox.Show("Ya se realizo la tarea, no se puede cancelar");
+
+                try
+                {
+                    if (this.xmlInicio.listNueva != null)
+                    {
+                        for (int i = 0; i < this.xmlInicio.listNueva.Count; i++)
+                        {
+                            if (this.xmlInicio.listNueva[i].GetType() == typeof(Ordenanza))
+                            {
+                                DB.AgregarOrdenanza((Ordenanza)this.xmlInicio.listNueva[i]);
+                            }
+                            else if (this.xmlInicio.listNueva[i].GetType() == typeof(Profesor))
+                            {
+                                DB.AgregarProfesor((Profesor)this.xmlInicio.listNueva[i]);
+                            }
+                            else if (this.xmlInicio.listNueva[i].GetType() == typeof(Estudiante))
+                            {
+                                DB.AgregarEstudiante((Estudiante)this.xmlInicio.listNueva[i]);
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+                FrmInicio inicio = new FrmInicio();
+                inicio.Show();
+                this.Visible = false;
+                
             }
-            
+
         }
-
-
     }
 }

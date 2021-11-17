@@ -37,6 +37,8 @@ namespace FrmAnalisisDeDatos
             this.btn_exportarXml = new System.Windows.Forms.Button();
             this.btn_compararTodos = new System.Windows.Forms.Button();
             this.btn_borrar = new System.Windows.Forms.Button();
+            this.btn_seguirdb = new System.Windows.Forms.Button();
+            this.btn_parardb = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_importar
@@ -47,11 +49,11 @@ namespace FrmAnalisisDeDatos
             this.btn_importar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_importar.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_importar.ForeColor = System.Drawing.Color.Coral;
-            this.btn_importar.Location = new System.Drawing.Point(371, 54);
+            this.btn_importar.Location = new System.Drawing.Point(347, 140);
             this.btn_importar.Name = "btn_importar";
-            this.btn_importar.Size = new System.Drawing.Size(254, 69);
+            this.btn_importar.Size = new System.Drawing.Size(210, 47);
             this.btn_importar.TabIndex = 23;
-            this.btn_importar.Text = "Importar datos (xml)";
+            this.btn_importar.Text = "Importar xml";
             this.btn_importar.UseVisualStyleBackColor = true;
             this.btn_importar.Click += new System.EventHandler(this.btn_importar_Click);
             // 
@@ -63,9 +65,9 @@ namespace FrmAnalisisDeDatos
             this.btn_exportarJson.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_exportarJson.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_exportarJson.ForeColor = System.Drawing.Color.Coral;
-            this.btn_exportarJson.Location = new System.Drawing.Point(57, 306);
+            this.btn_exportarJson.Location = new System.Drawing.Point(57, 228);
             this.btn_exportarJson.Name = "btn_exportarJson";
-            this.btn_exportarJson.Size = new System.Drawing.Size(258, 69);
+            this.btn_exportarJson.Size = new System.Drawing.Size(210, 64);
             this.btn_exportarJson.TabIndex = 24;
             this.btn_exportarJson.Text = "Exportar datos generales (Json)";
             this.btn_exportarJson.UseVisualStyleBackColor = true;
@@ -79,9 +81,9 @@ namespace FrmAnalisisDeDatos
             this.btn_analisis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_analisis.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_analisis.ForeColor = System.Drawing.Color.Coral;
-            this.btn_analisis.Location = new System.Drawing.Point(57, 174);
+            this.btn_analisis.Location = new System.Drawing.Point(57, 142);
             this.btn_analisis.Name = "btn_analisis";
-            this.btn_analisis.Size = new System.Drawing.Size(254, 69);
+            this.btn_analisis.Size = new System.Drawing.Size(210, 45);
             this.btn_analisis.TabIndex = 25;
             this.btn_analisis.Text = "Analisis de datos";
             this.btn_analisis.UseVisualStyleBackColor = true;
@@ -97,7 +99,7 @@ namespace FrmAnalisisDeDatos
             this.btn_agregarDatos.ForeColor = System.Drawing.Color.Coral;
             this.btn_agregarDatos.Location = new System.Drawing.Point(57, 54);
             this.btn_agregarDatos.Name = "btn_agregarDatos";
-            this.btn_agregarDatos.Size = new System.Drawing.Size(245, 69);
+            this.btn_agregarDatos.Size = new System.Drawing.Size(210, 47);
             this.btn_agregarDatos.TabIndex = 26;
             this.btn_agregarDatos.Text = "Agregar datos";
             this.btn_agregarDatos.UseVisualStyleBackColor = true;
@@ -111,9 +113,9 @@ namespace FrmAnalisisDeDatos
             this.btn_comparar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_comparar.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_comparar.ForeColor = System.Drawing.Color.Coral;
-            this.btn_comparar.Location = new System.Drawing.Point(371, 174);
+            this.btn_comparar.Location = new System.Drawing.Point(347, 328);
             this.btn_comparar.Name = "btn_comparar";
-            this.btn_comparar.Size = new System.Drawing.Size(254, 69);
+            this.btn_comparar.Size = new System.Drawing.Size(210, 69);
             this.btn_comparar.TabIndex = 27;
             this.btn_comparar.Text = "Comparar dos grupos";
             this.btn_comparar.UseVisualStyleBackColor = true;
@@ -127,9 +129,9 @@ namespace FrmAnalisisDeDatos
             this.btn_exportarXml.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_exportarXml.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_exportarXml.ForeColor = System.Drawing.Color.Coral;
-            this.btn_exportarXml.Location = new System.Drawing.Point(371, 306);
+            this.btn_exportarXml.Location = new System.Drawing.Point(347, 228);
             this.btn_exportarXml.Name = "btn_exportarXml";
-            this.btn_exportarXml.Size = new System.Drawing.Size(258, 69);
+            this.btn_exportarXml.Size = new System.Drawing.Size(210, 64);
             this.btn_exportarXml.TabIndex = 28;
             this.btn_exportarXml.Text = "Exportar datos por grupos (xml)";
             this.btn_exportarXml.UseVisualStyleBackColor = true;
@@ -143,9 +145,9 @@ namespace FrmAnalisisDeDatos
             this.btn_compararTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_compararTodos.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_compararTodos.ForeColor = System.Drawing.Color.Coral;
-            this.btn_compararTodos.Location = new System.Drawing.Point(57, 402);
+            this.btn_compararTodos.Location = new System.Drawing.Point(57, 328);
             this.btn_compararTodos.Name = "btn_compararTodos";
-            this.btn_compararTodos.Size = new System.Drawing.Size(258, 69);
+            this.btn_compararTodos.Size = new System.Drawing.Size(210, 69);
             this.btn_compararTodos.TabIndex = 29;
             this.btn_compararTodos.Text = "Comparar todos";
             this.btn_compararTodos.UseVisualStyleBackColor = true;
@@ -159,20 +161,54 @@ namespace FrmAnalisisDeDatos
             this.btn_borrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_borrar.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_borrar.ForeColor = System.Drawing.Color.Coral;
-            this.btn_borrar.Location = new System.Drawing.Point(371, 402);
+            this.btn_borrar.Location = new System.Drawing.Point(347, 54);
             this.btn_borrar.Name = "btn_borrar";
-            this.btn_borrar.Size = new System.Drawing.Size(258, 69);
+            this.btn_borrar.Size = new System.Drawing.Size(210, 45);
             this.btn_borrar.TabIndex = 30;
-            this.btn_borrar.Text = "Borrar comprador";
+            this.btn_borrar.Text = "Borrar datos";
             this.btn_borrar.UseVisualStyleBackColor = true;
             this.btn_borrar.Click += new System.EventHandler(this.btn_borrar_Click);
+            // 
+            // btn_seguirdb
+            // 
+            this.btn_seguirdb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_seguirdb.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btn_seguirdb.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_seguirdb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_seguirdb.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_seguirdb.ForeColor = System.Drawing.Color.Red;
+            this.btn_seguirdb.Location = new System.Drawing.Point(57, 441);
+            this.btn_seguirdb.Name = "btn_seguirdb";
+            this.btn_seguirdb.Size = new System.Drawing.Size(210, 64);
+            this.btn_seguirdb.TabIndex = 31;
+            this.btn_seguirdb.Text = "Seguir actualizacion db";
+            this.btn_seguirdb.UseVisualStyleBackColor = true;
+            this.btn_seguirdb.Click += new System.EventHandler(this.btn_seguirdb_Click);
+            // 
+            // btn_parardb
+            // 
+            this.btn_parardb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_parardb.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btn_parardb.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_parardb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_parardb.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_parardb.ForeColor = System.Drawing.Color.Red;
+            this.btn_parardb.Location = new System.Drawing.Point(347, 441);
+            this.btn_parardb.Name = "btn_parardb";
+            this.btn_parardb.Size = new System.Drawing.Size(210, 64);
+            this.btn_parardb.TabIndex = 32;
+            this.btn_parardb.Text = "Parar actualizacion db";
+            this.btn_parardb.UseVisualStyleBackColor = true;
+            this.btn_parardb.Click += new System.EventHandler(this.btn_parardb_Click);
             // 
             // FrmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(728, 496);
+            this.ClientSize = new System.Drawing.Size(728, 517);
+            this.Controls.Add(this.btn_parardb);
+            this.Controls.Add(this.btn_seguirdb);
             this.Controls.Add(this.btn_borrar);
             this.Controls.Add(this.btn_compararTodos);
             this.Controls.Add(this.btn_exportarXml);
@@ -184,6 +220,7 @@ namespace FrmAnalisisDeDatos
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmInicio";
             this.Text = "Inicio";
+            this.Load += new System.EventHandler(this.FrmInicio_Load);
             this.ResumeLayout(false);
 
         }
@@ -198,6 +235,8 @@ namespace FrmAnalisisDeDatos
         public System.Windows.Forms.Button btn_exportarXml;
         public System.Windows.Forms.Button btn_compararTodos;
         public System.Windows.Forms.Button btn_borrar;
+        public System.Windows.Forms.Button btn_seguirdb;
+        public System.Windows.Forms.Button btn_parardb;
     }
 }
 

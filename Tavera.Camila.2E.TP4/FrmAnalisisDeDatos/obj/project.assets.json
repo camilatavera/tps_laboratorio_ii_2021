@@ -513,11 +513,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\tps_laboratorio_ii\\tps_laboratorio_ii\\Tavera.Camila.2E.TPFinal\\FrmAnalisisDeDatos\\FrmAnalisisDeDatos.csproj",
+      "projectUniqueName": "C:\\tps_laboratorio_ii\\tps_laboratorio_ii\\Tavera.Camila.2E.TP4\\FrmAnalisisDeDatos\\FrmAnalisisDeDatos.csproj",
       "projectName": "FrmAnalisisDeDatos",
-      "projectPath": "C:\\tps_laboratorio_ii\\tps_laboratorio_ii\\Tavera.Camila.2E.TPFinal\\FrmAnalisisDeDatos\\FrmAnalisisDeDatos.csproj",
+      "projectPath": "C:\\tps_laboratorio_ii\\tps_laboratorio_ii\\Tavera.Camila.2E.TP4\\FrmAnalisisDeDatos\\FrmAnalisisDeDatos.csproj",
       "packagesPath": "C:\\Users\\caami\\.nuget\\packages\\",
-      "outputPath": "C:\\tps_laboratorio_ii\\tps_laboratorio_ii\\Tavera.Camila.2E.TPFinal\\FrmAnalisisDeDatos\\obj\\",
+      "outputPath": "C:\\tps_laboratorio_ii\\tps_laboratorio_ii\\Tavera.Camila.2E.TP4\\FrmAnalisisDeDatos\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\caami\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -534,14 +534,14 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
-            "C:\\tps_laboratorio_ii\\tps_laboratorio_ii\\Tavera.Camila.2E.TPFinal\\Bibloteca\\Bibloteca.csproj": {
-              "projectPath": "C:\\tps_laboratorio_ii\\tps_laboratorio_ii\\Tavera.Camila.2E.TPFinal\\Bibloteca\\Bibloteca.csproj"
+            "C:\\tps_laboratorio_ii\\tps_laboratorio_ii\\Tavera.Camila.2E.TP4\\Bibloteca\\Bibloteca.csproj": {
+              "projectPath": "C:\\tps_laboratorio_ii\\tps_laboratorio_ii\\Tavera.Camila.2E.TP4\\Bibloteca\\Bibloteca.csproj"
             },
-            "C:\\tps_laboratorio_ii\\tps_laboratorio_ii\\Tavera.Camila.2E.TPFinal\\ManejoArchivos\\ManejoArchivos.csproj": {
-              "projectPath": "C:\\tps_laboratorio_ii\\tps_laboratorio_ii\\Tavera.Camila.2E.TPFinal\\ManejoArchivos\\ManejoArchivos.csproj"
+            "C:\\tps_laboratorio_ii\\tps_laboratorio_ii\\Tavera.Camila.2E.TP4\\ManejoArchivos\\ManejoArchivos.csproj": {
+              "projectPath": "C:\\tps_laboratorio_ii\\tps_laboratorio_ii\\Tavera.Camila.2E.TP4\\ManejoArchivos\\ManejoArchivos.csproj"
             },
-            "C:\\tps_laboratorio_ii\\tps_laboratorio_ii\\Tavera.Camila.2E.TPFinal\\ManejoDB\\ManejoDB.csproj": {
-              "projectPath": "C:\\tps_laboratorio_ii\\tps_laboratorio_ii\\Tavera.Camila.2E.TPFinal\\ManejoDB\\ManejoDB.csproj"
+            "C:\\tps_laboratorio_ii\\tps_laboratorio_ii\\Tavera.Camila.2E.TP4\\ManejoDB\\ManejoDB.csproj": {
+              "projectPath": "C:\\tps_laboratorio_ii\\tps_laboratorio_ii\\Tavera.Camila.2E.TP4\\ManejoDB\\ManejoDB.csproj"
             }
           }
         }

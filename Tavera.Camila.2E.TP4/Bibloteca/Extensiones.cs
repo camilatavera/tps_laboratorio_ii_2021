@@ -47,6 +47,12 @@ namespace Bibloteca
         }
 
 
+
+        /// <summary>
+        /// Devuelve el valor que tiene la primary key de Eturno en la base de datos
+        /// </summary>
+        /// <param name="valor"></param>
+        /// <returns>int</returns>
         public static int fkTurno(this ETurno valor)
         {
             if (valor == ETurno.maniana)
@@ -82,6 +88,13 @@ namespace Bibloteca
             }
         }
 
+
+
+        /// <summary>
+        ///Devuelve el valor que tiene la primary key de Esexo en la base de datos
+        /// </summary>
+        /// <param name="valor"></param>
+        /// <returns></returns>
         public static string fkSexo(this Esexo valor)
         {
             if (valor == Esexo.f)

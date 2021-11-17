@@ -22,17 +22,22 @@ namespace Bibloteca
             ser = new Serializador<List<Persona>>(EtipoArchivoS.XML);
         }
 
-        public Task inicioTask(CancellationToken token)
+
+
+        public Task inicioTask(string archivo)
         {
-            Task tarea = Task.Run(() => traerXMLiniciales(token));
+            Task tarea = Task.Run(() => traerXMLiniciales(archivo));
             return tarea;
         }
+        
 
-        public void traerXMLiniciales(CancellationToken token)
+
+       /// <summary>
+       /// Serializa el archivo pasado por parametro e invoca el evento
+       /// </summary>
+       /// <param name="archivo"></param>
+        public void traerXMLiniciales(string archivo)
         {
-
-            if (token.IsCancellationRequested)
-                return;
 
             List<Persona> listNueva = new List<Persona>();
 
@@ -40,10 +45,10 @@ namespace Bibloteca
             if (eventoAviso is not null)
             {
                 eventoAviso.Invoke($"{DateTime.Now.ToString("dd / MM / yyyy HH: mm:ss")}: Iniciando serializacion de datos");
-                string arch = AppDomain.CurrentDomain.BaseDirectory + "CompradoresIniciales.xml";
+                //string arch = AppDomain.CurrentDomain.BaseDirectory + "CompradoresIniciales.xml";
                 try
                 {
-                    this.listNueva=ser.Leer(arch);
+                    this.listNueva=ser.Leer(archivo);
                     BarColegio.Compradores.AddRange(this.listNueva);
                 }
                 catch(Exception ex)

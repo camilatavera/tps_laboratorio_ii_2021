@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nawmw26z+b0+h99XA5HoQ18pcMaINiaJMW4ja7t2vctJmEt3G21zopSjVb/ph5SGZVHXf1AJBpkbrUpLfkI2oQ==",
+  "dgSpecHash": "9ngIVfDDiPnBsSDYMsS1dtpSE+eB/JwSNYmDLlQzZxgr2c32XiyKW04yYstihsM23Nz9rzRvFIw6zERwlDNGwA==",
   "success": true,
-  "projectFilePath": "C:\\tps_laboratorio_ii\\tps_laboratorio_ii\\Tavera.Camila.2E.TPFinal\\FrmAnalisisDeDatos\\FrmAnalisisDeDatos.csproj",
+  "projectFilePath": "C:\\tps_laboratorio_ii\\tps_laboratorio_ii\\Tavera.Camila.2E.TP4\\FrmAnalisisDeDatos\\FrmAnalisisDeDatos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\caami\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\caami\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

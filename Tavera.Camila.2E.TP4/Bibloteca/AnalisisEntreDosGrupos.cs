@@ -9,9 +9,8 @@ namespace Bibloteca
     public delegate void PasarInforme(string informe);
     public delegate void GenerarComparaciones(string informe);
     //IMPLEMENTA TIPOS GENERICOS
-    public class AnalisisEntreDosGrupos<T,U> : IAnalisis 
-                                             where T:Persona
-                                             where U:Persona 
+    public class AnalisisEntreDosGrupos<T,U>  where T:Persona
+                                               where U:Persona 
     {
         public event GenerarComparaciones EventoComparar;
 
@@ -70,7 +69,7 @@ namespace Bibloteca
         }
 
 
-
+       
         public string masProductosComprados()
         {
             int totalProductosG1 = 0;
@@ -113,14 +112,22 @@ namespace Bibloteca
 
         }
 
-
-        public string QuienMasCompras()
+        /// <summary>
+        /// Calcula que lista tiene mayor porcentaje de compras realizadas y le asigna a las
+        /// variables pasadas como parametro los valores de los porcentajes analizados
+        /// </summary>
+        /// <param name="n1"></param>
+        /// <param name="n2"></param>
+        /// <returns>string: nombre del type del objeto</returns>
+        public string QuienMasCompras(out float n1, out float n2)
         {
             int cantCompras1 = 0;
             int cantCompras2 = 0;
             float porcentajeG1;
             float porcentajeG2;
             string res=null;
+            n1 = 0;
+            n2 = 0;
 
             foreach (T item in Grupo1)
             {
@@ -139,6 +146,8 @@ namespace Bibloteca
                 porcentajeG2 = (float)cantCompras2 / Grupo2.Count;
 
                 res = PorcentajeMayor(porcentajeG1, porcentajeG2);
+                n1 = porcentajeG1;
+                n2=porcentajeG2;
                 return res;
                 
             }
@@ -170,7 +179,7 @@ namespace Bibloteca
             }
             else if (p2 > p1)
             {
-                return tipoG1.Name;
+                return tipoG2.Name;
             }
             else
                 return retNull;
@@ -185,8 +194,14 @@ namespace Bibloteca
 
 
 
-
-        public string QuienGastaMas()
+        /// <summary>
+        /// Calcula que lista tiene mayor porcentaje de plata gastada y le asigna a las
+        /// variables pasadas como parametro los valores de los porcentajes analizados
+        /// </summary>
+        /// <param name="n1"></param>
+        /// <param name="n2"></param>
+        /// <returns>string: nombre del type del objeto</returns>
+        public string QuienGastaMas(out float n1, out float n2)
         {
             int gastos1 = 0;
             int gastos2 = 0;
@@ -210,6 +225,8 @@ namespace Bibloteca
             {
                 porcentajeG1 = (float)gastos1 / Grupo1.Count;
                 porcentajeG2 = (float)gastos2 / Grupo2.Count;
+                n1 = porcentajeG1;
+                n2 = porcentajeG2;
 
                 res = PorcentajeMayor(porcentajeG1, porcentajeG2);
                 return res;
@@ -227,8 +244,14 @@ namespace Bibloteca
         }
 
 
-      
-        public string masProductosPorCompra()
+        /// <summary>
+        /// Calcula que lista tiene mayor porcentaje de productos comprados por compra y le asigna a las
+        /// variables pasadas como parametro los valores de los porcentajes analizados
+        /// </summary>
+        /// <param name="n1"></param>
+        /// <param name="n2"></param>
+        /// <returns>string: nombre del type del objeto</returns>
+        public string masProductosPorCompra(out float n1, out float n2)
         {
             int cantComprasG1 = 0;
             int cantProductosG1 = 0;
@@ -237,6 +260,8 @@ namespace Bibloteca
             int cantComprasG2 = 0;
             int cantProductosG2 = 0;
             float porcentajeG2;
+            n1 = 0;
+            n2 = 0;
 
             string res=null;
 
@@ -258,6 +283,9 @@ namespace Bibloteca
                 porcentajeG2 = (float)cantProductosG2 / cantComprasG2;
 
                 res = PorcentajeMayor(porcentajeG1, porcentajeG2);
+
+                n1 = porcentajeG1;
+                n2 = porcentajeG2;
 
             }
             catch (DivideByZeroException )
@@ -286,6 +314,7 @@ namespace Bibloteca
             float porcentajeG1;
             float porcentajeG2;
             List<ISueldo> g1 = new List<ISueldo>();
+
 
             try
             {
@@ -338,15 +367,19 @@ namespace Bibloteca
 
         }
 
-
+        /// <summary>
+        /// Crea una cadena con todo el analisis de los dos grupos
+        /// </summary>
+        /// <returns>string</returns>
         public string generarAnalisis()
         {
 
-  
+            float n1;
+            float n2;
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine();
-            sb.AppendLine($"Comparacion entre {tipoG1.Name} ({Grupo1.Count}) y {tipoG2.Name} ({Grupo2.Count})");
+            sb.AppendLine($"Comparacion entre GRUPO1: {tipoG1.Name} ({Grupo1.Count}) y GRUPO2: {tipoG2.Name} ({Grupo2.Count})");
 
             if (Grupo1.Count == 0 && Grupo2.Count==0)
             {
@@ -377,12 +410,14 @@ namespace Bibloteca
                 {
                     sb.Append(e.Message);
                 }
-                
-                
+
+
                 
                 try
                 {
-                    sb.AppendLine($"\nGrupo que tiene mas compras: {QuienMasCompras()}");
+                    sb.AppendLine($"\nGrupo que tiene mas compras: {QuienMasCompras(out n1, out n2)}");
+                    sb.AppendLine($"GRUPO1: {n1} compras por integrante");
+                    sb.AppendLine($"GRUPO2: {n2} compras por integrante");
                 }
                 catch (Exception e)
                 {
@@ -392,7 +427,9 @@ namespace Bibloteca
                 try
                 {
                    
-                    sb.AppendLine($"\nGrupo que mas gasta plata: {QuienGastaMas()}");
+                    sb.AppendLine($"\nGrupo que mas gasta plata: {QuienGastaMas(out n1, out n2)}");
+                    sb.AppendLine($"GRUPO1: {n1} pesos gastados por integrante");
+                    sb.AppendLine($"GRUPO2: {n2} pesos gastados por integrante");
                 }
                 catch (Exception e)
                 {
@@ -403,8 +440,9 @@ namespace Bibloteca
                 try
                 {
                    
-                    sb.AppendLine($"\nGrupo que se lleva mas productos por compra: {masProductosPorCompra()}");
-
+                    sb.AppendLine($"\nGrupo que se lleva mas productos por compra: {masProductosPorCompra(out n1, out n2)}");
+                    sb.AppendLine($"GRUPO1: {n1} productos por compra");
+                    sb.AppendLine($"GRUPO2: {n2} productos por compra");
                 }
                 catch (Exception e) 
                 {
@@ -418,14 +456,18 @@ namespace Bibloteca
             
         }
 
+        /// <summary>
+        /// Corre un nuevo hilo.
+        /// </summary>
         public void generarTask()
         {
             Task.Run(generarComparacionTask);
-            //Task tarea=new Task(generarComparacionTask);
-            //tarea.Start();
-            
+  
         }
 
+        /// <summary>
+        /// Verifica que el eventoComparar no sea nulo y lo invoca
+        /// </summary>
         public void generarComparacionTask()
         {
             string informe = InformeTask();
@@ -436,6 +478,11 @@ namespace Bibloteca
             }
         }
 
+
+        /// <summary>
+        /// Genera analisis con la hora del momento
+        /// </summary>
+        /// <returns>string</returns>
         public string InformeTask()
         {
             StringBuilder sb = new StringBuilder();

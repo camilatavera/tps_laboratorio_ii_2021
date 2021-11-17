@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bibloteca
 {
-    public class AnalisisDeDatosGeneral:IAnalisis
+    public class AnalisisDeDatosGeneral
     {
         List<Persona> listAComparar;
         List<Ordenanza> listOrdenanza;
@@ -189,7 +189,7 @@ namespace Bibloteca
                 return typeof(Ordenanza).Name;
             }
             else if (pProfesor > pOrdenanza && pProfesor > pEstudiante)
-            {
+            {            
                 return typeof(Profesor).Name;
             }
             else if (pEstudiante > pOrdenanza && pEstudiante > pProfesor)
@@ -206,8 +206,15 @@ namespace Bibloteca
 
 
 
-        
-        public string masProductosComprados()
+        /// <summary>
+        /// Calcula que lista tiene mayor porcentaje de productos comprados y le asigna a las
+        /// variables pasadas como parametro los valores de los porcentajes analizados
+        /// </summary>
+        /// <param name="pOrdenanza"></param>
+        /// <param name="pProfesor"></param>
+        /// <param name="pEstudiante"></param>
+        /// <returns>string: nombre del type del objeto</returns>
+        public string masProductosComprados(out float pOrdenanza, out float pProfesor, out float pEstudiante)
         {
             int totalProductosOrdenanza = cantidadProductos(listOrdenanza);
             int totalProductosProfesor = cantidadProductos(listProfesor);
@@ -217,16 +224,17 @@ namespace Bibloteca
             int contProfesor = listProfesor.Count;
             int contEstudiante = listEstudiante.Count;
 
-            float porcentajeOrdenanza;
-            float porcentajeProfesor;
-            float porcentajeEstudiante;
+            pOrdenanza = 0;
+            pProfesor = 0;
+            pEstudiante = 0;
+            
             try
             {
-                porcentajeOrdenanza = (float)totalProductosOrdenanza / contOrdenanza;
-                porcentajeProfesor = (float)totalProductosProfesor / contProfesor;
-                porcentajeEstudiante = (float)totalProductosEstudiante / contEstudiante;
+                pOrdenanza = (float)totalProductosOrdenanza / contOrdenanza;
+                pProfesor = (float)totalProductosProfesor / contProfesor;
+                pEstudiante = (float)totalProductosEstudiante / contEstudiante;
 
-                return mayorPorcentaje(porcentajeOrdenanza, porcentajeProfesor, porcentajeEstudiante);
+                return mayorPorcentaje(pOrdenanza, pProfesor, pEstudiante);
             }
             catch (DivideByZeroException)
             {
@@ -240,7 +248,16 @@ namespace Bibloteca
    
         }
 
-        public string QuienMasCompras()
+
+        /// <summary>
+        /// Calcula que lista tiene mayor porcentaje de compras realizadas y le asigna a las
+        /// variables pasadas como parametro los valores de los porcentajes analizados
+        /// </summary>
+        /// <param name="pOrdenanza"></param>
+        /// <param name="pProfesor"></param>
+        /// <param name="pEstudiante"></param>
+        /// <returns>string: nombre del type del objeto</returns>
+        public string QuienMasCompras(out float pOrdenanza, out float pProfesor, out float pEstudiante)
         {
             int totalComprasOrdenanza = cantidadCompras(listOrdenanza);
             int totalComprasProfesor = cantidadCompras(listProfesor);
@@ -250,19 +267,20 @@ namespace Bibloteca
             int contProfesor = listProfesor.Count;
             int contEstudiante = listEstudiante.Count;
 
-            float porcentajeOrdenanza;
-            float porcentajeProfesor;
-            float porcentajeEstudiante;
+
+            pOrdenanza = 0;
+            pProfesor = 0;
+            pEstudiante = 0;
 
 
 
             try
             {
-                porcentajeOrdenanza = (float)totalComprasOrdenanza / contOrdenanza;
-                porcentajeProfesor = (float)totalComprasProfesor / contProfesor;
-                porcentajeEstudiante = (float)totalComprasEstudiante / contEstudiante;
+                pOrdenanza = (float)totalComprasOrdenanza / contOrdenanza;
+                pProfesor = (float)totalComprasProfesor / contProfesor;
+                pEstudiante = (float)totalComprasEstudiante / contEstudiante;
 
-                return mayorPorcentaje(porcentajeOrdenanza, porcentajeProfesor, porcentajeEstudiante);
+                return mayorPorcentaje(pOrdenanza, pProfesor, pEstudiante);
             }
             catch (DivideByZeroException)
             {
@@ -279,8 +297,15 @@ namespace Bibloteca
         }
 
 
-
-        public string QuienGastaMas()
+        /// <summary>
+        /// Calcula que lista tiene mayor porcentaje de plata gastada y le asigna a las
+        /// variables pasadas como parametro los valores de los porcentajes analizados
+        /// </summary>
+        /// <param name="pOrdenanza"></param>
+        /// <param name="pProfesor"></param>
+        /// <param name="pEstudiante"></param>
+        /// <returns>string: nombre del type del objeto</returns>
+        public string QuienGastaMas(out float pOrdenanza, out float pProfesor, out float pEstudiante)
         {
             int totalPlataOrdenanza = plataGastada(listOrdenanza);
             int totalPlataProfesor = plataGastada(listProfesor);
@@ -290,19 +315,19 @@ namespace Bibloteca
             int contProfesor = listProfesor.Count;
             int contEstudiante = listEstudiante.Count;
 
-            float porcentajeOrdenanza;
-            float porcentajeProfesor;
-            float porcentajeEstudiante;
+            pOrdenanza = 0;
+            pProfesor = 0;
+            pEstudiante = 0;
 
 
 
             try
             {
-                porcentajeOrdenanza = (float)totalPlataOrdenanza / contOrdenanza;
-                porcentajeProfesor = (float)totalPlataProfesor / contProfesor;
-                porcentajeEstudiante = (float)totalPlataEstudiante / contEstudiante;
+                pOrdenanza = (float)totalPlataOrdenanza / contOrdenanza;
+                pProfesor = (float)totalPlataProfesor / contProfesor;
+                pEstudiante = (float)totalPlataEstudiante / contEstudiante;
 
-                return mayorPorcentaje(porcentajeOrdenanza, porcentajeProfesor, porcentajeEstudiante);
+                return mayorPorcentaje(pOrdenanza, pProfesor, pEstudiante);
             }
             catch (DivideByZeroException)
             {
@@ -317,8 +342,15 @@ namespace Bibloteca
         }
 
 
-
-        public string masProductosPorCompra()
+        /// <summary>
+        /// Calcula que lista tiene mayor porcentaje de productos comprados por compra y le asigna a las
+        /// variables pasadas como parametro los valores de los porcentajes analizados
+        /// </summary>
+        /// <param name="pOrdenanza"></param>
+        /// <param name="pProfesor"></param>
+        /// <param name="pEstudiante"></param>
+        /// <returns>string: nombre del type del objeto</returns>
+        public string masProductosPorCompra(out float pOrdenanza, out float pProfesor, out float pEstudiante)
         {
             int totalComprasOrdenanza = cantidadCompras(listOrdenanza);
             int totalComprasProfesor = cantidadCompras(listProfesor);
@@ -328,18 +360,18 @@ namespace Bibloteca
             int totalProductosProfesor = cantidadProductos(listProfesor);
             int totalProductosEstudiante = cantidadProductos(listEstudiante);
 
-            float porcentajeOrdenanza;
-            float porcentajeProfesor;
-            float porcentajeEstudiante;
+            pOrdenanza = 0;
+            pProfesor = 0;
+            pEstudiante = 0;
 
 
             try
             {
-                porcentajeOrdenanza = (float)totalProductosOrdenanza / totalComprasOrdenanza;
-                porcentajeProfesor = (float)totalProductosProfesor / totalComprasProfesor;
-                porcentajeEstudiante = (float)totalProductosEstudiante / totalComprasEstudiante;
+                pOrdenanza = (float)totalProductosOrdenanza / totalComprasOrdenanza;
+                pProfesor = (float)totalProductosProfesor / totalComprasProfesor;
+                pEstudiante = (float)totalProductosEstudiante / totalComprasEstudiante;
 
-                return mayorPorcentaje(porcentajeOrdenanza, porcentajeProfesor, porcentajeEstudiante);
+                return mayorPorcentaje(pOrdenanza, pProfesor, pEstudiante);
             }
             catch (DivideByZeroException)
             {
@@ -352,19 +384,17 @@ namespace Bibloteca
 
         }
 
-        //__________________COMPARACION ENTRE PERSONA GENERAL...._________________________________
 
-
-        //QUE SEXO GASTA MAS EN RELACION A LA CANTIDAD DE INTEGRANTE POR SEXO
 
 
 
         /// <summary>
         /// Implementa metodo de EXTENSION
-        /// Calcula que sexo de la lista total de compradores tiene mayor porcentaje de plata gastada
+        /// Calcula que sexo de la lista total de compradores tiene mayor porcentaje de plata gastada y le asigna a las
+        /// variables pasadas como parametro los valores de los porcentajes analizados
         /// </summary>
         /// <returns>string:femenino o masculino</returns>
-        public string SexoMasPlataGastada()
+        public string SexoMasPlataGastada(out float pFemenino, out float pMasculino)
         {
             int cantF = 0;
             int cantM = 0;
@@ -372,8 +402,7 @@ namespace Bibloteca
             int gastosF = 0;
             int gastosM = 0;
 
-            float porcentajeF=0;
-            float porcentajeM=0;
+           
 
             foreach (Persona persona in ListAComparar)
             {
@@ -391,14 +420,14 @@ namespace Bibloteca
 
             try
             {
-                porcentajeF = (float)gastosF / cantF;
-                porcentajeM = (float)gastosM / cantM;
+                pFemenino = (float)gastosF / cantF;
+                pMasculino = (float)gastosM / cantM;
 
-                if (porcentajeF > porcentajeM)
+                if (pFemenino > pMasculino)
                 {
                     return Esexo.f.Traducir();
                 }
-                else if (porcentajeF < porcentajeM)
+                else if (pFemenino < pMasculino)
                 {
                     return Esexo.m.Traducir();
                 }
@@ -418,17 +447,20 @@ namespace Bibloteca
 
         /// <summary>
         /// Implementa metodo de EXTENSION
-        /// Calcula que turno de ordenanza tiene mayor porcentaje de plata gastada
+        /// Calcula que turno de ordenanza tiene mayor porcentaje de plata gastada y le asigna a las
+        /// variables pasadas como parametro los valores de los porcentajes analizados
         /// </summary>
         /// <returns>string: nombre del type del objeto</returns>
-        public string turnoOrdenanzaMasGastador()
+        public string turnoOrdenanzaMasGastador(out float porcentajeM, out float porcentajeN)
         {
             int gastosM = 0;
             int gastosN=0;
             int contM = 0;
             int contN = 0;
-            float porcentajeM;
-            float porcentajeN;
+
+            porcentajeM = 0;
+            porcentajeN = 0;
+            
             foreach(Ordenanza ordenanza in listOrdenanza)
             {
                 if (ordenanza.Turno == ETurno.maniana)
@@ -476,10 +508,11 @@ namespace Bibloteca
 
         /// <summary>
         /// Implementa metodo de EXTENSION
-        /// Analiza si los estudiantes gastan mas plata que los empleados 
+        /// Analiza si los estudiantes gastan mas plata que los empleados y le asigna a las
+        /// variables pasadas como parametro los valores de los porcentajes analizados 
         /// </summary>
         /// <returns>bool</returns>
-        public string EstudiantesGastanMas()
+        public string EstudiantesGastanMas(out float porcentajeEstudiantes, out float porcentajeEmpleados)
         {
             int gastosEstudiantes = plataGastada(listEstudiante);
             int gastosEmpleados = plataGastada(listOrdenanza);
@@ -488,8 +521,8 @@ namespace Bibloteca
             int cantEstudiantes = listEstudiante.Count;
             int cantEmpleados = listOrdenanza.Count + listProfesor.Count;
 
-            float porcentajeEstudiantes = 0;
-            float porcentajeEmpleados = 0;
+             porcentajeEstudiantes = 0;
+             porcentajeEmpleados = 0;
             try
             {
                 porcentajeEstudiantes = gastosEstudiantes / cantEstudiantes;
@@ -512,18 +545,18 @@ namespace Bibloteca
 
         /// <summary>
         /// Implementa metodo de EXTENSION
-        /// Calcula el promedio de horas en el colegio y analiza si la gente con horas mayor al promedio gasta mas plata
+        /// Calcula el promedio de horas en el colegio y analiza si la gente con horas mayor al promedio gasta mas plata y le asigna a las
+        /// variables pasadas como parametro los valores de los porcentajes analizados
         /// </summary>
         /// <returns>bool</returns>
-        public string MasHorasMasPlataGastada()
+        public string MasHorasMasPlataGastada(out float pMasHoras, out float pMenosHoras)
         {
             int horaPromedio = BarColegio.promedioHorasColegio();
             int plataMasHoras=0;
             int plataMenosHoras=0;
             int contMasHoras = 0;
             int contMenosHoras = 0;
-            float porcentajeMasHoras;
-            float porcentajeMenosHoras;
+            
 
             foreach(Persona aux in listAComparar)
             {
@@ -541,10 +574,10 @@ namespace Bibloteca
 
             try
             {
-                porcentajeMasHoras = (float)plataMasHoras / contMasHoras;
-                porcentajeMenosHoras = (float)plataMenosHoras / contMenosHoras;
+                pMasHoras = (float)plataMasHoras / contMasHoras;
+                pMenosHoras = (float)plataMenosHoras / contMenosHoras;
 
-                bool res = porcentajeMasHoras > porcentajeMenosHoras;
+                bool res = pMasHoras > pMenosHoras;
                 return res.Traducir();
 
             }
@@ -562,10 +595,11 @@ namespace Bibloteca
 
         /// <summary>
         /// Implementa metodo de EXTENSION
-        /// Analiza si los estudiantes con promedio menos o igual a cinco realizan mas compras que los otros
+        /// Analiza si los estudiantes con promedio menos o igual a cinco realizan mas compras que los otros y le asigna a las
+        /// variables pasadas como parametro los valores de los porcentajes analizados
         /// </summary>
         /// <returns>bool</returns>
-        public string promedioBajoMasCompras()
+        public string promedioBajoMasCompras(out float porcentajePAlto, out float porcentajePBajo)
         {
             int contPAlto = 0;
             int contPBajo = 0;
@@ -573,8 +607,8 @@ namespace Bibloteca
             int comprasPAlto = 0;
             int comprasPBajo = 0;
 
-            float porcentajePAlto = 0;
-            float porcentajePBajo = 0;
+             porcentajePAlto = 0;
+             porcentajePBajo = 0;
 
             foreach(Estudiante estudiante in BarColegio.getEstudiantes())
             {
@@ -627,13 +661,19 @@ namespace Bibloteca
             sb.AppendLine();
 
             string resString;
+            float pO;
+            float pE;
+            float pP;
 
             
             try
             {
-                resString = masProductosComprados();
-                sb.Append($"\nQue grupo compra mas productos? {resString}");
-                
+                resString = masProductosComprados(out pO, out pP, out pE);
+                sb.Append($"\nQue grupo compra mas productos? {resString} \n");
+                sb.AppendLine($"Promedio Ordenanza: {pO} productos comprados por integrante");
+                sb.AppendLine($"Promedio Profesor: {pP} productos por integrante");
+                sb.AppendLine($"Promedio Estudiante: {pE} productos por integrante");
+
             }
             catch(Exception e)
             {
@@ -642,9 +682,12 @@ namespace Bibloteca
 
             try
             {
-                resString = QuienMasCompras();
-                sb.Append($"\nQue grupo realiza mas compras? {resString}");
-                
+                resString = QuienMasCompras(out pO, out pP, out pE);
+                sb.Append($"\nQue grupo realiza mas compras? {resString} \n");
+                sb.AppendLine($"Promedio Ordenanza: {pO} compras por integrante");
+                sb.AppendLine($"Promedio Profesor: {pP} compras por integrante");
+                sb.AppendLine($"Promedio Estudiante: {pE} compras por integrante");
+
             }
             catch (Exception e)
             {
@@ -653,8 +696,11 @@ namespace Bibloteca
 
             try
             {
-                resString = QuienGastaMas();
-                sb.Append($"\nQue grupo gasta mas plata? {resString}");         
+                resString = QuienGastaMas(out pO, out pP, out pE);
+                sb.Append($"\nQue grupo gasta mas plata? {resString} \n");
+                sb.AppendLine($"Promedio Ordenanza: {pO} pesos gastados por integrante");
+                sb.AppendLine($"Promedio Profesor: {pP} pesos gastados por integrante");
+                sb.AppendLine($"Promedio Estudiante: {pE} pesos gastados por integrante");
             }
             catch (Exception e)
             {
@@ -663,18 +709,24 @@ namespace Bibloteca
 
             try
             {
-                resString = masProductosPorCompra();
-                sb.Append($"\nQue grupo se lleva mas productos por compra? {resString}");
+                resString = masProductosPorCompra(out pO, out pP, out pE);
+                sb.Append($"\nQue grupo se lleva mas productos por compra? {resString} \n");
+                sb.AppendLine($"Promedio Ordenanza: {pO} productos por compra");
+                sb.AppendLine($"Promedio Profesor: {pP} productos por compra");
+                sb.AppendLine($"Promedio Estudiante: {pE} productos por compra");
             }
             catch (Exception e) 
             { sb.AppendLine($"\nQue grupo se lleva mas productos por compra? {e.Message}"); } 
 
             try
             {
+                float pM;
+                float pF;
+                resString = SexoMasPlataGastada(out pF, out pM );
+                sb.Append($"\nQue sexo gasta mas plata? {resString} \n");
+                sb.AppendLine($"Promedio sexo femenino: {pF} pesos gastados por mujer");
+                sb.AppendLine($"Promedio sexo masculino: {pM} pesos gastados por varon");
 
-                resString = SexoMasPlataGastada();
-                sb.Append($"\nQue sexo gasta mas plata? {resString}");
-                
             }
             catch (Exception e)
             {
@@ -683,9 +735,13 @@ namespace Bibloteca
 
             try
             {
-                resString = MasHorasMasPlataGastada();
-                sb.Append($"\n Mas horas en el colegio, mas plata gastada? {resString}");
-                
+                float pMashoras;
+                float pMenoshoras;
+                resString = MasHorasMasPlataGastada(out pMashoras, out pMenoshoras);
+                sb.Append($"\n Mas horas en el colegio, mas plata gastada? {resString} \n");
+                sb.AppendLine($"Promedio del grupo con mas horas en el colegio: {pMashoras} horas en el colegio por integrante");
+                sb.AppendLine($"Promedio del grupo con mas menos en el colegio: { pMenoshoras} horas en el colegio por integrante");
+
             }
             catch (Exception e)
             {
@@ -694,7 +750,13 @@ namespace Bibloteca
 
             try
             {
-                sb.AppendLine($"\nQue turno de ordenanza gasta mas plata? {turnoOrdenanzaMasGastador()}");
+
+                float pM;
+                float pN;
+                sb.AppendLine($"\nQue turno de ordenanza gasta mas plata? {turnoOrdenanzaMasGastador(out pM, out pN)} \n");
+                sb.AppendLine($"Promedio del turno maniana: {pM} pesos gastados por integrante ");
+                sb.AppendLine($"Promedio del turno noche: {pN} pesos gastados por integrante");
+
             }
             catch(Exception e)
             {
@@ -705,9 +767,13 @@ namespace Bibloteca
 
             try
             {
-                resString = EstudiantesGastanMas();
-                sb.Append($"\nLos estudiantes gastan mas plata que los empleados? {resString}");
-               
+                float pEstudiantes;
+                float pEmpleados;
+                resString = EstudiantesGastanMas(out pEstudiantes, out pEmpleados);
+                sb.Append($"\nLos estudiantes gastan mas plata que los empleados? {resString} \n");
+                sb.AppendLine($"Promedio de estudiantes: {pEstudiantes} pesos gastados por integrante ");
+                sb.AppendLine($"Promedio de empleados: {pEmpleados} pesos gastados por integrante");
+
             }
             catch (Exception e)
             {
@@ -716,9 +782,12 @@ namespace Bibloteca
 
             try
             {
-                resString = promedioBajoMasCompras();
-                sb.Append($"\nLos estudiantes con promedio mayor a 5 realizan menos compras que el resto de los estudiantes? {resString}");
-
+                float pBajo;
+                float pAlto;
+                resString = promedioBajoMasCompras(out pAlto, out pBajo);
+                sb.Append($"\nLos estudiantes con promedio mayor a 5 realizan menos compras que el resto de los estudiantes? {resString} \n");
+                sb.AppendLine($"Promedio de estudiantes con promedio alto: {pAlto} compras por integrante ");
+                sb.AppendLine($"Promedio de estudiantes con promedio bajo: {pBajo} compras por integrante");
             }
             catch (Exception e)
             {

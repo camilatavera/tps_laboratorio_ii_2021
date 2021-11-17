@@ -7,8 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Bibloteca;
 using ManejoDB;
-//despues borrar el manejo db
+
 
 namespace FrmAnalisisDeDatos
 {
@@ -70,15 +71,7 @@ namespace FrmAnalisisDeDatos
 
         private void btn_compararTodos_Click(object sender, EventArgs e)
         {
-            try
-            {
-                DB.DeleteOrdenanza("Juana", "Hessen");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            
+
             FrmCompararTodos frmCompararTodos = new FrmCompararTodos();
             frmCompararTodos.Show();
         }
@@ -88,6 +81,39 @@ namespace FrmAnalisisDeDatos
             FrmOpciones frmOpciones = new FrmOpciones(EAcciones.borrar);
             frmOpciones.Show();
 
+        }
+
+        private  void FrmInicio_Load(object sender, EventArgs e)
+        {
+            actualizandoCompradores();
+
+        }
+
+
+        /// <summary>
+        /// Pone a correr un hilo asincronico
+        /// </summary>
+        private async void actualizandoCompradores()
+        {
+            btn_seguirdb.Enabled = false;
+            btn_parardb.Enabled = true;
+            await Task.Run(() => DB.actualizando(BarColegio.Cts.Token));
+            MessageBox.Show("Ya no se esta actualizando la base de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);          
+        }
+
+       
+
+        private void btn_parardb_Click(object sender, EventArgs e)
+        {
+            btn_parardb.Enabled = false;
+            btn_seguirdb.Enabled = true;
+            BarColegio.Cts.Cancel();
+        }
+
+        private void btn_seguirdb_Click(object sender, EventArgs e)
+        {
+           
+            actualizandoCompradores();
         }
     }
 }

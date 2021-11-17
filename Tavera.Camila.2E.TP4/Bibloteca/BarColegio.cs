@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ManejoArchivos;
 using System.IO;
+using System.Threading;
 
 namespace Bibloteca
 {
@@ -15,13 +16,30 @@ namespace Bibloteca
         
         static ArchivoTxt at;
         static string archivo;
+        static CancellationTokenSource cts;
 
         static BarColegio()
         {
             compradores = new List<Persona>();
             at = new ArchivoTxt();
             archivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "CompradoresRepetidos.txt");
+            cts = new CancellationTokenSource();
         }
+
+        public static CancellationTokenSource Cts
+        {
+            get
+            {
+                if (cts is null || cts.IsCancellationRequested)
+                {
+                    cts = new CancellationTokenSource();
+                }
+                return cts;
+            }
+        }
+
+
+
 
         public static List<Persona> Compradores
         {
@@ -65,6 +83,13 @@ namespace Bibloteca
             return listOrdenanza;
         }
 
+
+        /// <summary>
+        /// Busca un Ordenanza en la lista estatica de compradores por nombre y apellido
+        /// y en caso de encontrarlos lo borra 
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
         public static void BorrarOrdenanza(string nombre, string apellido)
         {
             Persona persona;
@@ -81,6 +106,13 @@ namespace Bibloteca
  
         }
 
+
+        /// <summary>
+        /// Busca un Profesor en la lista estatica de compradores por nombre y apellido
+        /// y en caso de encontrarlos lo borra 
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
         public static void BorrarProfesor(string nombre, string apellido)
         {
             Persona persona;
@@ -97,6 +129,13 @@ namespace Bibloteca
 
         }
 
+
+        /// <summary>
+        /// Busca un Estudiante en la lista estatica de compradores por nombre y apellido
+        /// y en caso de encontrarlos lo borra 
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
         public static void BorrarEstudiante(string nombre, string apellido)
         {
             Persona persona;
@@ -228,6 +267,37 @@ namespace Bibloteca
         {
             BarColegio.Compradores.Clear();
         }
+
+
+        /// <summary>
+        /// Cuenta la cantidad de objetos de tipo Ordenanza que tiene la lista de compradores
+        /// </summary>
+        /// <returns>int</returns>
+        public static int contarOrdenanzasBar()
+        {
+            return getOrdenanza().Count;
+        }
+
+
+        /// <summary>
+        /// Cuenta la cantidad de objetos de tipo Estudiante que tiene la lista de compradores
+        /// </summary>
+        /// <returns>int</returns>
+        public static int contarEstudiantesBar()
+        {
+            return getEstudiantes().Count;
+        }
+
+
+        /// <summary>
+        /// Cuenta la cantidad de objetos de tipo Profesor que tiene la lista de compradores
+        /// </summary>
+        /// <returns>int</returns>
+        public static int contarProfesoresBar()
+        {
+            return getProfesor().Count;
+        }
+
 
 
 

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9/m0LnAJ3jIqbnDr7oFovCcNl5LGOGyhWIInKeobItdxFcMFDY5fsL2J3mi9RpywvZpsthnPRfCWI+9RNNGF3A==",
+  "dgSpecHash": "4kP55SiVet2NJXpTN6rVZORbHurXz4YHzCwLlA5L/oI7q4SuhH+8SwEM6JxnDdDRL8JU2qmsZfipE2VJgl43GQ==",
   "success": true,
-  "projectFilePath": "C:\\tps_laboratorio_ii\\tps_laboratorio_ii\\Tavera.Camila.2E.TPFinal\\ManejoDB\\ManejoDB.csproj",
+  "projectFilePath": "C:\\tps_laboratorio_ii\\tps_laboratorio_ii\\Tavera.Camila.2E.TP4\\ManejoDB\\ManejoDB.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\caami\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\caami\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

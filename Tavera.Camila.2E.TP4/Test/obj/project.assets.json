@@ -50,11 +50,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\tps_laboratorio_ii\\tps_laboratorio_ii\\Tavera.Camila.2E.TPFinal\\Test\\Test.csproj",
+      "projectUniqueName": "C:\\tps_laboratorio_ii\\tps_laboratorio_ii\\Tavera.Camila.2E.TP4\\Test\\Test.csproj",
       "projectName": "Test",
-      "projectPath": "C:\\tps_laboratorio_ii\\tps_laboratorio_ii\\Tavera.Camila.2E.TPFinal\\Test\\Test.csproj",
+      "projectPath": "C:\\tps_laboratorio_ii\\tps_laboratorio_ii\\Tavera.Camila.2E.TP4\\Test\\Test.csproj",
       "packagesPath": "C:\\Users\\caami\\.nuget\\packages\\",
-      "outputPath": "C:\\tps_laboratorio_ii\\tps_laboratorio_ii\\Tavera.Camila.2E.TPFinal\\Test\\obj\\",
+      "outputPath": "C:\\tps_laboratorio_ii\\tps_laboratorio_ii\\Tavera.Camila.2E.TP4\\Test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\caami\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -71,8 +71,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\tps_laboratorio_ii\\tps_laboratorio_ii\\Tavera.Camila.2E.TPFinal\\Bibloteca\\Bibloteca.csproj": {
-              "projectPath": "C:\\tps_laboratorio_ii\\tps_laboratorio_ii\\Tavera.Camila.2E.TPFinal\\Bibloteca\\Bibloteca.csproj"
+            "C:\\tps_laboratorio_ii\\tps_laboratorio_ii\\Tavera.Camila.2E.TP4\\Bibloteca\\Bibloteca.csproj": {
+              "projectPath": "C:\\tps_laboratorio_ii\\tps_laboratorio_ii\\Tavera.Camila.2E.TP4\\Bibloteca\\Bibloteca.csproj"
             }
           }
         }

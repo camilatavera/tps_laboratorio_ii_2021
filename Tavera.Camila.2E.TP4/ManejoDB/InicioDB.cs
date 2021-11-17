@@ -18,19 +18,25 @@ namespace ManejoDB
         public InicioDB() { }
 
 
-
-        public Task inicioTask(CancellationToken token)
+        /// <summary>
+        /// Pone a correr otro hilo
+        /// </summary>
+        /// <returns>Task</returns>
+        public Task inicioTask()
         {
-            Task tarea = Task.Run(() => traerDatosIniciales(token));
+
+            Task tarea = Task.Run(traerDatosIniciales);
             return tarea;
         }
 
 
-        public void traerDatosIniciales(CancellationToken token)
+
+        /// <summary>
+        /// Invoca los eventos y trae los compradores de la base de datos.
+        /// </summary>
+        public void traerDatosIniciales()
         {
 
-            if (token.IsCancellationRequested)
-                return;
 
             if (eventoFinal is not null && eventoInicio is not null)
             {
@@ -50,6 +56,8 @@ namespace ManejoDB
                 eventoFinal.Invoke($"{DateTime.Now.ToString("dd / MM / yyyy HH: mm:ss")}: Base de datos descargada con exito");
                  
             }
+
+            
         }
 
 

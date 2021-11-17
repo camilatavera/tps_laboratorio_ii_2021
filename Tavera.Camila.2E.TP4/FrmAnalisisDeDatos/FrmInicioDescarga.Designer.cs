@@ -31,8 +31,9 @@ namespace FrmAnalisisDeDatos
         {
             this.lbl_xml = new System.Windows.Forms.Label();
             this.lbl_db = new System.Windows.Forms.Label();
-            this.btn_cancel = new System.Windows.Forms.Button();
-            this.btn_inicio = new System.Windows.Forms.Button();
+            this.btn_db = new System.Windows.Forms.Button();
+            this.btn_xml = new System.Windows.Forms.Button();
+            this.btn_entrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbl_xml
@@ -55,37 +56,53 @@ namespace FrmAnalisisDeDatos
             this.lbl_db.Size = new System.Drawing.Size(0, 25);
             this.lbl_db.TabIndex = 33;
             // 
-            // btn_cancel
+            // btn_db
             // 
-            this.btn_cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_cancel.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btn_cancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cancel.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_cancel.ForeColor = System.Drawing.Color.Coral;
-            this.btn_cancel.Location = new System.Drawing.Point(192, 339);
-            this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(166, 45);
-            this.btn_cancel.TabIndex = 35;
-            this.btn_cancel.Text = "Cancelar";
-            this.btn_cancel.UseVisualStyleBackColor = true;
-            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
+            this.btn_db.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_db.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_db.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_db.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_db.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_db.ForeColor = System.Drawing.Color.Coral;
+            this.btn_db.Location = new System.Drawing.Point(396, 358);
+            this.btn_db.Name = "btn_db";
+            this.btn_db.Size = new System.Drawing.Size(261, 45);
+            this.btn_db.TabIndex = 36;
+            this.btn_db.Text = "Solo base de datos";
+            this.btn_db.UseVisualStyleBackColor = true;
+            this.btn_db.Click += new System.EventHandler(this.btn_inicio_Click);
             // 
-            // btn_inicio
+            // btn_xml
             // 
-            this.btn_inicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_inicio.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btn_inicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_inicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_inicio.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_inicio.ForeColor = System.Drawing.Color.Coral;
-            this.btn_inicio.Location = new System.Drawing.Point(403, 339);
-            this.btn_inicio.Name = "btn_inicio";
-            this.btn_inicio.Size = new System.Drawing.Size(166, 45);
-            this.btn_inicio.TabIndex = 36;
-            this.btn_inicio.Text = "Inicio";
-            this.btn_inicio.UseVisualStyleBackColor = true;
-            this.btn_inicio.Click += new System.EventHandler(this.btn_inicio_Click);
+            this.btn_xml.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_xml.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_xml.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_xml.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_xml.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_xml.ForeColor = System.Drawing.Color.Coral;
+            this.btn_xml.Location = new System.Drawing.Point(92, 358);
+            this.btn_xml.Name = "btn_xml";
+            this.btn_xml.Size = new System.Drawing.Size(261, 45);
+            this.btn_xml.TabIndex = 37;
+            this.btn_xml.Text = "Agregar xml";
+            this.btn_xml.UseVisualStyleBackColor = true;
+            this.btn_xml.Click += new System.EventHandler(this.btn_xml_Click);
+            // 
+            // btn_entrar
+            // 
+            this.btn_entrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_entrar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_entrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_entrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_entrar.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_entrar.ForeColor = System.Drawing.Color.Coral;
+            this.btn_entrar.Location = new System.Drawing.Point(659, 123);
+            this.btn_entrar.Name = "btn_entrar";
+            this.btn_entrar.Size = new System.Drawing.Size(107, 152);
+            this.btn_entrar.TabIndex = 38;
+            this.btn_entrar.Text = "Entrar";
+            this.btn_entrar.UseVisualStyleBackColor = true;
+            this.btn_entrar.Click += new System.EventHandler(this.btn_entrar_Click);
             // 
             // FrmInicioDescarga
             // 
@@ -93,8 +110,9 @@ namespace FrmAnalisisDeDatos
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btn_inicio);
-            this.Controls.Add(this.btn_cancel);
+            this.Controls.Add(this.btn_entrar);
+            this.Controls.Add(this.btn_xml);
+            this.Controls.Add(this.btn_db);
             this.Controls.Add(this.lbl_db);
             this.Controls.Add(this.lbl_xml);
             this.Name = "FrmInicioDescarga";
@@ -110,7 +128,8 @@ namespace FrmAnalisisDeDatos
 
         private System.Windows.Forms.Label lbl_xml;
         private System.Windows.Forms.Label lbl_db;
-        public System.Windows.Forms.Button btn_cancel;
-        public System.Windows.Forms.Button btn_inicio;
+        public System.Windows.Forms.Button btn_db;
+        public System.Windows.Forms.Button btn_xml;
+        public System.Windows.Forms.Button btn_entrar;
     }
 }

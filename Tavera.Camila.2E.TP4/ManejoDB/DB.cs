@@ -1,8 +1,10 @@
 ﻿using Bibloteca;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace ManejoDB
 {
@@ -22,6 +24,8 @@ namespace ManejoDB
             command.Connection = connection;
         }
 
+
+        
         static Esexo traerSexo(string pk)
         {
             if (pk == "f")
@@ -42,6 +46,12 @@ namespace ManejoDB
                 return ETurno.noche;
         }
 
+
+
+        /// <summary>
+        /// Crea los objetos de la tabla ordenanzas
+        /// </summary>
+        /// <returns>List<Ordenanza></returns>
         public static List<Ordenanza> TraerOrdenanza()
         {
             List<Ordenanza> listOrdenanza = new List<Ordenanza>();
@@ -75,8 +85,11 @@ namespace ManejoDB
 
         }
 
-        
 
+        /// <summary>
+        /// Crea los objetos de la tabla profesores
+        /// </summary>
+        /// <returns>List<Profesor></returns>
         public static List<Profesor> TraerProfesores()
         {
             List<Profesor> listProfesor = new List<Profesor>();
@@ -111,7 +124,10 @@ namespace ManejoDB
         }
 
 
-       
+        /// <summary>
+        /// Crea los objetos de la tabla estudiantes
+        /// </summary>
+        /// <returns>List<Estudiante></returns>
         public static List<Estudiante> TraerEstudiantes()
         {
             List<Estudiante> listEstudiantes = new List<Estudiante>();
@@ -146,6 +162,10 @@ namespace ManejoDB
 
         }
 
+
+        /// <summary>
+        /// Crea los objetos de la tabla ordenanzas, estudiantes y profesores
+        /// </summary>
         public static void TraerCompradores()
         {
             TraerEstudiantes();
@@ -156,13 +176,18 @@ namespace ManejoDB
 
 
 
-
+        /// <summary>
+        /// Agrega un objeto del tipo Ordenanza a la tabla ordenanzas
+        /// </summary>
+        /// <param name="ordenanza"></param>
         public static void AgregarOrdenanza(Ordenanza ordenanza)
         {
             try
             {
                 command.Parameters.Clear();
-                connection.Open();
+
+                if(connection.State!= ConnectionState.Open)
+                    connection.Open();
 
 
                 command.CommandText = $"INSERT INTO ordenanzas (NOMBRE,APELLIDO,SEXO,PLATA_GASTADA,CANTIDAD_PRODUCTOS_COMPRADOS,CANTIDAD_COMPRAS,TURNO) " +
@@ -191,6 +216,10 @@ namespace ManejoDB
         }
 
 
+        /// <summary>
+        /// Agrega un objeto del tipo Estudiante a la tabla estudiantes
+        /// </summary>
+        /// <param name="estudiante"></param>
         public static void AgregarEstudiante(Estudiante estudiante)
         {
             try
@@ -226,6 +255,11 @@ namespace ManejoDB
         }
 
 
+
+        /// <summary>
+        /// Agrega un objeto del tipo Profesor a la tabla profesores
+        /// </summary>
+        /// <param name="profesor"></param>
         public static void AgregarProfesor(Profesor profesor)
         {
             try
@@ -260,6 +294,106 @@ namespace ManejoDB
             }
         }
 
+
+
+        /// <summary>
+        /// Cuenta la cantidad de filas que hay en la tabla profesores
+        /// </summary>
+        /// <returns>int </returns>
+        public static int contarProfesor()
+        {
+            int cantidad;
+
+            try
+            {
+                if(connection.State!=ConnectionState.Open)
+                    connection.Open();
+
+                command.CommandText = "SELECT * FROM profesores";
+                cantidad = command.ExecuteNonQuery();
+
+                return cantidad;
+            }
+            catch (Exception ex)
+            {
+
+                throw new ExceptionDB(ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+        }
+
+
+        /// <summary>
+        /// Cuenta la cantidad de filas que hay en la tabla ordenanzas
+        /// </summary>
+        /// <returns>int </returns>
+        public static int contarOrdenanza()
+        {
+            int cantidad;
+
+            try
+            {
+                if (connection.State != ConnectionState.Open)
+                    connection.Open();
+
+                command.CommandText = "SELECT * FROM ordenanzas";
+                cantidad = command.ExecuteNonQuery();
+
+                return cantidad;
+            }
+            catch (Exception ex)
+            {
+
+                throw new ExceptionDB(ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+        }
+
+        /// <summary>
+        /// Cuenta la cantidad de filas que hay en la tabla estudiantes
+        /// </summary>
+        /// <returns>int </returns>
+        public static int contarEstudiantes()
+        {
+            int cantidad;
+
+            try
+            {
+                if (connection.State != ConnectionState.Open)
+                    connection.Open();
+
+                command.CommandText = "SELECT * FROM estudiantes";
+                cantidad = command.ExecuteNonQuery();
+
+                return cantidad;
+            }
+            catch (Exception ex)
+            {
+
+                throw new ExceptionDB(ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+        }
+
+
+
+        /// <summary>
+        /// Busca el objeto por nombre y apellido en la tabla profesores y lo elimina
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
         public static void DeleteProfesor(string nombre, string apellido)
         {
             int filasAfectadas;
@@ -297,7 +431,11 @@ namespace ManejoDB
         }
 
 
-
+        /// <summary>
+        /// Busca el objeto por nombre y apellido en la tabla estudiantes y lo elimina
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
         public static void DeteleEstudiantes(string nombre, string apellido)
         {
             int filasAfectadas;
@@ -335,7 +473,11 @@ namespace ManejoDB
 
         }
 
-
+        /// <summary>
+        /// Busca el objeto por nombre y apellido en la tabla ordenanzas y lo elimina
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
         public static void DeleteOrdenanza(string nombre, string apellido)
         {
             int filasAfectadas=0;
@@ -370,6 +512,39 @@ namespace ManejoDB
             }
 
         }
+
+
+
+        /// <summary>
+        /// Cada 30 segundos se fija que haya igual cantidad de Compradores en la base de datos
+        /// y en la lista estatica que maneja los Compradores. Y en caso de que no coincida la cantidad, 
+        /// la borra, y vuelve a traer los compradores de la base de datos hasta que cancelen el hilo.
+        /// </summary>
+        /// <param name="ct"></param>
+        public static void actualizando(CancellationToken ct)
+        {
+            while (!ct.IsCancellationRequested)
+            {
+                try
+                {
+                    if (contarEstudiantes() != BarColegio.contarEstudiantesBar() || contarOrdenanza()!=BarColegio.contarOrdenanzasBar() ||
+                        contarProfesor()!=BarColegio.contarProfesoresBar())
+                    {
+                        BarColegio.Compradores.Clear();
+                        TraerCompradores();
+                    }
+                    Thread.Sleep(30000);
+                }
+                catch (Exception) 
+                {
+                    return;
+                }            
+            }
+
+           
+        }
+
+
 
 
 

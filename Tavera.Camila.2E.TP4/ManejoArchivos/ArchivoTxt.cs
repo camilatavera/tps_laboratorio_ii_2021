@@ -23,7 +23,7 @@ namespace ManejoArchivos
             }
             catch
             {
-                throw; // ACA TENGO QUE ARROJAR ALGUNA EXCEPCION EN PARTICUAL
+                throw; 
             }
         }
 

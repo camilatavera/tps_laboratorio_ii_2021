@@ -19,6 +19,9 @@ namespace FrmAnalisisDeDatos
         SaveFileDialog saveFileDialog;
         ArchivoTxt archivoTxt;
         string archivo;
+        float aux1;
+        float aux2 ;
+        float aux3;
         
         public FrmAnalisis()
         {
@@ -26,6 +29,9 @@ namespace FrmAnalisisDeDatos
             analisis = new AnalisisDeDatosGeneral(BarColegio.Compradores);
             archivoTxt = new ArchivoTxt();
             saveFileDialog = new SaveFileDialog();
+            aux1 = 0;
+             aux2 = 0;
+             aux3 = 0;
 
         }
 
@@ -41,7 +47,7 @@ namespace FrmAnalisisDeDatos
             
             try
             {
-                txt_1.Text = analisis.masProductosComprados();
+                txt_1.Text = analisis.masProductosComprados(out aux1,out aux2,out aux3);
                 
             }
             catch (Exception ex)
@@ -58,7 +64,7 @@ namespace FrmAnalisisDeDatos
             
             try
             {
-                txt_2.Text = analisis.QuienMasCompras();
+                txt_2.Text = analisis.QuienMasCompras(out aux1, out aux2, out aux3);
 
             }
             catch (Exception ex)
@@ -77,7 +83,7 @@ namespace FrmAnalisisDeDatos
 
             try
             {
-                txt_3.Text = analisis.QuienGastaMas();
+                txt_3.Text = analisis.QuienGastaMas(out aux1, out aux2, out aux3);
 
             }
             catch (Exception ex)
@@ -93,7 +99,7 @@ namespace FrmAnalisisDeDatos
 
             try
             {
-                txt_4.Text = analisis.masProductosPorCompra();
+                txt_4.Text = analisis.masProductosPorCompra(out aux1, out aux2, out aux3);
 
             }
             catch (Exception ex)
@@ -110,7 +116,7 @@ namespace FrmAnalisisDeDatos
 
             try
             {
-                txt_5.Text = analisis.SexoMasPlataGastada();
+                txt_5.Text = analisis.SexoMasPlataGastada(out aux1, out aux2);
 
             }
             catch (Exception ex)
@@ -126,7 +132,7 @@ namespace FrmAnalisisDeDatos
 
             try
             {
-                txt_6.Text = analisis.MasHorasMasPlataGastada();
+                txt_6.Text = analisis.MasHorasMasPlataGastada(out aux1, out aux2);
 
             }
             catch (Exception ex)
@@ -141,8 +147,8 @@ namespace FrmAnalisisDeDatos
         {
             try
             {
-                txt_7.Text = analisis.turnoOrdenanzaMasGastador();
-                
+                txt_7.Text = analisis.turnoOrdenanzaMasGastador(out aux1, out aux2);
+
             }
             catch (Exception ex)
             {
@@ -178,7 +184,7 @@ namespace FrmAnalisisDeDatos
             
             try
             {
-                this.txt_8.Text = analisis.EstudiantesGastanMas();
+                this.txt_8.Text = analisis.EstudiantesGastanMas(out aux1, out aux2);
 
             }
             catch (Exception ex)
@@ -199,7 +205,7 @@ namespace FrmAnalisisDeDatos
             
             try
             {
-                this.txt_9.Text = analisis.promedioBajoMasCompras();
+                this.txt_9.Text = analisis.promedioBajoMasCompras(out aux1, out aux2);
 
             }
             catch (Exception ex)

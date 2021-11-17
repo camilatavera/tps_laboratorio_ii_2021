@@ -12,12 +12,12 @@ using System.Xml.Serialization;
 namespace ManejoArchivos
 {
 
-   // public delegate void ArchivoDelegate(out string path);
+   
 
     public class Serializador<T>: IArchivos<T> where T:class
     {
         private EtipoArchivoS tipo;
-       // public event ArchivoDelegate EventoArchivo;
+       
 
         public Serializador(EtipoArchivoS tipo)
         {
@@ -65,7 +65,7 @@ namespace ManejoArchivos
 
                 }
 
-            }            //PRIMERO HAGO UN CATCH DE LA EXCEPCION DE EXTENISON
+            }            
             catch (ExceptionExtension)
             {
                 throw;
