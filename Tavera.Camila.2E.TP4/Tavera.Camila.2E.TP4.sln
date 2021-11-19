@@ -15,8 +15,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTest", "UnitTest\UnitTe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManejoDB", "ManejoDB\ManejoDB.csproj", "{C7E79A0A-1417-4AD9-ABC6-9745FC53B37E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ser", "ser\ser.csproj", "{FFC9DBFF-824F-46EC-BACE-B6B440336826}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,10 +45,6 @@ Global
 		{C7E79A0A-1417-4AD9-ABC6-9745FC53B37E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7E79A0A-1417-4AD9-ABC6-9745FC53B37E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7E79A0A-1417-4AD9-ABC6-9745FC53B37E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FFC9DBFF-824F-46EC-BACE-B6B440336826}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FFC9DBFF-824F-46EC-BACE-B6B440336826}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FFC9DBFF-824F-46EC-BACE-B6B440336826}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FFC9DBFF-824F-46EC-BACE-B6B440336826}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

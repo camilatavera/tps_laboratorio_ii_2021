@@ -121,7 +121,7 @@ namespace Test
 
 
 
-            Console.WriteLine("______________COMPARAR DOS GRUPOS____(Tenemos en cuenta el estudiante y el ordenanza de arriba)_");
+            Console.WriteLine("______________COMPARAR DOS GRUPOS___________");
           
             AnalisisEntreDosGrupos<Estudiante, Ordenanza> AEstudianteOrdenanza = new AnalisisEntreDosGrupos<Estudiante, Ordenanza>
              (BarColegio.getEstudiantes(), BarColegio.getOrdenanza());

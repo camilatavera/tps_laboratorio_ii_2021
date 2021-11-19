@@ -58,7 +58,8 @@ namespace ManejoDB
 
             try
             {
-                connection.Open();
+                if (connection.State != ConnectionState.Open)
+                    connection.Open();
                 command.CommandText = "SELECT * FROM ordenanzas";
                 SqlDataReader dataReader = command.ExecuteReader();
 
@@ -96,7 +97,8 @@ namespace ManejoDB
 
             try
             {
-                connection.Open();
+                if (connection.State != ConnectionState.Open)
+                    connection.Open();
                 command.CommandText = "SELECT * FROM profesores";
                 SqlDataReader dataReader = command.ExecuteReader();
 
@@ -133,8 +135,9 @@ namespace ManejoDB
             List<Estudiante> listEstudiantes = new List<Estudiante>();
 
             try
-            {              
-                connection.Open();
+            {
+                if (connection.State != ConnectionState.Open)
+                    connection.Open();
 
                 command.CommandText = "SELECT * FROM estudiantes";
                 SqlDataReader dataReader = command.ExecuteReader();
@@ -225,7 +228,8 @@ namespace ManejoDB
             try
             {
                 command.Parameters.Clear();
-                connection.Open();
+                if (connection.State != ConnectionState.Open)
+                    connection.Open();
 
 
                 command.CommandText = $"INSERT INTO estudiantes (NOMBRE,APELLIDO,SEXO,PLATA_GASTADA,CANTIDAD_PRODUCTOS_COMPRADOS,CANTIDAD_COMPRAS,PROMEDIO_GENERAL,ANIO_CURSO) " +
@@ -265,7 +269,9 @@ namespace ManejoDB
             try
             {
                 command.Parameters.Clear();
-                connection.Open();
+
+                if (connection.State != ConnectionState.Open)
+                    connection.Open();
 
 
                 command.CommandText = $"INSERT INTO profesores (NOMBRE,APELLIDO,SEXO,PLATA_GASTADA,CANTIDAD_PRODUCTOS_COMPRADOS,CANTIDAD_COMPRAS,HORAS_CATEDRA) " +
@@ -419,7 +425,9 @@ namespace ManejoDB
             try
             {
                 command.Parameters.Clear();
-                connection.Open();
+
+                if (connection.State != ConnectionState.Open)
+                    connection.Open();
 
 
                 command.CommandText = $"DELETE FROM profesores WHERE NOMBRE=@nombre AND APELLIDO=@apellido";
@@ -462,7 +470,9 @@ namespace ManejoDB
             try
             {
                 command.Parameters.Clear();
-                connection.Open();
+
+                if (connection.State != ConnectionState.Open)
+                    connection.Open();
 
 
                 command.CommandText = $"DELETE FROM estudiantes WHERE NOMBRE=@nombre AND APELLIDO=@apellido";
@@ -503,7 +513,9 @@ namespace ManejoDB
             try
             {
                 command.Parameters.Clear();
-                connection.Open();
+
+                if (connection.State != ConnectionState.Open)
+                    connection.Open();
 
 
                 command.CommandText = $"DELETE FROM ordenanzas WHERE NOMBRE=@nombre AND APELLIDO=@apellido";

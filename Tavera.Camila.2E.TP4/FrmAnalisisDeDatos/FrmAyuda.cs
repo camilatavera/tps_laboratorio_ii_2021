@@ -21,11 +21,11 @@ namespace FrmAnalisisDeDatos
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("Al presionar el boton IMPORTAR AUTOMATICAMENTE: " +
-                " se mostrara por pantalla todos los compradores en el archivo CompradoresIniciales.xml ubicado en el Base Directory de este proyecto (FrmAnalisisDeDatos -> bin -> Debug -> net 5.0-windows )");
+                " se mostrara por pantalla todos los compradores en el archivo compradoresAutoImportar.xml ubicado en el Base Directory de este proyecto (FrmAnalisisDeDatos -> bin -> Debug -> net 5.0-windows )");
             sb.AppendLine("\n");
 
             sb.AppendLine("Al presionar el boton ABRIR ARCHIVO: Puede seleccionar el archivo mencionado anteriormente" + 
-                "CompradoresIniciales.xml y en la misma carpeta hay otro xml llamado compradoresExportar.xml  ");
+                "CompradoresImportarManual.xml y en la misma carpeta hay otro xml llamado compradoresExportar.xml  ");
 
             sb.AppendLine("\n");
 

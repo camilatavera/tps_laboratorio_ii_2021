@@ -52,14 +52,7 @@ namespace UnitTest
             ordenanzaError.validarConException();
         }
 
-        //[TestMethod]
-        //public void Test_ValidarCalcularHoras()
-        //{
-        //    int actual = profesor.HorasEnElColegiPorMes;
-        //    int expected = 30;
-        //    Assert.AreEqual(expected, actual);
-        //}
-
+        
 
     }
 }

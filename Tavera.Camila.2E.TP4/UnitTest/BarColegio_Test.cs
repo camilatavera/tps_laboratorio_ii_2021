@@ -16,18 +16,10 @@ namespace UnitTest
             listCompradores = new List<Persona>();
 
             Profesor p1 = new Profesor("Marcos", "Ludovic", Esexo.m, 1000, 5, 5, 20);
-            //Profesor p2 = new Profesor("Emilia", "Kinga", 50, Esexo.f, 1800, 10, 5, 10);
-
-            //Ordenanza o1 = new Ordenanza("Roberto", "Roman", 60, Esexo.m, 500, 2, 2, ETurno.maniana);
-            //Ordenanza o2 = new Ordenanza("Milagros", "Ren", 50, Esexo.f, 500, 5, 1, ETurno.maniana);
-
             Estudiante e1 = new Estudiante("Nacho", "Salam", Esexo.m, 50, 1, 1, 4, 5);
             Estudiante e2 = new Estudiante("Candela", "Gala", Esexo.f, 10, 1, 1, 8, 4);
 
             listCompradores.Add(p1);
-            //listCompradores.Add(p2);
-            //listCompradores.Add(o1);
-            //listCompradores.Add(o2);
             listCompradores.Add(e1);
             listCompradores.Add(e2);
             BarColegio.Compradores = listCompradores;
