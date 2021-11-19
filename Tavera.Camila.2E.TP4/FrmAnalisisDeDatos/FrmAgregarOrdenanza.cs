@@ -32,10 +32,12 @@ namespace FrmAnalisisDeDatos
                     {
                         nuevaPersona = new Ordenanza(txt_nombre.Text, txt_apellido.Text, (Esexo)cmb_sexo.SelectedItem,
                         (int)nud_plata.Value, (int)nud_pComprados.Value, (int)nud_compras.Value, (ETurno)cmb_turno.SelectedItem);
-                        
-                        BarColegio.Compradores.Add(nuevaPersona);
-                        DB.AgregarOrdenanza(nuevaPersona);
-                        this.Close();
+
+                        if (BarColegio.AgregarComprador(nuevaPersona))
+                        {
+                            DB.AgregarOrdenanza(nuevaPersona);
+                            this.Close();
+                        }
                     }
                     
 
@@ -46,9 +48,9 @@ namespace FrmAnalisisDeDatos
                 }
                 catch (ExcepcionPersona ex)
                 {
-                    MessageBox.Show($"{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"{ex.Message}\nChequee que la base de datos se este actualizando", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show($"Algo salio mal: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 

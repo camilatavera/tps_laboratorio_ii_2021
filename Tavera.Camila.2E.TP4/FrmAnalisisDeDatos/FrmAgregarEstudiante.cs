@@ -32,12 +32,17 @@ namespace FrmAnalisisDeDatos
                 {
                     if(validarCoherencia() && validarRangos())
                     {
-                        nuevaPersona = new Estudiante(txt_nombre.Text, txt_apellido.Text, (Esexo)cmb_sexo.SelectedItem,
-                        (int)nud_plata.Value, (int)nud_pComprados.Value, (int)nud_compras.Value, promedio, anio);
 
-                        BarColegio.AgregarComprador(nuevaPersona);
-                        DB.AgregarEstudiante(nuevaPersona);
-                        this.Close();
+                        nuevaPersona = new Estudiante(txt_nombre.Text, txt_apellido.Text, (Esexo)cmb_sexo.SelectedItem,
+                        (int)nud_plata.Value, (int)nud_pComprados.Value, (int)nud_compras.Value, float.Parse(txt_promedio.Text), (int)nud_anio.Value);
+
+
+
+                        if (BarColegio.AgregarComprador(nuevaPersona))
+                        {
+                            DB.AgregarEstudiante(nuevaPersona);
+                            this.Close();
+                        }
                     }
 
                 }
@@ -47,7 +52,7 @@ namespace FrmAnalisisDeDatos
                 }
                 catch (ExcepcionPersona ex)
                 {
-                    MessageBox.Show($"{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"{ex.Message}\nChequee que la base de datos se este actualizando", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else

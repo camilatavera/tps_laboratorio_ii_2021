@@ -153,10 +153,10 @@ namespace FrmAnalisisDeDatos
 
         private void btn_automatic_Click(object sender, EventArgs e)
         {
-            string arch = AppDomain.CurrentDomain.BaseDirectory + "CompradoresIniciales.xml";
+
+            string arch = AppDomain.CurrentDomain.BaseDirectory + "compradoresAutoImportar.xml";
             limpiarListas();
            
-
             try
             {
                 listPrueba = ser.Leer(arch);

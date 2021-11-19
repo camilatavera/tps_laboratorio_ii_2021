@@ -31,9 +31,12 @@ namespace FrmAnalisisDeDatos
                         nuevaPersona = new Profesor(txt_nombre.Text, txt_apellido.Text, (Esexo)cmb_sexo.SelectedItem,
                         (int)nud_plata.Value, (int)nud_pComprados.Value, (int)nud_compras.Value, horasCatedras);
 
-                        BarColegio.Compradores.Add(nuevaPersona);
-                        DB.AgregarProfesor(nuevaPersona);
-                        this.Close();
+                        if (BarColegio.AgregarComprador(nuevaPersona))
+                        {
+                            DB.AgregarProfesor(nuevaPersona);
+                            this.Close();
+                        }
+
                     }
 
                 }
@@ -43,7 +46,7 @@ namespace FrmAnalisisDeDatos
                 }
                 catch (ExcepcionPersona ex)
                 {
-                    MessageBox.Show($"{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"{ex.Message}\nChequee que la base de datos se este actualizando", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 catch (Exception ex)
                 {

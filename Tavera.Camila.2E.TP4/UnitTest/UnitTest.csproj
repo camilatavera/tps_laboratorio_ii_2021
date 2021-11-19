@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Bibloteca\Bibloteca.csproj" />
+    <ProjectReference Include="..\ManejoDB\ManejoDB.csproj" />
   </ItemGroup>
 
 </Project>

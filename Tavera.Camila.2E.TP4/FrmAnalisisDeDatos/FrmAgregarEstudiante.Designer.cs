@@ -39,6 +39,10 @@ namespace FrmAnalisisDeDatos
             ((System.ComponentModel.ISupportInitialize)(this.nud_anio)).BeginInit();
             this.SuspendLayout();
             // 
+            // lbl_cantCompras
+            // 
+            this.lbl_cantCompras.Location = new System.Drawing.Point(29, 306);
+            // 
             // btn_guardar
             // 
             this.btn_guardar.FlatAppearance.BorderColor = System.Drawing.Color.White;
@@ -53,12 +57,16 @@ namespace FrmAnalisisDeDatos
             this.btn_cancel.Location = new System.Drawing.Point(61, 471);
             this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
+            // nud_compras
+            // 
+            this.nud_compras.Location = new System.Drawing.Point(134, 306);
+            // 
             // cmb_sexo
             // 
             this.cmb_sexo.DataSource = new Bibloteca.Esexo[] {
         Bibloteca.Esexo.f,
         Bibloteca.Esexo.m};
-           
+          
             // 
             // txt_promedio
             // 

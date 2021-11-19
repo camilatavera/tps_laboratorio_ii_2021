@@ -38,7 +38,6 @@ namespace FrmAnalisisDeDatos
             // 
             // btn_guardar
             // 
-            this.btn_guardar.Enabled = true;
             this.btn_guardar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btn_guardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_guardar.Location = new System.Drawing.Point(232, 447);
@@ -57,7 +56,11 @@ namespace FrmAnalisisDeDatos
             // 
             // cmb_sexo
             // 
-            this.cmb_sexo.Location = new System.Drawing.Point(143, 188);
+            this.cmb_sexo.DataSource = new Bibloteca.Esexo[] {
+        Bibloteca.Esexo.f,
+        Bibloteca.Esexo.m};
+           
+            this.cmb_sexo.Location = new System.Drawing.Point(143, 145);
             // 
             // lbl_turno
             // 
@@ -81,7 +84,7 @@ namespace FrmAnalisisDeDatos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 540);
+            this.ClientSize = new System.Drawing.Size(436, 540);
             this.Controls.Add(this.cmb_turno);
             this.Controls.Add(this.lbl_turno);
             this.Name = "FrmAgregarOrdenanza";

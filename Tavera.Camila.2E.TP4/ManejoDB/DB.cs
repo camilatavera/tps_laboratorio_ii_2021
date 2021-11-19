@@ -18,7 +18,7 @@ namespace ManejoDB
 
         static DB()
         {
-            connectionString= @"Data Source=.\SQLEXPRESS;Initial Catalog=TP4; Integrated Security=True";
+            connectionString= @"Data Source=.\SQLEXPRESS;Initial Catalog=TP4_TAVERA_2E; Integrated Security=True";
             command = new SqlCommand();
             connection = new SqlConnection(connectionString);
             command.Connection = connection;
@@ -302,7 +302,7 @@ namespace ManejoDB
         /// <returns>int </returns>
         public static int contarProfesor()
         {
-            int cantidad;
+            int cont=0;
 
             try
             {
@@ -310,9 +310,15 @@ namespace ManejoDB
                     connection.Open();
 
                 command.CommandText = "SELECT * FROM profesores";
-                cantidad = command.ExecuteNonQuery();
+                SqlDataReader dataReader = command.ExecuteReader();
 
-                return cantidad;
+                while (dataReader.Read())
+                {
+                    cont++;
+
+                }
+
+                return cont;
             }
             catch (Exception ex)
             {
@@ -333,7 +339,7 @@ namespace ManejoDB
         /// <returns>int </returns>
         public static int contarOrdenanza()
         {
-            int cantidad;
+            int cont=0;
 
             try
             {
@@ -341,9 +347,15 @@ namespace ManejoDB
                     connection.Open();
 
                 command.CommandText = "SELECT * FROM ordenanzas";
-                cantidad = command.ExecuteNonQuery();
+                SqlDataReader dataReader = command.ExecuteReader();
 
-                return cantidad;
+                while (dataReader.Read())
+                {
+                    cont++;
+
+                }
+
+                return cont;
             }
             catch (Exception ex)
             {
@@ -363,7 +375,7 @@ namespace ManejoDB
         /// <returns>int </returns>
         public static int contarEstudiantes()
         {
-            int cantidad;
+            int cont=0;
 
             try
             {
@@ -371,9 +383,16 @@ namespace ManejoDB
                     connection.Open();
 
                 command.CommandText = "SELECT * FROM estudiantes";
-                cantidad = command.ExecuteNonQuery();
+               
+                SqlDataReader dataReader = command.ExecuteReader();
 
-                return cantidad;
+                while (dataReader.Read())
+                {
+                    cont++;
+
+                }
+
+                return cont;
             }
             catch (Exception ex)
             {
@@ -540,6 +559,8 @@ namespace ManejoDB
                     return;
                 }            
             }
+
+            return;
 
            
         }

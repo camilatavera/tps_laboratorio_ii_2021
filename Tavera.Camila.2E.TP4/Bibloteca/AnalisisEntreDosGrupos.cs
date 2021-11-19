@@ -416,8 +416,8 @@ namespace Bibloteca
                 try
                 {
                     sb.AppendLine($"\nGrupo que tiene mas compras: {QuienMasCompras(out n1, out n2)}");
-                    sb.AppendLine($"GRUPO1: {n1} compras por integrante");
-                    sb.AppendLine($"GRUPO2: {n2} compras por integrante");
+                    sb.AppendLine($"GRUPO1: promedio de {n1} compras por integrante");
+                    sb.AppendLine($"GRUPO2: promedio de {n2} compras por integrante");
                 }
                 catch (Exception e)
                 {
@@ -428,8 +428,8 @@ namespace Bibloteca
                 {
                    
                     sb.AppendLine($"\nGrupo que mas gasta plata: {QuienGastaMas(out n1, out n2)}");
-                    sb.AppendLine($"GRUPO1: {n1} pesos gastados por integrante");
-                    sb.AppendLine($"GRUPO2: {n2} pesos gastados por integrante");
+                    sb.AppendLine($"GRUPO1: promedio de {n1} pesos gastados por integrante");
+                    sb.AppendLine($"GRUPO2: promedio de {n2} pesos gastados por integrante");
                 }
                 catch (Exception e)
                 {
@@ -441,8 +441,8 @@ namespace Bibloteca
                 {
                    
                     sb.AppendLine($"\nGrupo que se lleva mas productos por compra: {masProductosPorCompra(out n1, out n2)}");
-                    sb.AppendLine($"GRUPO1: {n1} productos por compra");
-                    sb.AppendLine($"GRUPO2: {n2} productos por compra");
+                    sb.AppendLine($"GRUPO1: promedio de {n1} productos por compra");
+                    sb.AppendLine($"GRUPO2: promedio de {n2} productos por compra");
                 }
                 catch (Exception e) 
                 {

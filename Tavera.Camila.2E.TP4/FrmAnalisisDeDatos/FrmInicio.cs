@@ -98,7 +98,7 @@ namespace FrmAnalisisDeDatos
             btn_seguirdb.Enabled = false;
             btn_parardb.Enabled = true;
             await Task.Run(() => DB.actualizando(BarColegio.Cts.Token));
-            MessageBox.Show("Ya no se esta actualizando la base de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);          
+            btn_seguirdb.Enabled = true;
         }
 
        
@@ -106,13 +106,12 @@ namespace FrmAnalisisDeDatos
         private void btn_parardb_Click(object sender, EventArgs e)
         {
             btn_parardb.Enabled = false;
-            btn_seguirdb.Enabled = true;
+            btn_seguirdb.Enabled = false;
             BarColegio.Cts.Cancel();
         }
 
         private void btn_seguirdb_Click(object sender, EventArgs e)
-        {
-           
+        {          
             actualizandoCompradores();
         }
     }
