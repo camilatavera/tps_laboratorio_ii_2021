@@ -27,7 +27,9 @@ namespace FrmAnalisisDeDatos
             Persona per;
             StringBuilder sb = new StringBuilder();
             List<Persona> compradores = new List<Persona>();
-            compradores = BarColegio.Compradores;
+            compradores.AddRange(BarColegio.Estudiantes);
+            compradores.AddRange(BarColegio.Ordenanzas);
+            compradores.AddRange(BarColegio.Profesores);
 
             if (tipo == EtipoArchivoS.XML)
             {
@@ -56,18 +58,17 @@ namespace FrmAnalisisDeDatos
         private void btn_guardar_Click(object sender, EventArgs e)
         {
             string path;
-            Serializador<List<Estudiante>> serEstudiante= new Serializador<List<Estudiante>>(EtipoArchivoS.JSON);
-            Serializador<List<Profesor>> serProfesor = new Serializador<List<Profesor>>(EtipoArchivoS.JSON);
-            
+           
+
 
             SaveFileDialog saveFileDialog = new SaveFileDialog();
-            if (BarColegio.Compradores.Count == 0)
+            if (BarColegio.contarCompradores() == 0)
             {
                 MessageBox.Show("No Hay compradores que serializar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
             else if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
+                List<Persona> listCompradores = BarColegio.listaCompradores();
                 path = saveFileDialog.FileName;
                
                 try
@@ -75,12 +76,12 @@ namespace FrmAnalisisDeDatos
                     if (tipo == EtipoArchivoS.JSON)
                     {
                         Serializador<List<Persona>> ser = new Serializador<List<Persona>>(EtipoArchivoS.JSON);
-                        ser.Escribir(path, BarColegio.Compradores, true);
+                        ser.Escribir(path, listCompradores, true);
                     }
                     else
                     {
                         Serializador<List<Persona>> ser = new Serializador<List<Persona>>(EtipoArchivoS.XML);
-                        ser.Escribir(path, BarColegio.Compradores, true);
+                        ser.Escribir(path, listCompradores, true);
 
                     }
                     this.Close();           

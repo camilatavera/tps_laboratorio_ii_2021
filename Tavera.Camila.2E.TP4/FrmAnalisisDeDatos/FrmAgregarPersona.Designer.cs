@@ -145,6 +145,7 @@ namespace FrmAnalisisDeDatos
             // 
             // cmb_sexo
             // 
+            this.cmb_sexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_sexo.FormattingEnabled = true;
             this.cmb_sexo.Location = new System.Drawing.Point(142, 147);
             this.cmb_sexo.Name = "cmb_sexo";
@@ -204,7 +205,7 @@ namespace FrmAnalisisDeDatos
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lbl_nombre);
             this.Name = "FrmAgregarPersona";
-            this.Text = "FrmAgregarPersona";
+            this.Text = "Agregar persona";
             this.Load += new System.EventHandler(this.FrmAgregarPersona_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nud_pComprados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_plata)).EndInit();

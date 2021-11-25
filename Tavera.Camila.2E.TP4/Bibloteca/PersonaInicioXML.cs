@@ -9,12 +9,14 @@ using ManejoArchivos;
 namespace Bibloteca
 {
 
+    public delegate void DelegadoLista(List<Persona> list);
 
     public class PersonaInicioXML
     {
 
         public List<Persona> listNueva;
         public event Action<string> eventoAviso;
+        public event DelegadoLista EventAgregarLista;
         private Serializador<List<Persona>> ser;
 
         public PersonaInicioXML()
@@ -48,8 +50,9 @@ namespace Bibloteca
                 //string arch = AppDomain.CurrentDomain.BaseDirectory + "CompradoresIniciales.xml";
                 try
                 {
-                    this.listNueva=ser.Leer(archivo);
-                    BarColegio.Compradores.AddRange(this.listNueva);
+                    this.listNueva = ser.Leer(archivo);
+                    this.EventAgregarLista.Invoke(this.listNueva);
+                    //BarColegio.Compradores.AddRange(this.listNueva);
                 }
                 catch(Exception ex)
                 {

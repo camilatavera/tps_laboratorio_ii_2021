@@ -46,7 +46,9 @@ namespace FrmAnalisisDeDatos
 
         private void btn_analisis_Click(object sender, EventArgs e)
         {
-            FrmAnalisis frmAnalisis = new FrmAnalisis();
+            //FrmAnalisis frmAnalisis = new FrmAnalisis();
+            //frmAnalisis.Show();
+            FrmAnalisisDeTodos frmAnalisis = new FrmAnalisisDeTodos();
             frmAnalisis.Show();
         }
 

@@ -26,9 +26,10 @@ namespace UnitTest
                  new Estudiante("Candela", "Gala", Esexo.f, 10, 1, 1, 8, 4)
             };
 
-            BarColegio.Compradores = listCompradores;
-            analisisOrdeProfe = new AnalisisEntreDosGrupos<Ordenanza, Profesor>(BarColegio.getOrdenanza(), BarColegio.getProfesor());
-            analisisExSueldo = new AnalisisEntreDosGrupos<Estudiante, Profesor>(BarColegio.getEstudiantes(), BarColegio.getProfesor());
+           //agregarlos
+            analisisOrdeProfe = new AnalisisEntreDosGrupos<Ordenanza, Profesor>(BarColegio.Ordenanzas, BarColegio.Profesores);
+            analisisExSueldo = new AnalisisEntreDosGrupos<Estudiante, Profesor>(BarColegio.Estudiantes, BarColegio.Profesores
+                );
         }
 
 

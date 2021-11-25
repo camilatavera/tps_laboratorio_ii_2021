@@ -1809,6 +1809,7 @@
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "Bibloteca": "1.0.0",
+          "ManejoArchivos": "1.0.0",
           "System.Data.SqlClient": "4.8.3"
         },
         "compile": {

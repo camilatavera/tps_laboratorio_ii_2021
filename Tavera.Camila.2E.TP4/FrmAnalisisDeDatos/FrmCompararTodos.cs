@@ -28,9 +28,9 @@ namespace FrmAnalisisDeDatos
 
         private void FrmCompararTodos_Load(object sender, EventArgs e)
         {
-            profesorOrdenanza = new AnalisisEntreDosGrupos<Profesor, Ordenanza>(BarColegio.getProfesor(), BarColegio.getOrdenanza());
-            profesorEstudiante = new AnalisisEntreDosGrupos<Profesor, Estudiante>(BarColegio.getProfesor(), BarColegio.getEstudiantes());
-            estudianteOrdenanza = new AnalisisEntreDosGrupos<Estudiante, Ordenanza>(BarColegio.getEstudiantes(), BarColegio.getOrdenanza());
+            profesorOrdenanza = new AnalisisEntreDosGrupos<Profesor, Ordenanza>(BarColegio.Profesores, BarColegio.Ordenanzas);
+            profesorEstudiante = new AnalisisEntreDosGrupos<Profesor, Estudiante>(BarColegio.Profesores, BarColegio.Estudiantes);
+            estudianteOrdenanza = new AnalisisEntreDosGrupos<Estudiante, Ordenanza>(BarColegio.Estudiantes, BarColegio.Ordenanzas);
 
             profesorOrdenanza.EventoComparar += comparar1;
             profesorEstudiante.EventoComparar += comparar2;

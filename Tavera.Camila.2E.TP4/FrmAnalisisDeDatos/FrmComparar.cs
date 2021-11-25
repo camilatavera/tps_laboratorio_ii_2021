@@ -101,7 +101,7 @@ namespace FrmAnalisisDeDatos
                 cmb_grupo2.SelectedItem.ToString() == typeof(Profesor).Name.ToString()))
             {
                 AnalisisEntreDosGrupos<Ordenanza, Profesor> analisis = new AnalisisEntreDosGrupos<Ordenanza, Profesor>
-                    (BarColegio.getOrdenanza(), BarColegio.getProfesor());
+                    (BarColegio.Ordenanzas, BarColegio.Profesores);
                 return analisis.generarAnalisis();
             }
             else if ((cmb_grupo1.SelectedItem.ToString() == typeof(Ordenanza).Name.ToString() ||
@@ -110,7 +110,7 @@ namespace FrmAnalisisDeDatos
                 cmb_grupo2.SelectedItem.ToString() == typeof(Estudiante).Name.ToString()))
             {
                 AnalisisEntreDosGrupos<Ordenanza, Estudiante>  analisis = new AnalisisEntreDosGrupos<Ordenanza, Estudiante>
-                     (BarColegio.getOrdenanza(), BarColegio.getEstudiantes());
+                     (BarColegio.Ordenanzas, BarColegio.Estudiantes);
                 return analisis.generarAnalisis();
 
             }
@@ -120,7 +120,7 @@ namespace FrmAnalisisDeDatos
                 cmb_grupo2.SelectedItem.ToString() == typeof(Estudiante).Name.ToString())) 
            {
                 AnalisisEntreDosGrupos<Profesor, Estudiante> analisis = new AnalisisEntreDosGrupos<Profesor, Estudiante>
-                  (BarColegio.getProfesor(), BarColegio.getEstudiantes());
+                  (BarColegio.Profesores, BarColegio.Estudiantes);
                 return analisis.generarAnalisis();
 
            }

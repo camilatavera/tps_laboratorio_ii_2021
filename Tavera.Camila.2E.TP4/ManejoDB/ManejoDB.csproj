@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Bibloteca\Bibloteca.csproj" />
+    <ProjectReference Include="..\ManejoArchivos\ManejoArchivos.csproj" />
   </ItemGroup>
 
 </Project>

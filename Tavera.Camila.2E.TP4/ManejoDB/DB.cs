@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Threading;
 using System.Threading.Tasks;
+using ManejoArchivos;
 
 namespace ManejoDB
 {
@@ -48,6 +49,9 @@ namespace ManejoDB
 
 
 
+
+
+
         /// <summary>
         /// Crea los objetos de la tabla ordenanzas
         /// </summary>
@@ -70,7 +74,7 @@ namespace ManejoDB
                         (int)dataReader["CANTIDAD_COMPRAS"], traerTurno((int)dataReader["TURNO"])));
 
                 }
-                BarColegio.Compradores.AddRange(listOrdenanza);
+                BarColegio.Ordenanzas.AddRange(listOrdenanza);
                 return listOrdenanza;
 
             }
@@ -109,7 +113,7 @@ namespace ManejoDB
                         (int)dataReader["CANTIDAD_COMPRAS"], (int)dataReader["HORAS_CATEDRA"]));
 
                 }
-                BarColegio.Compradores.AddRange(listProfesor);
+                BarColegio.Profesores.AddRange(listProfesor);
                 return listProfesor;
 
             }
@@ -149,7 +153,7 @@ namespace ManejoDB
                         int.Parse(dataReader["CANTIDAD_COMPRAS"].ToString()), float.Parse(dataReader["PROMEDIO_GENERAL"].ToString()), int.Parse(dataReader["ANIO_CURSO"].ToString())));
 
                 }
-                BarColegio.Compradores.AddRange(listEstudiantes);
+                BarColegio.Estudiantes.AddRange(listEstudiantes);
                 return listEstudiantes;
 
             }
@@ -177,6 +181,61 @@ namespace ManejoDB
         }
 
 
+        /// <summary>
+        /// Agrega una lista de personas a la base de datos
+        /// </summary>
+        /// <param name="listPersonas"></param>
+        public static void AgregarPersonas(List<Persona> listPersonas)
+        {
+            try
+            {
+                foreach (Persona item in listPersonas)
+                {
+                    AgregarCompradorSerializer(item);
+                }
+            }
+            catch (Exception) { }
+
+        }
+
+
+
+        /// <summary>
+        /// Intenta agregar un nuevo comprador, y si esta repetido pone sus datos en un archivo.txt
+        /// </summary>
+        /// <param name="nuevaPersona"></param>
+        /// 
+
+        public static void AgregarCompradorSerializer(Persona nuevaPersona)
+        {
+            string file_name_ExRepeticiones = AppDomain.CurrentDomain.BaseDirectory + "compradoresRepetidos";
+            try
+            {
+                if (nuevaPersona.GetType() == typeof(Ordenanza))
+                {
+                    AgregarOrdenanza((Ordenanza)nuevaPersona);
+                }
+                else if (nuevaPersona.GetType() == typeof(Profesor))
+                {
+                    AgregarProfesor((Profesor)nuevaPersona);
+                }
+                else if (nuevaPersona.GetType() == typeof(Estudiante))
+                {
+                    AgregarEstudiante((Estudiante)nuevaPersona);
+                }
+
+            }
+            catch (ExcepcionPersona ex)
+            {
+                ArchivoTxt at = new ArchivoTxt();
+                at.Escribir(file_name_ExRepeticiones, ex.Message, true);
+            }
+        }
+
+
+
+
+
 
 
         /// <summary>
@@ -187,6 +246,8 @@ namespace ManejoDB
         {
             try
             {
+
+                BarColegio.AgregarOrdenanza(ordenanza);
                 command.Parameters.Clear();
 
                 if(connection.State!= ConnectionState.Open)
@@ -206,6 +267,10 @@ namespace ManejoDB
                 command.Parameters.AddWithValue("@turno", ordenanza.Turno.fkTurno());
 
                 command.ExecuteNonQuery();
+            }
+            catch (ExcepcionPersona)
+            {
+                throw;
             }
             catch (Exception ex)
             {
@@ -227,6 +292,8 @@ namespace ManejoDB
         {
             try
             {
+                BarColegio.AgregarEstudiante(estudiante);
+
                 command.Parameters.Clear();
                 if (connection.State != ConnectionState.Open)
                     connection.Open();
@@ -246,6 +313,10 @@ namespace ManejoDB
                 command.Parameters.AddWithValue("@curso", estudiante.AnioCurso);
 
                 command.ExecuteNonQuery();
+            }
+            catch (ExcepcionPersona)
+            {
+                throw;
             }
             catch (Exception ex)
             {
@@ -268,6 +339,8 @@ namespace ManejoDB
         {
             try
             {
+                BarColegio.AgregarProfesor(profesor);
+
                 command.Parameters.Clear();
 
                 if (connection.State != ConnectionState.Open)
@@ -287,6 +360,10 @@ namespace ManejoDB
                 command.Parameters.AddWithValue("@horasCatedra", profesor.HorasCatedraPorSemana);
 
                 command.ExecuteNonQuery();
+            }
+            catch (ExcepcionPersona)
+            {
+                throw;
             }
             catch (Exception ex)
             {
@@ -558,12 +635,25 @@ namespace ManejoDB
             {
                 try
                 {
-                    if (contarEstudiantes() != BarColegio.contarEstudiantesBar() || contarOrdenanza()!=BarColegio.contarOrdenanzasBar() ||
-                        contarProfesor()!=BarColegio.contarProfesoresBar())
+
+                    if (contarEstudiantes() != BarColegio.Estudiantes.Count)
                     {
-                        BarColegio.Compradores.Clear();
-                        TraerCompradores();
+                        BarColegio.Estudiantes.Clear();
+                        TraerEstudiantes();
                     }
+
+                    if (contarOrdenanza() != BarColegio.Ordenanzas.Count)
+                    {
+                        BarColegio.Ordenanzas.Clear();
+                        TraerOrdenanza();
+                    }
+
+                    if (contarProfesor() != BarColegio.Profesores.Count)
+                    {
+                        BarColegio.Profesores.Clear();
+                        TraerProfesores();
+                    }
+
                     Thread.Sleep(30000);
                 }
                 catch (Exception) 
@@ -576,6 +666,8 @@ namespace ManejoDB
 
            
         }
+
+
 
 
 

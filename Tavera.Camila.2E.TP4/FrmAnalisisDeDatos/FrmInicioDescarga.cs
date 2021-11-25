@@ -48,6 +48,7 @@ namespace FrmAnalisisDeDatos
         private void IniciarProcesoCompleto()
         {           
             xmlInicio.eventoAviso += msj_XML;
+            xmlInicio.EventAgregarLista += DB.AgregarPersonas;
             taskxml = xmlInicio.inicioTask(archivo);
             taskdb = db.inicioTask();
       
@@ -135,10 +136,13 @@ namespace FrmAnalisisDeDatos
         private void btn_entrar_Click(object sender, EventArgs e)
         {
 
-            if (((taskdb != null && !taskdb.IsCompleted) || (taskxml!=null && !taskxml.IsCompleted)) ||
-                ((taskdb != null && !taskdb.IsCompleted) && (taskxml != null && !taskxml.IsCompleted)))
+            if (((taskdb != null && !taskdb.IsCompleted) || (taskxml!=null && !taskxml.IsCompleted)))
             {
                 MessageBox.Show("Todavia no se cargaron los datos");
+            }
+            else if (taskdb == null)
+            {
+                MessageBox.Show("Cargue la base de datos");
             }
             else
             {
@@ -151,15 +155,30 @@ namespace FrmAnalisisDeDatos
                         {
                             if (this.xmlInicio.listNueva[i].GetType() == typeof(Ordenanza))
                             {
-                                DB.AgregarOrdenanza((Ordenanza)this.xmlInicio.listNueva[i]);
+                                try
+                                {
+                                    DB.AgregarOrdenanza((Ordenanza)this.xmlInicio.listNueva[i]);
+                                }
+                                catch (ExcepcionPersona) { }
+                                
                             }
                             else if (this.xmlInicio.listNueva[i].GetType() == typeof(Profesor))
                             {
-                                DB.AgregarProfesor((Profesor)this.xmlInicio.listNueva[i]);
+                                try
+                                {
+                                    DB.AgregarProfesor((Profesor)this.xmlInicio.listNueva[i]);
+                                }
+                                catch (ExcepcionPersona) { }
+
                             }
                             else if (this.xmlInicio.listNueva[i].GetType() == typeof(Estudiante))
                             {
-                                DB.AgregarEstudiante((Estudiante)this.xmlInicio.listNueva[i]);
+                                try
+                                {
+                                    DB.AgregarEstudiante((Estudiante)this.xmlInicio.listNueva[i]);
+                                }
+                                catch (ExcepcionPersona) { }
+                                
                             }
                         }
                     }
@@ -171,7 +190,7 @@ namespace FrmAnalisisDeDatos
 
                 FrmInicio inicio = new FrmInicio();
                 inicio.Show();
-                this.Visible = false;
+                
                 
             }
 

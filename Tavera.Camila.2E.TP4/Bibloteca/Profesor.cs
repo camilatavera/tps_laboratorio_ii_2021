@@ -148,6 +148,19 @@ namespace Bibloteca
         }
 
 
+        public override bool validarNoRepeticion()
+        {
+            foreach (Profesor item in BarColegio.Profesores)
+            {
+                if (this.Nombre == item.Nombre && this.Apellido == item.Apellido)
+                {
+                    throw new ExcepcionPersona($"Se intento agregar una persona que ya existe: {item.Nombre} {item.Apellido}");
+                }
+            }
+            return true;
+        }
+
+
 
     }
 }
