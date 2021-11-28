@@ -47,6 +47,25 @@ namespace Bibloteca
         }
 
 
+        /// <summary>
+        /// Traduce el valor  de una variable de tipo Eturno para ser utilizado en combo box
+        /// </summary>
+        /// <param name="valor"></param>
+        /// <returns>string</returns>
+        public static string TraducirCmb(this ETurno valor)
+        {
+            if (valor == ETurno.maniana)
+            {
+                return "mañana";
+            }
+            else
+            {
+                return "noche";
+            }
+        }
+
+
+       
 
         /// <summary>
         /// Devuelve el valor que tiene la primary key de Eturno en la base de datos

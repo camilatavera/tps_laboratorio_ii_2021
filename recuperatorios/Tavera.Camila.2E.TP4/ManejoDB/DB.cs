@@ -187,6 +187,10 @@ namespace ManejoDB
         /// <param name="listPersonas"></param>
         public static void AgregarPersonas(List<Persona> listPersonas)
         {
+            if (listPersonas == null)
+            {
+                return;
+            }
             try
             {
                 foreach (Persona item in listPersonas)
