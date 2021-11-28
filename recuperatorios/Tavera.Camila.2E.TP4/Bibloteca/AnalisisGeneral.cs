@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bibloteca
 {
-    public class AnalisisEntreTodos
+    public class AnalisisGeneral
     {
         static string retNull = "No se registran diferencias";
         static string msjException = "Error. No se pudo calcular";

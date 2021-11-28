@@ -66,7 +66,6 @@ C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP4\FrmAnalisisDeDatos
 C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP4\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.FrmAgregarOrdenanza.resources
 C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP4\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.FrmAgregarPersona.resources
 C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP4\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.FrmAgregarProfesor.resources
-C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP4\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.FrmAnalisis.resources
 C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP4\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.FrmAnalisisDeTodos.resources
 C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP4\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.FrmAyuda.resources
 C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP4\FrmAnalisisDeDatos\obj\Debug\net5.0-windows\FrmAnalisisDeDatos.FrmBorrar.resources
