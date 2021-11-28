@@ -36,13 +36,8 @@ namespace FrmAnalisisDeDatos
                         nuevaPersona = new Estudiante(txt_nombre.Text, txt_apellido.Text, (Esexo)cmb_sexo.SelectedItem,
                         (int)nud_plata.Value, (int)nud_pComprados.Value, (int)nud_compras.Value, float.Parse(txt_promedio.Text), (int)nud_anio.Value);
 
-
-
-                        if (BarColegio.AgregarComprador(nuevaPersona))
-                        {
-                            DB.AgregarEstudiante(nuevaPersona);
-                            this.Close();
-                        }
+                        DB.AgregarEstudiante(nuevaPersona);
+                        this.Close();
                     }
 
                 }

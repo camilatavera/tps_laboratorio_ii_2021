@@ -116,7 +116,7 @@ namespace FrmAnalisisDeDatos
             this.Controls.Add(this.lbl_db);
             this.Controls.Add(this.lbl_xml);
             this.Name = "FrmInicioDescarga";
-            this.Text = "FrmDescargaPrincipal";
+            this.Text = "Entrada";
             this.Load += new System.EventHandler(this.FrmDescargaPrincipal_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.FrmDescargaPrincipal_Paint);
             this.ResumeLayout(false);

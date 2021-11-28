@@ -74,6 +74,7 @@ namespace FrmAnalisisDeDatos
             // 
             // cmb_turno
             // 
+            this.cmb_turno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_turno.FormattingEnabled = true;
             this.cmb_turno.Location = new System.Drawing.Point(134, 375);
             this.cmb_turno.Name = "cmb_turno";
@@ -88,7 +89,7 @@ namespace FrmAnalisisDeDatos
             this.Controls.Add(this.cmb_turno);
             this.Controls.Add(this.lbl_turno);
             this.Name = "FrmAgregarOrdenanza";
-            this.Text = "FrmAgregarOrdenanza";
+            this.Text = "Agregar ordenanza";
             this.Load += new System.EventHandler(this.FrmAgregarOrdenanza_Load);
             this.Controls.SetChildIndex(this.lbl_nombre, 0);
             this.Controls.SetChildIndex(this.label2, 0);

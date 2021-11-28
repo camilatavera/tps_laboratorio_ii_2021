@@ -484,6 +484,7 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "Bibloteca >= 1.0.0",
+      "ManejoArchivos >= 1.0.0",
       "System.Data.SqlClient >= 4.8.3"
     ]
   },
@@ -516,6 +517,9 @@
           "projectReferences": {
             "C:\\tps_laboratorio_ii\\tps_laboratorio_ii\\Tavera.Camila.2E.TP4\\Bibloteca\\Bibloteca.csproj": {
               "projectPath": "C:\\tps_laboratorio_ii\\tps_laboratorio_ii\\Tavera.Camila.2E.TP4\\Bibloteca\\Bibloteca.csproj"
+            },
+            "C:\\tps_laboratorio_ii\\tps_laboratorio_ii\\Tavera.Camila.2E.TP4\\ManejoArchivos\\ManejoArchivos.csproj": {
+              "projectPath": "C:\\tps_laboratorio_ii\\tps_laboratorio_ii\\Tavera.Camila.2E.TP4\\ManejoArchivos\\ManejoArchivos.csproj"
             }
           }
         }

@@ -37,6 +37,7 @@ namespace FrmAnalisisDeDatos
             // 
             // cmb_grupo1
             // 
+            this.cmb_grupo1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_grupo1.FormattingEnabled = true;
             this.cmb_grupo1.Location = new System.Drawing.Point(123, 141);
             this.cmb_grupo1.Name = "cmb_grupo1";
@@ -45,6 +46,7 @@ namespace FrmAnalisisDeDatos
             // 
             // cmb_grupo2
             // 
+            this.cmb_grupo2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_grupo2.FormattingEnabled = true;
             this.cmb_grupo2.Location = new System.Drawing.Point(317, 141);
             this.cmb_grupo2.Name = "cmb_grupo2";

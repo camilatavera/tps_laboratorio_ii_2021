@@ -66,7 +66,8 @@ namespace FrmAnalisisDeDatos
             this.cmb_sexo.DataSource = new Bibloteca.Esexo[] {
         Bibloteca.Esexo.f,
         Bibloteca.Esexo.m};
-          
+            this.cmb_sexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            
             // 
             // txt_promedio
             // 

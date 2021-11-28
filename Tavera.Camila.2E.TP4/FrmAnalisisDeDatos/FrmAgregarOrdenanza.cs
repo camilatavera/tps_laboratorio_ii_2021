@@ -33,11 +33,8 @@ namespace FrmAnalisisDeDatos
                         nuevaPersona = new Ordenanza(txt_nombre.Text, txt_apellido.Text, (Esexo)cmb_sexo.SelectedItem,
                         (int)nud_plata.Value, (int)nud_pComprados.Value, (int)nud_compras.Value, (ETurno)cmb_turno.SelectedItem);
 
-                        if (BarColegio.AgregarComprador(nuevaPersona))
-                        {
-                            DB.AgregarOrdenanza(nuevaPersona);
-                            this.Close();
-                        }
+                        DB.AgregarOrdenanza(nuevaPersona);
+                        this.Close();
                     }
                     
 

@@ -22,7 +22,10 @@ namespace UnitTest
             listCompradores.Add(p1);
             listCompradores.Add(e1);
             listCompradores.Add(e2);
-            BarColegio.Compradores = listCompradores;
+            BarColegio.AgregarEstudiante(e1);
+            BarColegio.AgregarEstudiante(e2);
+            BarColegio.AgregarProfesor(p1);
+
         }
 
 
@@ -30,7 +33,7 @@ namespace UnitTest
         public void Test_ValidarGetProfesor()
         {
 
-            List<Profesor> list = new List<Profesor>(BarColegio.getProfesor());
+            List<Profesor> list = new List<Profesor>(BarColegio.Profesores);
             int actual = list.Count;
             int expected = 1;
             Assert.AreEqual(expected, actual);
@@ -41,7 +44,7 @@ namespace UnitTest
         public void Test_ValidarGetOrdenanza()
         {
 
-            List<Ordenanza> list = new List<Ordenanza>(BarColegio.getOrdenanza());
+            List<Ordenanza> list = new List<Ordenanza>(BarColegio.Ordenanzas);
             int actual = list.Count;
             int expected = 0;
             Assert.AreEqual(expected, actual);
@@ -52,7 +55,7 @@ namespace UnitTest
         public void Test_ValidarGetEstudiantes()
         {
 
-            List<Estudiante> list = new List<Estudiante>(BarColegio.getEstudiantes());
+            List<Estudiante> list = new List<Estudiante>(BarColegio.Estudiantes);
             int actual = list.Count;
             int expected = 2;
             Assert.AreEqual(expected, actual);

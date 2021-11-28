@@ -253,6 +253,8 @@ namespace Bibloteca
         /// <returns>bool</returns>
         public abstract bool validarConException();
 
+        public abstract bool validarNoRepeticion();
+
 
 
         

@@ -31,7 +31,6 @@ namespace FrmAnalisisDeDatos
         {
             this.lbl_hCatedra = new System.Windows.Forms.Label();
             this.nud_hCatedra = new System.Windows.Forms.NumericUpDown();
-
             ((System.ComponentModel.ISupportInitialize)(this.nud_pComprados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_plata)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_compras)).BeginInit();
@@ -55,9 +54,9 @@ namespace FrmAnalisisDeDatos
             // cmb_sexo
             // 
             this.cmb_sexo.DataSource = new Bibloteca.Esexo[] {
-                 Bibloteca.Esexo.f,
-                 Bibloteca.Esexo.m};
-          
+        Bibloteca.Esexo.f,
+        Bibloteca.Esexo.m};
+           
             // 
             // lbl_hCatedra
             // 
@@ -94,7 +93,7 @@ namespace FrmAnalisisDeDatos
             this.Controls.Add(this.nud_hCatedra);
             this.Controls.Add(this.lbl_hCatedra);
             this.Name = "FrmAgregarProfesor";
-            this.Text = "FrmAgregarProfesor";
+            this.Text = "Agregar profesor";
             this.Controls.SetChildIndex(this.lbl_nombre, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.lbl_plataGastada, 0);

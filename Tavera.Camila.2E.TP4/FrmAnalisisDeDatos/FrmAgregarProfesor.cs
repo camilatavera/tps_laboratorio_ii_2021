@@ -31,12 +31,8 @@ namespace FrmAnalisisDeDatos
                         nuevaPersona = new Profesor(txt_nombre.Text, txt_apellido.Text, (Esexo)cmb_sexo.SelectedItem,
                         (int)nud_plata.Value, (int)nud_pComprados.Value, (int)nud_compras.Value, horasCatedras);
 
-                        if (BarColegio.AgregarComprador(nuevaPersona))
-                        {
-                            DB.AgregarProfesor(nuevaPersona);
-                            this.Close();
-                        }
-
+                        DB.AgregarProfesor(nuevaPersona);
+                        this.Close();
                     }
 
                 }
