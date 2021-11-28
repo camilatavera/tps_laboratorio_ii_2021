@@ -107,7 +107,7 @@ namespace Bibloteca
                 if (totalM > totalN)
                 {
                     porcentaje = calcularPorcentaje(total, totalM);
-                    return $"{ETurno.maniana.Traducir()} ({porcentaje}% del total de plata gastada por ordenanzas)";
+                    return $"{ETurno.mañana.Traducir()} ({porcentaje}% del total de plata gastada por ordenanzas)";
                 }
                 else if (totalN > totalM)
                 {
@@ -362,7 +362,7 @@ namespace Bibloteca
 
             foreach (Ordenanza item in BarColegio.Ordenanzas)
             {
-                if (item.Turno == ETurno.maniana)
+                if (item.Turno == ETurno.mañana)
                 {
                     listM.Add(item);
                 }

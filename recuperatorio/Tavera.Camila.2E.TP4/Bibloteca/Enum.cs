@@ -14,7 +14,7 @@ namespace Bibloteca
 
     public enum ETurno
     {
-        maniana,
+        mañana,
         noche
     }
 

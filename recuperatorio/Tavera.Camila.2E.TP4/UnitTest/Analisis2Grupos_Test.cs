@@ -20,8 +20,8 @@ namespace UnitTest
             listCompradores = new List<Persona>() {
                  new Profesor("Marcos", "Ludovic", Esexo.m, 1000, 5, 5, 20),
                  new Profesor("Emilia", "Kinga", Esexo.f, 1800, 10, 5, 10),
-                 new Ordenanza("Roberto", "Roman", Esexo.m, 500, 2, 2, ETurno.maniana),
-                 new Ordenanza("Milagros", "Ren", Esexo.f, 500, 5, 1, ETurno.maniana),
+                 new Ordenanza("Roberto", "Roman", Esexo.m, 500, 2, 2, ETurno.mañana),
+                 new Ordenanza("Milagros", "Ren", Esexo.f, 500, 5, 1, ETurno.mañana),
                  new Estudiante("Nacho", "Salam",Esexo.m, 50, 1, 1, 4, 5),
                  new Estudiante("Candela", "Gala", Esexo.f, 10, 1, 1, 8, 4)
             };

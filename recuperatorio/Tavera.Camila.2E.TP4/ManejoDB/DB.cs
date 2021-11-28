@@ -41,7 +41,7 @@ namespace ManejoDB
         {
             if (turno == 1)
             {
-                return ETurno.maniana;
+                return ETurno.mañana;
             }
             else
                 return ETurno.noche;

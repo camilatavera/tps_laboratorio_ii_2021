@@ -36,7 +36,7 @@ namespace Bibloteca
         /// <returns>string</returns>
         public static string Traducir(this ETurno valor)
         {
-            if (valor == ETurno.maniana)
+            if (valor == ETurno.mañana)
             {
                 return "Turno mañana";
             }
@@ -55,7 +55,7 @@ namespace Bibloteca
         /// <returns>int</returns>
         public static int fkTurno(this ETurno valor)
         {
-            if (valor == ETurno.maniana)
+            if (valor == ETurno.mañana)
             {
                 return 1;
             }
