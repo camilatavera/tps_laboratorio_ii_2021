@@ -14,7 +14,11 @@ namespace FrmAnalisisDeDatos
 {
     public partial class FrmAnalisisDeTodos : Form
     {
+<<<<<<< HEAD:Tavera.Camila.2E.TP4/FrmAnalisisDeDatos/FrmAnalisisDeTodos.cs
         AnalisisGeneral analisis = new AnalisisGeneral();
+=======
+        AnalisisEntreTodos analisis = new AnalisisEntreTodos();
+>>>>>>> 4eb58a8e12e9de078453ed62b0a21ff22249d67c:Tavera.Camila.2E.TP4/FrmAnalisisDeDatos/FrmAnalisis.cs
         SaveFileDialog saveFileDialog;
 
 

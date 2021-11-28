@@ -1,0 +1,3 @@
+Se intento agregar una persona que ya existe: Estudiante1 Sin error
+Se intento agregar una persona que ya existe: Estudiante1 Sin error
+Se intento agregar una persona que ya existe: Estudiante1 Sin error

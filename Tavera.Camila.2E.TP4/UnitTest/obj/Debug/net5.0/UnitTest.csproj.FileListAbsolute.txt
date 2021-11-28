@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP4\UnitTest\bin\Debug\net5.0\CoverletSourceRootsMapping
 C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP4\UnitTest\bin\Debug\net5.0\testhost.dll
 C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP4\UnitTest\bin\Debug\net5.0\testhost.exe
@@ -110,3 +111,5 @@ C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP4\UnitTest\obj\Debug
 C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP4\UnitTest\obj\Debug\net5.0\ref\UnitTest.dll
 C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP4\UnitTest\obj\Debug\net5.0\UnitTest.pdb
 C:\tps_laboratorio_ii\tps_laboratorio_ii\Tavera.Camila.2E.TP4\UnitTest\obj\Debug\net5.0\UnitTest.genruntimeconfig.cache
+=======
+>>>>>>> 4eb58a8e12e9de078453ed62b0a21ff22249d67c
